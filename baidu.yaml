@@ -1,0 +1,175 @@
+mixed-port: 7890
+allow-lan: true   #允许局域网连接
+bind-address: "*"
+mode: rule
+geodata-mode: true
+log-level: info
+ipv6: false
+find-process-mode: strict
+global-client-fingerprint: chrome
+geodata-loader: memconservative
+
+
+# DNS配置
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.1/8
+  default-nameserver:
+    - https://223.6.6.6/dns-query
+  nameserver:
+    - https://223.6.6.6/dns-query
+    - https://1.1.1.1/dns-query
+
+#自定义 geodata url
+geox-url:
+  geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
+  mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+
+# 百度配置文件
+baidu: &baidu
+  type: http
+  port: 443
+  headers:
+    Host: 153.3.236.22:443
+    X-T5-Auth: 683556433
+    User-Agent: okhttp/3.11.0 Dalvik/2.1.0 (Linux; Build/RKQ1.200826.002) baiduboxapp/11.0.5.12 (Baidu; P1 11)
+
+# v2ray配置文件
+CF: &CF
+    type: vless
+    uuid: a59d7a2e-b2a6-4825-aa59-bc492f71c656
+    tls: true
+    servername: world.kh11a.link
+    skip-cert-verify: false
+    network: ws
+    ws-opts: 
+      path: /path?ed=2048
+      headers: 
+        Host: world.kh11a.link
+        
+proxies:
+#百度直连IP，根据自己运营商替换IP
+  - name: Baidu auto
+    server: cloudnproxy.baidu.com
+    <<: *baidu
+
+  - name: 河北 联通-1
+    server: 110.242.70.68
+    <<: *baidu
+
+  - name: 河北 联通-2
+    server: 110.242.70.69
+    <<: *baidu
+
+  - name: 南京 联通
+    server: 153.3.237.117
+    <<: *baidu
+
+  - name: 江苏 联通
+    server: 157.0.148.53
+    <<: *baidu
+
+  - name: 广州 联通-1
+    server: 157.255.78.51
+    <<: *baidu
+
+  - name: 广州 联通-2
+    server: 157.255.72.18
+    <<: *baidu
+
+# 优选IP 
+  - name: CF-1
+    server: 103.148.72.147
+    port: 1443
+    <<: *CF
+
+  - name: CF-2
+    server: 5.253.16.149
+    port: 9529
+    <<: *CF
+
+  - name: CF-3
+    server: 103.103.245.45
+    port: 2096
+    <<: *CF
+
+  - name: CF-4
+    server: 47.75.101.0
+    port: 3443
+    <<: *CF
+
+  - name: CF-5
+    server: cnd1.kh11a.link
+    port: 443
+    <<: *CF
+    
+proxy-groups:
+# 节点群组，节点和订阅的名称配置到下面
+  - name: 🌎 全球节点
+    type: select
+    proxies:
+      - 🚀 百度直连
+      - CF-1
+      - CF-2
+      - CF-3
+      - CF-4
+      - CF-5
+
+  - name: 🚀 百度直连
+    type: select
+    proxies:
+      - 河北 联通auto
+      - 广州 联通auto
+      - 江苏 联通
+      - 南京 联通
+      - Baidu auto
+      - 🎯 全球直连
+      
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+
+  - name: 🐟 漏网之鱼
+    type: relay
+    proxies:
+      - 🚀 百度直连
+      - 🌎 全球节点
+
+  - name: "广州 联通auto"
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 600
+    lazy: true
+    proxies:
+      - 广州 联通-1
+      - 广州 联通-2
+
+  - name: "河北 联通auto"
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 602
+    lazy: true
+    proxies:
+      - 河北 联通-1
+      - 河北 联通-2
+
+rules:
+  # UDP 规则 
+  - NETWORK,UDP,🛑 全球拦截
+  # 广告过滤
+  - geosite,category-ads-all,🛑 全球拦截
+  # 分流规则
+  - DOMAIN-KEYWORD,google,🐟 漏网之鱼
+  - GEOSITE,CN,🚀 百度直连
+  - GEOIP,CN,🚀 百度直连
+  - MATCH,🐟 漏网之鱼
