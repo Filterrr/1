@@ -38,7 +38,6 @@ baidu: &baidu
     X-T5-Auth: 683556433
     User-Agent: okhttp/3.11.0 Dalvik/2.1.0 (Linux; Build/RKQ1.200826.002) baiduboxapp/11.0.5.12 (Baidu; P1 11)
 
-# v2ray配置文件
 CF: &CF
     type: vless
     uuid: a59d7a2e-b2a6-4825-aa59-bc492f71c656
@@ -52,7 +51,6 @@ CF: &CF
         Host: world.kh11a.link
         
 proxies:
-#百度直连IP，根据自己运营商替换IP
   - name: Baidu auto
     server: cloudnproxy.baidu.com
     <<: *baidu
@@ -81,7 +79,6 @@ proxies:
     server: 157.255.72.18
     <<: *baidu
 
-# 优选IP 
   - name: CF-1
     server: 103.148.72.147
     port: 1443
@@ -108,7 +105,6 @@ proxies:
     <<: *CF
     
 proxy-groups:
-# 节点群组，节点和订阅的名称配置到下面
   - name: 🌎 全球节点
     type: select
     proxies:
