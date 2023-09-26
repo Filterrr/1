@@ -50,6 +50,32 @@ CF: &CF
         Host: world.kh11a.link
         
 proxies:
+  - name: CF-1
+    server: 103.148.72.147
+    port: 1443
+    <<: *CF
+
+  - name: CF-2
+    server: 5.253.16.149
+    port: 9529
+    <<: *CF
+
+  - name: CF-3
+    server: 103.103.245.45
+    port: 2096
+    <<: *CF
+
+  - name: CF-4
+    server: 47.75.101.0
+    port: 3443
+    <<: *CF
+
+  - name: CF-5
+    server: cnd1.kh11a.link
+    port: 443
+    <<: *CF
+
+
   - name: Baidu auto
     server: cloudnproxy.baidu.com
     <<: *baidu
@@ -78,30 +104,6 @@ proxies:
     server: 157.255.72.18
     <<: *baidu
 
-  - name: CF-1
-    server: 103.148.72.147
-    port: 1443
-    <<: *CF
-
-  - name: CF-2
-    server: 5.253.16.149
-    port: 9529
-    <<: *CF
-
-  - name: CF-3
-    server: 103.103.245.45
-    port: 2096
-    <<: *CF
-
-  - name: CF-4
-    server: 47.75.101.0
-    port: 3443
-    <<: *CF
-
-  - name: CF-5
-    server: cnd1.kh11a.link
-    port: 443
-    <<: *CF
     
 proxy-groups:
   - name: 🌎 全球节点
