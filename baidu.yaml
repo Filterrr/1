@@ -61,8 +61,8 @@ proxies:
     <<: *CF
 
   - name: CF-3
-    server: 103.103.245.45
-    port: 2096
+    server: 61.220.65.189
+    port: 26832
     <<: *CF
 
   - name: CF-4
