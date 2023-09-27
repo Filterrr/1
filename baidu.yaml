@@ -25,8 +25,8 @@ dns:
 
 #自定义 geodata url
 geox-url:
-  geoip: "https://worldcf.kh11a.link/Loyalsoldier/v2ray-rules-dat/release/geoip.dat"
-  geosite: "https://worldcf.kh11a.link/Loyalsoldier/v2ray-rules-dat/release/geosite.dat"
+  geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
   mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
 
 baidu: &baidu
