@@ -1,0 +1,155 @@
+mixed-port: 7890
+allow-lan: true   #允许局域网连接
+bind-address: "*"
+mode: rule
+geodata-mode: true
+log-level: info
+ipv6: false
+find-process-mode: strict
+global-client-fingerprint: chrome
+geodata-loader: memconservative
+
+
+# DNS配置
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.1/8
+  default-nameserver:
+    - https://223.6.6.6/dns-query
+  nameserver:
+    - https://223.6.6.6/dns-query
+    - https://1.1.1.1/dns-query
+
+#自定义 geodata url
+geox-url:
+  geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
+  mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+
+baidu: &baidu
+  type: http
+  port: 443
+  headers:
+    Host: 153.3.236.22:443
+    X-T5-Auth: 683556433
+    User-Agent: okhttp/3.11.0 Dalvik/2.1.0 (Linux; Build/RKQ1.200826.002) baiduboxapp/11.0.5.12 (Baidu; P1 11)
+
+        
+proxies:
+
+  - name: Baidu auto
+    server: cloudnproxy.baidu.com
+    <<: *baidu
+
+  - name: 南京 移动
+    server: 36.155.169.188
+    <<: *baidu
+
+  - name: 广州 移动
+    server: 183.232.232.253
+    <<: *baidu
+
+  - name: 苏州 电信
+    server: 14.215.179.244
+    <<: *baidu
+
+  - name: 广州 电信
+    server: 14.215.179.244
+    <<: *baidu
+
+  - name: 北京 电信
+    server: 220.181.111.189
+    <<: *baidu
+
+  - name: 南京 电信
+    server: 180.101.50.208
+    <<: *baidu
+
+  - name: 河北 联通-1
+    server: 110.242.70.68
+    <<: *baidu
+
+  - name: 河北 联通-2
+    server: 110.242.70.69
+    <<: *baidu
+
+  - name: 南京 联通
+    server: 153.3.237.117
+    <<: *baidu
+
+  - name: 江苏 联通
+    server: 157.0.148.53
+    <<: *baidu
+
+  - name: 广州 联通-1
+    server: 157.255.78.51
+    <<: *baidu
+
+  - name: 广州 联通-2
+    server: 157.255.72.18
+    <<: *baidu
+
+    
+proxy-groups:
+  - name: 🚀 百度直连
+    type: select
+    proxies:
+      - 河北 联通auto
+      - 广州 联通auto
+      - 江苏 联通
+      - 南京 联通
+      - 苏州 电信
+      - 广州 电信
+      - 北京 电信
+      - 南京 移动
+      - 广州 移动
+
+      - Baidu auto
+      - 🎯 全球直连
+      
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+
+  - name: 🐟 漏网之鱼
+    type: relay
+    proxies:
+      - 🚀 百度直连
+
+  - name: "广州 联通auto"
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 600
+    lazy: true
+    proxies:
+      - 广州 联通-1
+      - 广州 联通-2
+
+  - name: "河北 联通auto"
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 602
+    lazy: true
+    proxies:
+      - 河北 联通-1
+      - 河北 联通-2
+
+rules:
+  # UDP 规则 
+  - NETWORK,UDP,🛑 全球拦截
+  # 广告过滤
+  - geosite,category-ads-all,🛑 全球拦截
+  # 分流规则
+  - DOMAIN-KEYWORD,google,🐟 漏网之鱼
+  - GEOSITE,CN,🚀 百度直连
+  - GEOIP,CN,🚀 百度直连
+  - MATCH,🐟 漏网之鱼
