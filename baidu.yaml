@@ -29,6 +29,19 @@ geox-url:
   geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
   mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
 
+# 机场订阅地址
+proxy-providers:
+  机场节点1:
+    type: http
+   #【Meta专属】URL支持解析V2rayN等工具使用的普通订阅
+    url: https://sub.cfno1.eu.org/clash?host=world.kh11a.link&uuid=a59d7a2e-b2a6-4825-aa59-bc492f71c656&path=/?ed=2048&protocol=vless 
+    interval: 432000
+    path: ./provider201.yaml
+    health-check:
+      enable: false
+      interval: 7200
+      url: http://www.gstatic.com/generate_204
+
 baidu: &baidu
   type: http
   port: 443
@@ -124,6 +137,8 @@ proxies:
 proxy-groups:
   - name: 🌎 全球节点
     type: select
+    use:
+      - 机场节点1
     proxies:
       - 🚀 百度直连
       - CF-1
