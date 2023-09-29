@@ -1,6 +1,5 @@
 mixed-port: 7890
-allow-lan: true   #允许局域网连接
-bind-address: "*"
+allow-lan: false
 mode: rule
 geodata-mode: true
 log-level: info
@@ -23,17 +22,14 @@ dns:
     - https://223.6.6.6/dns-query
     - https://1.1.1.1/dns-query
 
-#自定义 geodata url
 geox-url:
   geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
   geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
   mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
 
-# 机场订阅地址
 proxy-providers:
   机场节点1:
     type: http
-   #【Meta专属】URL支持解析V2rayN等工具使用的普通订阅
     url: https://sub.cfno1.eu.org/clash?host=world.kh11a.link&uuid=a59d7a2e-b2a6-4825-aa59-bc492f71c656&path=/?ed=2048&protocol=vless 
     interval: 432000
     path: ./provider201.yaml
@@ -64,30 +60,9 @@ CF: &CF
         
 proxies:
   - name: CF-1
-    server: 103.148.72.147
-    port: 1443
-    <<: *CF
-
-  - name: CF-2
-    server: 5.253.16.149
-    port: 9529
-    <<: *CF
-
-  - name: CF-3
-    server: 61.220.65.189
-    port: 26832
-    <<: *CF
-
-  - name: CF-4
-    server: 47.242.141.98
-    port: 55527
-    <<: *CF
-
-  - name: CF-5
     server: cnd1.kh11a.link
     port: 443
     <<: *CF
-
 
   - name: Baidu auto
     server: cloudnproxy.baidu.com
@@ -142,10 +117,6 @@ proxy-groups:
     proxies:
       - 🚀 百度直连
       - CF-1
-      - CF-2
-      - CF-3
-      - CF-4
-      - CF-5
 
   - name: 🚀 百度直连
     type: select
