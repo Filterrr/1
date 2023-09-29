@@ -66,8 +66,8 @@ proxies:
     <<: *CF
 
   - name: CF-4
-    server: 47.75.101.0
-    port: 3443
+    server: 47.242.141.98
+    port: 55527
     <<: *CF
 
   - name: CF-5
