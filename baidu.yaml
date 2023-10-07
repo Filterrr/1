@@ -10,8 +10,6 @@ geodata-loader: memconservative
 keep-alive-interval: 30
 tcp-concurrent: true
 
-
-
 # DNS配置
 dns:
   enable: true
@@ -57,13 +55,13 @@ CF: &CF
     skip-cert-verify: false
     network: ws
     ws-opts: 
-      path: /path?ed=2048
+      path: /
       headers: 
         Host: world.kh11a.link
         
 proxies:
   - name: CF-1
-    server: cnd1.kh11a.link
+    server: cn.king360.eu.org
     port: 443
     <<: *CF
 
