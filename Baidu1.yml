@@ -129,6 +129,7 @@ proxy-groups:
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
+    tolerance: 50
     lazy: true
     proxies:
       - 广州 联通-1
@@ -137,7 +138,8 @@ proxy-groups:
   - name: "河北 联通auto"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 602
+    interval: 600
+    tolerance: 50
     lazy: true
     proxies:
       - 河北 联通-1
