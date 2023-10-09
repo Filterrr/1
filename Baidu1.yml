@@ -39,21 +39,12 @@ baidu: &baidu
 
         
 proxies:
-
   - name: Baidu auto
     server: cloudnproxy.baidu.com
     <<: *baidu
 
-  - name: 南京 移动
-    server: 36.155.169.188
-    <<: *baidu
-
-  - name: 广州 移动
-    server: 183.232.232.253
-    <<: *baidu
-
   - name: 苏州 电信
-    server: 14.215.179.244
+    server: 180.97.93.202
     <<: *baidu
 
   - name: 广州 电信
@@ -65,7 +56,7 @@ proxies:
     <<: *baidu
 
   - name: 南京 电信
-    server: 180.101.50.208
+    server: 180.101.50.249
     <<: *baidu
 
   - name: 河北 联通-1
