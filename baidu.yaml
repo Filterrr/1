@@ -1,3 +1,9 @@
+###########################################
+#
+# 支持 Clash.Meta 的工具推荐
+# https://wiki.metacubex.one/client/
+#
+###########################################
 mixed-port: 7890
 allow-lan: false
 mode: rule
