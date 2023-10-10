@@ -72,8 +72,8 @@ proxies:
     <<: *CF
 
   - name: CF-2
-    server: cn.king360.eu.org
-    port: 443
+    server: 103.148.72.147
+    port: 1443
     <<: *CF
 
   - name: Baidu auto
