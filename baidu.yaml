@@ -156,20 +156,18 @@ proxy-groups:
       - 🌎 全球节点
 
   - name: "广州 联通auto"
-    type: url-test
+    type: fallback
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
-    tolerance: 50
     lazy: true
     proxies:
       - 广州 联通-1
       - 广州 联通-2
 
   - name: "河北 联通auto"
-    type: url-test
+    type: fallback
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
-    tolerance: 50
     lazy: true
     proxies:
       - 河北 联通-1
