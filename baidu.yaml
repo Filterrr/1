@@ -52,30 +52,8 @@ baidu: &baidu
     Host: 153.3.236.22:443
     X-T5-Auth: 683556433
     User-Agent: okhttp/3.11.0 Dalvik/2.1.0 (Linux; Build/RKQ1.200826.002) baiduboxapp/11.0.5.12 (Baidu; P1 11)
-
-CF: &CF
-    type: vless
-    uuid: a59d7a2e-b2a6-4825-aa59-bc492f71c656
-    tls: true
-    servername: world.kh11a.link
-    skip-cert-verify: false
-    network: ws
-    ws-opts: 
-      path: /
-      headers: 
-        Host: world.kh11a.link
         
 proxies:
-  - name: CF-1
-    server: cn.king360.eu.org
-    port: 443
-    <<: *CF
-
-  - name: CF-2
-    server: 103.148.72.147
-    port: 1443
-    <<: *CF
-
   - name: Baidu auto
     server: cloudnproxy.baidu.com
     <<: *baidu
@@ -128,7 +106,6 @@ proxy-groups:
       - xiaopro1
     proxies:
       - 🚀 百度直连
-      - CF auto
 
   - name: 🚀 百度直连
     type: select
@@ -179,16 +156,6 @@ proxy-groups:
     proxies:
       - 河北 联通-1
       - 河北 联通-2
-
-  - name: "CF auto"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    tolerance: 100
-    lazy: true
-    proxies:
-      - CF-1
-      - CF-2
 
 rules:
   # UDP 规则 
