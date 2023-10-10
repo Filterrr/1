@@ -164,6 +164,7 @@ proxy-groups:
     type: fallback
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
+    tolerance: 100
     lazy: true
     proxies:
       - 广州 联通-1
@@ -173,6 +174,7 @@ proxy-groups:
     type: fallback
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
+    tolerance: 100
     lazy: true
     proxies:
       - 河北 联通-1
