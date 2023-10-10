@@ -121,7 +121,7 @@ proxy-groups:
       - 🚀 百度直连
 
   - name: "广州 联通auto"
-    type: url-test
+    type: fallback
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
     tolerance: 50
@@ -131,7 +131,7 @@ proxy-groups:
       - 广州 联通-2
 
   - name: "河北 联通auto"
-    type: url-test
+    type: fallback
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
     tolerance: 50
