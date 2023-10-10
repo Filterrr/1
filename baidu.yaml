@@ -71,6 +71,11 @@ proxies:
     port: 443
     <<: *CF
 
+  - name: CF-2
+    server: cn.king360.eu.org
+    port: 443
+    <<: *CF
+
   - name: Baidu auto
     server: cloudnproxy.baidu.com
     <<: *baidu
@@ -123,7 +128,7 @@ proxy-groups:
       - xiaopro1
     proxies:
       - 🚀 百度直连
-      - CF-1
+      - CF auto
 
   - name: 🚀 百度直连
     type: select
@@ -172,6 +177,16 @@ proxy-groups:
     proxies:
       - 河北 联通-1
       - 河北 联通-2
+
+  - name: "CF auto"
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 600
+    tolerance: 100
+    lazy: true
+    proxies:
+      - CF-1
+      - CF-2
 
 rules:
   # UDP 规则 
