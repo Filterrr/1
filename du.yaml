@@ -137,24 +137,26 @@ proxy-groups:
       - 🌎 全球节点
 
   - name: "广州 联通auto"
-    type: url-test
+    type: load-balance
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
-    tolerance: 100
+    #tolerance: 100
     lazy: true
     proxies:
       - 广州 联通-1
       - 广州 联通-2
+    strategy: consistent-hashing
 
   - name: "河北 联通auto"
-    type: url-test
+    type: load-balance
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
-    tolerance: 100
+    #tolerance: 100
     lazy: true
     proxies:
       - 河北 联通-1
       - 河北 联通-2
+    strategy: consistent-hashing
 
 rules:
   # UDP 规则 
