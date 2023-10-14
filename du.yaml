@@ -111,7 +111,8 @@ proxies:
     <<: *baidu
 
   - name: CF
-    server: cdn.xn--b6gac.eu.org
+    server: 172.67.32.0
+    port: 2053
     <<: *CF
     
 proxy-groups:
