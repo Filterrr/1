@@ -52,6 +52,18 @@ baidu: &baidu
     Host: 153.3.236.22:443
     X-T5-Auth: 683556433
     User-Agent: okhttp/3.11.0 Dalvik/2.1.0 (Linux; Build/RKQ1.200826.002) baiduboxapp/11.0.5.12 (Baidu; P1 11)
+
+CF: &CF
+    type: vless
+    uuid: 1ff64191-83b3-410a-86e3-74f721681a80
+    tls: true
+    servername: world.kh11a.link
+    skip-cert-verify: false
+    network: ws
+    ws-opts: 
+      path: /
+      headers: 
+        Host: world.kh11a.link
         
 proxies:
   - name: Baidu auto
@@ -98,6 +110,9 @@ proxies:
     server: 157.255.72.18
     <<: *baidu
 
+  - name: CF
+    server: cdn.xn--b6gac.eu.org
+    <<: *CF
     
 proxy-groups:
   - name: 🌎 全球节点
