@@ -111,8 +111,8 @@ proxies:
     <<: *baidu
 
   - name: CF
-    server: 172.67.32.0
-    port: 2053
+    server: 103.148.72.147
+    port: 1443
     <<: *CF
     
 proxy-groups:
