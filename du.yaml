@@ -111,8 +111,8 @@ proxies:
     <<: *baidu
 
   - name: CF
-    server: 103.148.72.147
-    port: 1443
+    server: cfip.gay
+    port: 443
     <<: *CF
     
 proxy-groups:
