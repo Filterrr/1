@@ -35,9 +35,9 @@ geox-url:
   mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
 
 proxy-providers:
-  xiaopro1:
+  xiaopro:
     type: http
-    url: https://sub.cfno1.eu.org/sub
+    url: https://sub.cfno1.eu.org/clash?host=world.kh11a.link&uuid=a59d7a2e-b2a6-4825-aa59-bc492f71c656&path=/?ed=2048&protocol=vless
     interval: 432000
     path: ./provider201.yaml
     health-check:
@@ -103,7 +103,7 @@ proxy-groups:
   - name: 🌎 全球节点
     type: select
     use:
-      - xiaopro1
+      - xiaopro
     proxies:
       - 🚀 百度直连
 
