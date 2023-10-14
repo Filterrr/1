@@ -122,6 +122,7 @@ proxy-groups:
       - xiaopro1
     proxies:
       - 🚀 百度直连
+      - CF
 
   - name: 🚀 百度直连
     type: select
