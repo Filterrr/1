@@ -159,7 +159,7 @@ proxy-groups:
 
 rules:
   # UDP 规则 
-  - NETWORK,UDP,🛑 全球拦截
+ # - NETWORK,UDP,🛑 全球拦截
   # 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
   # 分流规则
