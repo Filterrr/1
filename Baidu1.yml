@@ -142,6 +142,6 @@ proxy-groups:
 
 rules:
   # UDP 规则 
-  - NETWORK,UDP,🛑 全球拦截
+ # - NETWORK,UDP,🛑 全球拦截
   # 分流规则
   - MATCH,🐟 漏网之鱼
