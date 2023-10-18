@@ -37,7 +37,7 @@ geox-url:
 proxy-providers:
   xiaopro1:
     type: http
-    url: https://sub.cfno1.eu.org/clash?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&protocol=vless 
+    url: https://sub.cfno1.eu.org/clash?host=world1.kh11a.link&uuid=68750102-6324-4643-aa0a-df1b8df09c71&path=/?ed=2048&protocol=vless 
     interval: 432000
     path: ./provider201.yaml
     health-check:
@@ -55,15 +55,15 @@ baidu: &baidu
 
 CF: &CF
     type: vless
-    uuid: 1ff64191-83b3-410a-86e3-74f721681a80
+    uuid: 68750102-6324-4643-aa0a-df1b8df09c71
     tls: true
-    servername: world.kh11a.link
+    servername: world1.kh11a.link
     skip-cert-verify: false
     network: ws
     ws-opts: 
       path: /
       headers: 
-        Host: world.kh11a.link
+        Host: world1.kh11a.link
         
 proxies:
   - name: Baidu auto
