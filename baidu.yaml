@@ -4,6 +4,7 @@
 # https://wiki.metacubex.one/client/
 #
 ###########################################
+
 mixed-port: 7890
 allow-lan: false
 mode: rule
