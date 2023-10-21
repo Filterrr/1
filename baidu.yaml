@@ -172,7 +172,7 @@ rules:
  # - NETWORK,UDP,🛑 全球拦截
   # 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
-  - RULE-SET,广告域名,🛑 全球拦截
+  - RULE-SET,reject,🛑 全球拦截
   # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
   - GEOSITE,CN,🚀 百度直连
