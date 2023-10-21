@@ -163,7 +163,7 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/广告域名.yaml
+    path: ./ruleset/reject.yaml
     interval: 86400
 
 
