@@ -179,8 +179,19 @@ proxy-groups:
       - 北京 电信3
     strategy: consistent-hashing
 
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+
 rules:
-  # UDP 规则 
+  # UDP 拦截
   - NETWORK,UDP,🛑 全球拦截
-  # 分流规则
+  # 广告过滤
+  - RULE-SET,reject,🛑 全球拦截
+  # 兜底规则
   - MATCH,🐟 漏网之鱼
