@@ -79,19 +79,31 @@ proxies:
     server: 14.215.179.244
     <<: *baidu
 
-  - name: 北京 电信
+  - name: 北京 电信1
     server: 220.181.111.189
     <<: *baidu
 
-  - name: 南京 电信
+  - name: 北京 电信2
+    server: 220.181.33.174
+    <<: *baidu
+
+  - name: 北京 电信3
+    server: 220.181.7.1
+    <<: *baidu
+
+  - name: 南京 电信1
     server: 180.101.50.249
     <<: *baidu
 
-  - name: 河北 联通-1
+  - name: 南京 电信2
+    server: 180.101.50.208
+    <<: *baidu
+
+  - name: 河北 联通1
     server: 110.242.70.68
     <<: *baidu
 
-  - name: 河北 联通-2
+  - name: 河北 联通2
     server: 110.242.70.69
     <<: *baidu
 
@@ -103,11 +115,11 @@ proxies:
     server: 157.0.148.53
     <<: *baidu
 
-  - name: 广州 联通-1
+  - name: 广州 联通1
     server: 157.255.78.51
     <<: *baidu
 
-  - name: 广州 联通-2
+  - name: 广州 联通2
     server: 157.255.72.18
     <<: *baidu
 
@@ -132,10 +144,10 @@ proxy-groups:
       - 广州 联通auto
       - 江苏 联通
       - 南京 联通
-      - 南京 电信
       - 苏州 电信
       - 广州 电信
-      - 北京 电信
+      - 北京 电信auto
+      - 南京 电信auto
       - Baidu auto
       - 🎯 全球直连
       
@@ -162,8 +174,8 @@ proxy-groups:
     #tolerance: 100
     lazy: true
     proxies:
-      - 广州 联通-1
-      - 广州 联通-2
+      - 广州 联通1
+      - 广州 联通2
     strategy: consistent-hashing
 
   - name: "河北 联通auto"
@@ -173,9 +185,34 @@ proxy-groups:
     #tolerance: 100
     lazy: true
     proxies:
-      - 河北 联通-1
-      - 河北 联通-2
+      - 河北 联通1
+      - 河北 联通2
     strategy: consistent-hashing
+
+  - name: "南京 电信auto"
+    type: load-balance
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 600
+    #tolerance: 100
+    lazy: true
+    proxies:
+      - 南京 电信1
+      - 南京 电信2
+    strategy: consistent-hashing
+
+  - name: "北京 电信auto"
+    type: load-balance
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 600
+    #tolerance: 100
+    lazy: true
+    proxies:
+      - 北京 电信1
+      - 北京 电信2
+      - 北京 电信3
+    strategy: consistent-hashing
+
+
 
 rules:
   # UDP 规则 
