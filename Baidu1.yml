@@ -7,8 +7,7 @@
 ###########################################
 
 mixed-port: 7890
-allow-lan: true   #允许局域网连接
-bind-address: "*"
+allow-lan: false
 mode: rule
 geodata-mode: true
 log-level: info
@@ -16,7 +15,7 @@ ipv6: false
 find-process-mode: strict
 global-client-fingerprint: chrome
 geodata-loader: memconservative
-keep-alive-interval: 15
+keep-alive-interval: 30
 tcp-concurrent: true
 
 # DNS配置
