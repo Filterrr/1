@@ -110,11 +110,6 @@ proxies:
   - name: 广州 联通2
     server: 157.255.72.18
     <<: *baidu
-
-  - name: CF
-    server: cfip.gay
-    port: 443
-    <<: *CF
     
 proxy-groups:
   - name: 🌎 全球节点
