@@ -60,55 +60,55 @@ proxies:
     server: cloudnproxy.baidu.com
     <<: *baidu
 
-  - name: 苏州 电信
+  - name: 电信 苏州
     server: 180.97.93.202
     <<: *baidu
 
-  - name: 广州 电信
+  - name: 电信 广州
     server: 14.215.179.244
     <<: *baidu
 
-  - name: 北京 电信1
+  - name: 电信 北京1
     server: 220.181.111.189
     <<: *baidu
 
-  - name: 北京 电信2
+  - name: 电信 北京2
     server: 220.181.33.174
     <<: *baidu
 
-  - name: 北京 电信3
+  - name: 电信 北京3
     server: 220.181.7.1
     <<: *baidu
 
-  - name: 南京 电信1
+  - name: 电信 南京1
     server: 180.101.50.249
     <<: *baidu
 
-  - name: 南京 电信2
+  - name: 电信 南京2
     server: 180.101.50.208
     <<: *baidu
 
-  - name: 河北 联通1
+  - name: 联通 河北1
     server: 110.242.70.68
     <<: *baidu
 
-  - name: 河北 联通2
+  - name: 联通 河北2
     server: 110.242.70.69
     <<: *baidu
 
-  - name: 南京 联通
+  - name: 联通 南京
     server: 153.3.237.117
     <<: *baidu
 
-  - name: 江苏 联通
+  - name: 联通 江苏
     server: 157.0.148.53
     <<: *baidu
 
-  - name: 广州 联通1
+  - name: 联通 广州1
     server: 157.255.78.51
     <<: *baidu
 
-  - name: 广州 联通2
+  - name: 联通 广州2
     server: 157.255.72.18
     <<: *baidu
     
@@ -123,14 +123,14 @@ proxy-groups:
   - name: 🚀 百度直连
     type: select
     proxies:
-      - 河北 联通auto
-      - 广州 联通auto
-      - 江苏 联通
-      - 南京 联通
-      - 苏州 电信
-      - 广州 电信
-      - 北京 电信auto
-      - 南京 电信auto
+      - 联通 河北auto
+      - 联通 广州auto
+      - 联通 江苏
+      - 联通 南京
+      - 电信 苏州
+      - 电信 广州
+      - 电信 北京auto
+      - 电信 南京auto
       - Baidu auto
       - 🎯 全球直连
       
@@ -150,49 +150,49 @@ proxy-groups:
       - 🚀 百度直连
       - 🌎 全球节点
 
-  - name: "广州 联通auto"
+  - name: "联通 广州auto"
     type: load-balance
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
     #tolerance: 100
     lazy: true
     proxies:
-      - 广州 联通1
-      - 广州 联通2
+      - 联通 广州1
+      - 联通 广州2
     strategy: consistent-hashing
 
-  - name: "河北 联通auto"
+  - name: "联通 河北auto"
     type: load-balance
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
     #tolerance: 100
     lazy: true
     proxies:
-      - 河北 联通1
-      - 河北 联通2
+      - 联通 河北1
+      - 联通 河北2
     strategy: consistent-hashing
 
-  - name: "南京 电信auto"
+  - name: "电信 南京auto"
     type: load-balance
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
     #tolerance: 100
     lazy: true
     proxies:
-      - 南京 电信1
-      - 南京 电信2
+      - 电信 南京1
+      - 电信 南京2
     strategy: consistent-hashing
 
-  - name: "北京 电信auto"
+  - name: "电信 北京auto"
     type: load-balance
     url: 'https://www.gstatic.com/generate_204'
     interval: 600
     #tolerance: 100
     lazy: true
     proxies:
-      - 北京 电信1
-      - 北京 电信2
-      - 北京 电信3
+      - 电信 北京1
+      - 电信 北京2
+      - 电信 北京3
     strategy: consistent-hashing
 
 rule-providers:
