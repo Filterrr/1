@@ -10,7 +10,7 @@ mixed-port: 7890
 allow-lan: false
 mode: rule
 geodata-mode: true
-log-level: info
+log-level: debug
 ipv6: false
 find-process-mode: strict
 global-client-fingerprint: chrome
