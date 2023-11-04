@@ -135,10 +135,10 @@ proxy-groups:
       - 🚀 百度直连
 
   - name: "广州 联通auto"
-    type: load-balance
+    type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    #tolerance: 100
+    interval: 300
+    tolerance: 50
     lazy: true
     proxies:
       - 广州 联通1
@@ -146,10 +146,10 @@ proxy-groups:
     strategy: consistent-hashing
 
   - name: "河北 联通auto"
-    type: load-balance
+    type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    #tolerance: 100
+    interval: 300
+    tolerance: 50
     lazy: true
     proxies:
       - 河北 联通1
@@ -157,10 +157,10 @@ proxy-groups:
     strategy: consistent-hashing
 
   - name: "南京 电信auto"
-    type: load-balance
+    type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    #tolerance: 100
+    interval: 300
+    tolerance: 50
     lazy: true
     proxies:
       - 南京 电信1
@@ -168,10 +168,10 @@ proxy-groups:
     strategy: consistent-hashing
 
   - name: "北京 电信auto"
-    type: load-balance
+    type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    #tolerance: 100
+    interval: 300
+    tolerance: 50
     lazy: true
     proxies:
       - 北京 电信1
