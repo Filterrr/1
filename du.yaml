@@ -169,10 +169,10 @@ proxy-groups:
       - 🌎 全球节点
 
   - name: "联通 广州auto"
-    type: load-balance
+    type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    #tolerance: 100
+    interval: 300
+    tolerance: 50
     lazy: true
     proxies:
       - 联通 广州1
@@ -180,10 +180,10 @@ proxy-groups:
     strategy: consistent-hashing
 
   - name: "联通 河北auto"
-    type: load-balance
+    type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    #tolerance: 100
+    interval: 300
+    tolerance: 50
     lazy: true
     proxies:
       - 联通 河北1
@@ -191,10 +191,10 @@ proxy-groups:
     strategy: consistent-hashing
 
   - name: "电信 南京auto"
-    type: load-balance
+    type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    #tolerance: 100
+    interval: 300
+    tolerance: 50
     lazy: true
     proxies:
       - 电信 南京1
@@ -202,10 +202,10 @@ proxy-groups:
     strategy: consistent-hashing
 
   - name: "电信 北京auto"
-    type: load-balance
+    type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    #tolerance: 100
+    interval: 300
+    tolerance: 50
     lazy: true
     proxies:
       - 电信 北京1
