@@ -121,7 +121,15 @@ proxies:
   - name: 联通 广州2
     server: 157.255.72.18
     <<: *baidu
-    
+
+  - name: 移动 广州
+    server: 183.232.232.253
+    <<: *baidu
+
+  - name: 移动 南京
+    server: 36.155.169.188
+    <<: *baidu
+
 proxy-groups:
   - name: 🌎 全球节点
     type: select
@@ -142,6 +150,8 @@ proxy-groups:
       - 电信 广州
       - 电信 北京auto
       - 电信 南京auto
+      - 移动 广州
+      - 移动 南京
       - Baidu auto
       - 🎯 全球直连
       
