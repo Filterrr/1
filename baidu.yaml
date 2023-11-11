@@ -39,7 +39,7 @@ geox-url:
 proxy-providers:
   xiaopro:
     type: http
-    url: https://sub.cfno1.eu.org/clash?host=world.kh11a.link&uuid=a59d7a2e-b2a6-4825-aa59-bc492f71c656&path=/?ed=2048&protocol=vless
+    url: https://sub.cfno1.eu.org/sub
     interval: 432000
     path: ./provider201.yaml
     health-check:
@@ -51,7 +51,7 @@ proxy-providers:
     type: http
     url: https://ludashi.link/sub
     interval: 432000
-    path: ./provider201.yaml
+    path: ./provider202.yaml
     health-check:
       enable: false
       interval: 7200
