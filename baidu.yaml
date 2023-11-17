@@ -39,19 +39,9 @@ geox-url:
 proxy-providers:
   xiaopro:
     type: http
-    url: https://sub.cfno1.eu.org/sub
+    url: https://sub.cfno1.eu.org/clash?host=warp.chigua.tk&uuid=ffffffff-ffff-ffff-ffff-ffffffffffff&path=&protocol=vmess
     interval: 432000
     path: ./provider201.yaml
-    health-check:
-      enable: false
-      interval: 7200
-      url: http://www.gstatic.com/generate_204
-
-  xiaopro1:
-    type: http
-    url: https://ludashi.link/sub
-    interval: 432000
-    path: ./provider202.yaml
     health-check:
       enable: false
       interval: 7200
@@ -135,7 +125,6 @@ proxy-groups:
     type: select
     use:
       - xiaopro
-      - xiaopro1
     proxies:
       - 🚀 百度直连
 
