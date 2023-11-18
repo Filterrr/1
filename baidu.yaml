@@ -105,11 +105,11 @@ proxies:
     <<: *baidu
 
   - name: 联通 广州1
-    server: 157.255.78.51
+    server: 163.177.17.6
     <<: *baidu
 
   - name: 联通 广州2
-    server: 157.255.72.18
+    server: 163.177.17.189
     <<: *baidu
 
   - name: 移动 广州
