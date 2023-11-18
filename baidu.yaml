@@ -65,7 +65,7 @@ proxies:
     <<: *baidu
 
   - name: 电信 广州
-    server: 14.215.182.75
+    server: 14.215.179.244
     <<: *baidu
 
   - name: 电信 北京1
@@ -105,11 +105,11 @@ proxies:
     <<: *baidu
 
   - name: 联通 广州1
-    server: 163.177.17.6
+    server: 157.255.78.51
     <<: *baidu
 
   - name: 联通 广州2
-    server: 163.177.17.189
+    server: 157.255.72.18
     <<: *baidu
 
   - name: 移动 广州
