@@ -39,7 +39,7 @@ geox-url:
 proxy-providers:
   xiaopro:
     type: http
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fsub.cfno1.eu.org%2Fclash%3Fhost%3Dwarp.chigua.tk%26uuid%3Dffffffff-ffff-ffff-ffff-ffffffffffff%26path%3D%26protocol%3Dvmess&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Mini_AdblockPlus.ini
+    url: https://sub.cfno1.eu.org/sub
     interval: 432000
     path: ./provider201.yaml
     health-check:
