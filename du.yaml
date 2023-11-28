@@ -172,44 +172,46 @@ proxy-groups:
     type: load-balance
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
+    tolerance: 50
     lazy: true
-    strategy: consistent-hashing
     proxies:
       - 联通 广州1
       - 联通 广州2
-
+    strategy: consistent-hashing
 
   - name: "联通 河北auto"
     type: load-balance
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
+    tolerance: 50
     lazy: true
-    strategy: consistent-hashing
     proxies:
       - 联通 河北1
       - 联通 河北2
+    strategy: consistent-hashing
 
   - name: "电信 南京auto"
     type: load-balance
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
+    tolerance: 50
     lazy: true
-    strategy: consistent-hashing
     proxies:
       - 电信 南京1
       - 电信 南京2
-
+    strategy: consistent-hashing
 
   - name: "电信 北京auto"
     type: load-balance
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
+    tolerance: 50
     lazy: true
-    strategy: consistent-hashing
     proxies:
       - 电信 北京1
       - 电信 北京2
       - 电信 北京3
+    strategy: consistent-hashing
 
 rule-providers:
   reject:
