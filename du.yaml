@@ -51,7 +51,7 @@ proxy-providers:
     type: http
     url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&type=vless
     interval: 432000
-    path: ./provider201.yaml
+    path: ./provider202.yaml
     health-check:
       enable: false
       interval: 7200
