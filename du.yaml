@@ -152,8 +152,9 @@ proxy-groups:
   - name: 🚀 百度直连
     type: select
     proxies:
-      - 联通 河北auto
-      - 联通 广州auto
+      - 联通 河北1
+      - 联通 河北2
+      - 联通 广州1
       - 联通 江苏
       - 联通 南京
       - 电信 苏州
