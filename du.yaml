@@ -31,7 +31,6 @@ dns:
     - https://223.6.6.6/dns-query
     - https://1.1.1.1/dns-query
 
-
 geox-url:
   geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
