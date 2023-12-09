@@ -16,6 +16,7 @@ find-process-mode: strict
 global-client-fingerprint: chrome
 geodata-loader: memconservative
 keep-alive-interval: 30
+tcp-concurrent: true
 
 dns:
   enable: true
