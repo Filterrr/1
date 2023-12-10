@@ -51,8 +51,8 @@ baidu: &baidu
   type: http
   port: 443
   headers:
-    Host: 153.3.236.22:443
-    X-T5-Auth: 683556433
+    Host: sptest.baidu.com
+    X-T5-Auth: 482857715
     User-Agent: okhttp/3.11.0 Dalvik/2.1.0 (Linux; Build/RKQ1.200826.002) baiduboxapp/11.0.5.12 (Baidu; P1 11)
         
 proxies:
