@@ -39,7 +39,7 @@ geox-url:
 proxy-providers:
   xiaopro1:
     type: http
-    url: https://sub.cfno1.eu.org/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&type=vless 
+    url: https://sub.xf.free.hr/api/sub?host=vmiss1.kh11a.link&uuid=85af9957-01d0-4699-940d-50ad4bfc2979&path=/2d6d7974ea/&format=base64&type=vmess
     interval: 432000
     path: ./provider201.yaml
     health-check:
@@ -49,7 +49,7 @@ proxy-providers:
 
   xiaopro2:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=vmiss1.kh11a.link&uuid=85af9957-01d0-4699-940d-50ad4bfc2979&path=/2d6d7974ea/&format=base64&type=vmess
+    url: https://sub.cfno1.eu.org/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&type=vless
     interval: 432000
     path: ./provider202.yaml
     health-check:
