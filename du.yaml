@@ -71,7 +71,7 @@ CF: &CF
     alterId: 0
     tls: true
     servername: vmiss1.kh11a.link
-    skip-cert-verify: false
+    cipher: auto
     network: ws
     ws-opts: 
       path: /2d6d7974ea/
