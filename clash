@@ -1,0 +1,91 @@
+###########################################
+#
+# 支持 此订阅 的工具推荐
+#
+# https://wiki.metacubex.one/startup/client/
+#
+###########################################
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+geodata-mode: true
+log-level: info
+ipv6: false
+find-process-mode: strict
+global-client-fingerprint: chrome
+geodata-loader: memconservative
+keep-alive-interval: 30
+tcp-concurrent: true
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.1/8
+  default-nameserver:
+    - https://223.6.6.6/dns-query
+    - https://1.1.1.1/dns-query
+  nameserver:
+    - https://223.6.6.6/dns-query
+    - https://1.1.1.1/dns-query
+
+geox-url:
+  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
+
+proxy-providers:
+  xiaopro:
+    type: http
+    url: https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fsub.cfno1.eu.org%2Fclash%3Fhost%3Dworld.kh11a.link%26uuid%3D6a26eadd-4580-49ba-ab5c-e96bf90f3b99%26path%3D%2F%3Fed%3D2048%26protocol%3Dvless&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Mini_AdblockPlus.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+    interval: 432000
+    path: ./provider201.yaml
+    health-check:
+      enable: false
+      interval: 7200
+      url: http://www.gstatic.com/generate_204
+
+
+proxy-groups:
+  - name: 🌎 全球节点
+    type: select
+    use:
+      - xiaopro
+
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+
+  - name: 🐟 漏网之鱼
+    type: relay
+    proxies:
+      - 🎯 全球直连
+      - 🌎 全球节点
+
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+
+rules:
+  # UDP 规则 
+  - NETWORK,UDP,🛑 全球拦截
+  # 广告过滤
+  - RULE-SET,reject,🛑 全球拦截
+  # 分流规则
+  - DOMAIN-KEYWORD,google,🐟 漏网之鱼
+  - GEOSITE,CN,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
