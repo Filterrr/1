@@ -37,9 +37,10 @@ geox-url:
   mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
 
 proxy-providers:
-  xiaopro:
+
+  xiaopro201:
     type: http
-    url: https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fsub.cfno1.eu.org%2Fclash%3Fhost%3Dworld.kh11a.link%26uuid%3D6a26eadd-4580-49ba-ab5c-e96bf90f3b99%26path%3D%2F%3Fed%3D2048%26protocol%3Dvless&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Mini_AdblockPlus.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+    url: https://sub.xf.free.hr/api/sub?host=vmiss1.kh11a.link&uuid=85af9957-01d0-4699-940d-50ad4bfc2979&path=/2d6d7974ea/&format=base64&type=vmess
     interval: 432000
     path: ./provider201.yaml
     health-check:
@@ -47,12 +48,22 @@ proxy-providers:
       interval: 7200
       url: http://www.gstatic.com/generate_204
 
+  xiaopro202:
+    type: http
+    url: https://api.v1.mk/sub?target=clash&url=https%3A%2F%2Fsub.cfno1.eu.org%2Fclash%3Fhost%3Dworld.kh11a.link%26uuid%3D6a26eadd-4580-49ba-ab5c-e96bf90f3b99%26path%3D%2F%3Fed%3D2048%26protocol%3Dvless&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Mini_AdblockPlus.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+    interval: 432000
+    path: ./provider202.yaml
+    health-check:
+      enable: false
+      interval: 7200
+      url: http://www.gstatic.com/generate_204
 
 proxy-groups:
   - name: 🌎 全球节点
     type: select
     use:
-      - xiaopro
+      - xiaopro201
+      - xiaopro202
 
   - name: 🎯 全球直连
     type: select
@@ -70,18 +81,8 @@ proxy-groups:
       - 🎯 全球直连
       - 🌎 全球节点
 
-rule-providers:
-  reject:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
-    interval: 86400
-
 
 rules:
-  # UDP 规则 
-  - NETWORK,UDP,🛑 全球拦截
   # 广告过滤
   - RULE-SET,reject,🛑 全球拦截
   # 分流规则
