@@ -84,7 +84,7 @@ proxy-groups:
 
 rules:
   # 广告过滤
-  - RULE-SET,reject,🛑 全球拦截
+  - geosite,category-ads-all,🛑 全球拦截
   # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
   - GEOSITE,CN,🎯 全球直连
