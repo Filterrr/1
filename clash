@@ -40,7 +40,7 @@ proxy-providers:
 
   xiaopro203:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=vmiss1.kh11a.link&uuid=85af9957-01d0-4699-940d-50ad4bfc2979&path=/ba3746307f/&format=base64&type=vmess
+    url: https://sub.xf.free.hr/api/sub?host=manuals-promo-lake-yields.trycloudflare.com&uuid=b000ffea-8a69-416f-9b22-76d0c733133d&path=b000ffea-8a69-416f-9b22-76d0c733133d-vm&format=base64&type=vmess
     interval: 86400
     path: ./provider203.yaml
     health-check:
