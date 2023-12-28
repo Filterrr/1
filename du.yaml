@@ -39,7 +39,7 @@ geox-url:
 proxy-providers:
   xiaopro1:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=vmiss2.kh11a.link&uuid=8d0bf592-7350-4bef-a724-6e9755ed364c&path=/9fd45231225c3/&format=base64&type=vmess
+    url: https://sub.xf.free.hr/api/sub?host=vmiss1.kh11a.link&uuid=8d0bf592-7350-4bef-a724-6e9755ed364c&path=/9fd45231225c3/&format=base64&type=vmess
     interval: 86400
     path: ./provider201.yaml
     health-check:
