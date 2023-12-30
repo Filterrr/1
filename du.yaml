@@ -39,7 +39,7 @@ geox-url:
 proxy-providers:
   xiaopro1:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=vmiss1.kh11a.link&uuid=8d0bf592-7350-4bef-a724-6e9755ed364c&path=/9fd45231225c3/&format=base64&type=vmess
+    url: https://api.dler.io/sub?target=v2ray&url=https%3A%2F%2Fsub.cfno1.eu.org%2Fclash%3Fhost%3Dvmiss1.kh11a.link%26uuid%3D8d0bf592-7350-4bef-a724-6e9755ed364c%26path%3D%2F9fd45231225c3%2F%26protocol%3Dvmess&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini
     interval: 86400
     path: ./provider201.yaml
     health-check:
@@ -49,7 +49,7 @@ proxy-providers:
 
   xiaopro2:
     type: http
-    url: https://sub.cfno1.eu.org/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&type=vless
+    url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&type=vless
     interval: 86400
     path: ./provider202.yaml
     health-check:
