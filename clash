@@ -7,16 +7,28 @@
 ###########################################
 
 mixed-port: 7890
-allow-lan: false
+allow-lan: true
+lan-allowed-ips:
+- 0.0.0.0/0
+- ::/0
 mode: rule
 geodata-mode: true
-log-level: info
+log-level: debug
 ipv6: false
 find-process-mode: strict
 global-client-fingerprint: chrome
 geodata-loader: memconservative
 keep-alive-interval: 30
 tcp-concurrent: true
+unified-delay: true
+geo-auto-update: true
+geo-update-interval: 24
+global-ua: clash.meta
+
+profile:
+  store-selected: true
+  # 储存 API 对策略组的选择，以供下次启动时使用
+  store-fake-ip: true
 
 dns:
   enable: true
