@@ -52,7 +52,7 @@ geox-url:
 proxy-providers:
   xiaopro1:
     type: http
-    url: https://api.dler.io/sub?target=v2ray&url=https%3A%2F%2Fsub.cfno1.eu.org%2Fclash%3Fhost%3Dvmiss1.kh11a.link%26uuid%3D8d0bf592-7350-4bef-a724-6e9755ed364c%26path%3D%2F9fd45231225c3%2F%26protocol%3Dvmess&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini
+    url: https://sub.cfno1.eu.org/clash?host=vmiss1.kh11a.link&uuid=8d0bf592-7350-4bef-a724-6e9755ed364c&path=/9fd45231225c3/&protocol=vmess
     interval: 86400
     path: ./provider201.yaml
     health-check:
