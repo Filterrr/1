@@ -27,9 +27,7 @@ global-ua: clash.meta
 
 profile:
   store-selected: true
-  # 储存 API 对策略组的选择，以供下次启动时使用
   store-fake-ip: true
-  # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
 
 dns:
   enable: true
@@ -148,7 +146,7 @@ proxies:
     <<: *baidu
 
   - name: CF
-    server: 172.67.32.0
+    server: www.visa.com.hk
     port: 8443
     <<: *CF
     
