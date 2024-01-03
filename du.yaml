@@ -62,7 +62,7 @@ proxy-providers:
 
   xiaopro2:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&type=vless
+    url: https://sub.xf.free.hr/api/sub?format=clash&host=vmiss1.kh11a.link&uuid=8d0bf592-7350-4bef-a724-6e9755ed364c&path=/9fd45231225c3/&type=vmess
     interval: 86400
     path: ./provider202.yaml
     health-check:
