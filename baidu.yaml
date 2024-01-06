@@ -27,7 +27,6 @@ global-ua: clash.meta
 
 profile:
   store-selected: true
-  # 储存 API 对策略组的选择，以供下次启动时使用
   store-fake-ip: true
 
 dns:
