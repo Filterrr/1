@@ -145,6 +145,14 @@ proxies:
     server: 157.255.72.18
     <<: *baidu
 
+  - name: 移动 南京
+    server: 36.155.169.188
+    <<: *baidu
+
+  - name: 移动 广州
+    server: 183.240.98.84
+    <<: *baidu
+
   - name: CF
     server: www.visa.com.hk
     port: 8443
@@ -175,6 +183,8 @@ proxy-groups:
       - 电信 广州
       - 电信 北京auto
       - 电信 南京auto
+      - 移动 广州
+      - 移动 南京
       - Baidu auto
       - 🎯 全球直连
       
