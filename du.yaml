@@ -163,8 +163,6 @@ proxy-groups:
       - TW
       - JP
       - KR
-      - CN
-
 
   - name: 🚀 百度直连
     type: select
@@ -284,18 +282,7 @@ proxy-groups:
     use:
       - xiaopro1
       - xiaopro2
-
-  - name: "CN"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
-    lazy: true
-    filter: "(?i)中|cn|china|chinese"
-    use:
-      - xiaopro1
-      - xiaopro2
-
+      
 rules:
   # UDP 规则 
   - NETWORK,UDP,🛑 全球拦截
