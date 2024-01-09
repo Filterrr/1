@@ -51,7 +51,7 @@ proxy-providers:
   xiaopro1:
     type: http
     url: https://sub.cfno1.eu.org/clash?host=vmiss1.kh11a.link&uuid=8d0bf592-7350-4bef-a724-6e9755ed364c&path=/9fd45231225c3/&protocol=vmess
-    interval: 86400
+    interval: 604800
     path: ./provider201.yaml
     health-check:
       enable: false
@@ -61,7 +61,7 @@ proxy-providers:
   xiaopro2:
     type: http
     url: https://sub.xf.free.hr/api/sub?&host=vmiss1.kh11a.link&uuid=8d0bf592-7350-4bef-a724-6e9755ed364c&path=/9fd45231225c3/&type=vmess
-    interval: 86400
+    interval: 604800
     path: ./provider202.yaml
     health-check:
       enable: false
