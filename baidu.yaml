@@ -50,7 +50,7 @@ geox-url:
 proxy-providers:
   xiaopro:
     type: http
-    url: https://psub.affa21.free.hr/sub?target=clash&url=https%3A%2F%2Fsub.xf.free.hr%2Fapi%2Fsub%3Fhost%3Dworld.kh11a.link%26uuid%3D1ff64191-83b3-410a-86e3-74f721681a80%26format%3Dbase64%26type%3Dvless&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&emoji=true&list=true&tfo=false&scv=true&fdn=false&sort=false&new_name=true
+    url: https://psub.affa21.free.hr/sub?target=clash&url=https%3A%2F%2Fsub.xijingping.gay%2Fapi%2Fsub%3Fhost%3Dworld.kh11a.link%26uuid%3D1ff64191-83b3-410a-86e3-74f721681a80%26format%3Dbase64%26type%3Dvless&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&emoji=true&list=true&tfo=false&scv=true&fdn=false&sort=false&new_name=true
     interval: 86400
     path: ./provider200.yaml
     health-check:
