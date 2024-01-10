@@ -136,6 +136,10 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 百度直连
+      - HK
+      - TW
+      - JP
+      - KR
 
   - name: 🚀 百度直连
     type: select
