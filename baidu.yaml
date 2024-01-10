@@ -134,8 +134,6 @@ proxies:
 proxy-groups:
   - name: 🌎 全球节点
     type: select
-    use:
-      - xiaopro
     proxies:
       - 🚀 百度直连
 
@@ -215,6 +213,47 @@ proxy-groups:
       - 电信 北京2
       - 电信 北京3
     strategy: consistent-hashing
+
+  - name: "HK"
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 50
+    lazy: true
+    filter: "(?i)港|hk|hongkong|hong kong"
+    use:
+      - xiaopro1
+      - xiaopro2
+
+  - name: "JP"
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 50
+    lazy: true
+    filter: "(?i)日|jp|japanese|japan"
+    use:
+      - xiaopro
+
+  - name: "KR"
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 50
+    lazy: true
+    filter: "(?i)韩|kr|South Korea|SouthKorea"
+    use:
+      - xiaopro
+
+  - name: "TW"
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 50
+    lazy: true
+    filter: "(?i)台|tw|taiwanese|taiwan|taiwan strait"
+    use:
+      - xiaopro
 
 rule-providers:
   reject:
