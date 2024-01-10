@@ -226,8 +226,7 @@ proxy-groups:
     lazy: true
     filter: "(?i)港|hk|hongkong|hong kong"
     use:
-      - xiaopro1
-      - xiaopro2
+      - xiaopro
 
   - name: "JP"
     type: url-test
