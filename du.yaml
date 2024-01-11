@@ -266,7 +266,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     lazy: true
-    filter: "(?i)日|jp|japanese|japan"
+    filter: "(?i)日|jp|japanese|japan|tokyo"
     use:
       - xiaopro1
       - xiaopro2
@@ -277,7 +277,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     lazy: true
-    filter: "(?i)韩|kr|South Korea|SouthKorea"
+    filter: "(?i)韩|kr|south korea|southkorea|seoul"
     use:
       - xiaopro1
       - xiaopro2
