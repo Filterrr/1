@@ -244,7 +244,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     lazy: true
-    filter: "(?i)韩|kr|South Korea|SouthKorea"
+    filter: "(?i)韩|kr|South Korea|SouthKorea|seoul"
     use:
       - xiaopro
 
