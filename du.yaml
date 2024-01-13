@@ -179,7 +179,7 @@ proxies:
     <<: *baidu
 
   - name: CF
-    server: www.visa.com.hk
+    server: 104.16.96.142
     port: 8443
     <<: *CF
     
