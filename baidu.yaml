@@ -234,7 +234,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     lazy: true
-    filter: "(?i)日|jp|japanese|japan"
+    filter: "(?i)日|jp|japanese|japan|tokyo"
     use:
       - xiaopro
 
