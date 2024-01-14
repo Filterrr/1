@@ -128,67 +128,67 @@ vm: &vm
         Host: vmiss1.kh11a.link
         
 proxies:
-  - name: Baidu auto
+  - name: 🇨🇳 Baidu auto
     server: cloudnproxy.baidu.com
     <<: *baidu
 
-  - name: 电信 苏州
+  - name: 🇨🇳 电信 苏州
     server: 180.97.93.202
     <<: *baidu
 
-  - name: 电信 广州
+  - name: 🇨🇳 电信 广州
     server: 14.215.179.244
     <<: *baidu
 
-  - name: 电信 北京1
+  - name: 🇨🇳 电信 北京1
     server: 220.181.111.189
     <<: *baidu
 
-  - name: 电信 北京2
+  - name: 🇨🇳 电信 北京2
     server: 220.181.33.174
     <<: *baidu
 
-  - name: 电信 北京3
+  - name: 🇨🇳 电信 北京3
     server: 220.181.7.1
     <<: *baidu
 
-  - name: 电信 南京1
+  - name: 🇨🇳 电信 南京1
     server: 180.101.50.249
     <<: *baidu
 
-  - name: 电信 南京2
+  - name: 🇨🇳 电信 南京2
     server: 180.101.50.208
     <<: *baidu
 
-  - name: 联通 河北1
+  - name: 🇨🇳 联通 河北1
     server: 110.242.70.68
     <<: *baidu
 
-  - name: 联通 河北2
+  - name: 🇨🇳 联通 河北2
     server: 110.242.70.69
     <<: *baidu
 
-  - name: 联通 南京
+  - name: 🇨🇳 联通 南京
     server: 153.3.237.117
     <<: *baidu
 
-  - name: 联通 江苏
+  - name: 🇨🇳 联通 江苏
     server: 157.0.148.53
     <<: *baidu
 
-  - name: 联通 广州1
+  - name: 🇨🇳 联通 广州1
     server: 157.255.78.51
     <<: *baidu
 
-  - name: 联通 广州2
+  - name: 🇨🇳 联通 广州2
     server: 157.255.72.18
     <<: *baidu
 
-  - name: 移动 南京
+  - name: 🇨🇳 移动 南京
     server: 36.155.169.188
     <<: *baidu
 
-  - name: 移动 广州
+  - name: 🇨🇳 移动 广州
     server: 183.240.98.84
     <<: *baidu
 
@@ -220,17 +220,17 @@ proxy-groups:
   - name: 🚀 百度直连
     type: select
     proxies:
-      - 联通 河北auto
-      - 联通 广州auto
-      - 联通 江苏
-      - 联通 南京
-      - 电信 苏州
-      - 电信 广州
-      - 电信 北京auto
-      - 电信 南京auto
-      - 移动 广州
-      - 移动 南京
-      - Baidu auto
+      - 🇨🇳 联通 河北auto
+      - 🇨🇳 联通 广州auto
+      - 🇨🇳 联通 江苏
+      - 🇨🇳 联通 南京
+      - 🇨🇳 电信 苏州
+      - 🇨🇳 电信 广州
+      - 🇨🇳 电信 北京auto
+      - 🇨🇳 电信 南京auto
+      - 🇨🇳 移动 广州
+      - 🇨🇳 移动 南京
+      - 🇨🇳 Baidu auto
       - 🎯 全球直连
       
   - name: 🎯 全球直连
@@ -256,49 +256,49 @@ proxy-groups:
       - CF
 
     
-  - name: "联通 广州auto"
+  - name: "🇨🇳 联通 广州auto"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 50
     lazy: true
     proxies:
-      - 联通 广州1
-      - 联通 广州2
+      - 🇨🇳 联通 广州1
+      - 🇨🇳 联通 广州2
     strategy: consistent-hashing
 
-  - name: "联通 河北auto"
+  - name: "🇨🇳 联通 河北auto"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 50
     lazy: true
     proxies:
-      - 联通 河北1
-      - 联通 河北2
+      - 🇨🇳 联通 河北1
+      - 🇨🇳 联通 河北2
     strategy: consistent-hashing
 
-  - name: "电信 南京auto"
+  - name: "🇨🇳 电信 南京auto"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 50
     lazy: true
     proxies:
-      - 电信 南京1
-      - 电信 南京2
+      - 🇨🇳 电信 南京1
+      - 🇨🇳 电信 南京2
     strategy: consistent-hashing
 
-  - name: "电信 北京auto"
+  - name: "🇨🇳 电信 北京auto"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
     tolerance: 50
     lazy: true
     proxies:
-      - 电信 北京1
-      - 电信 北京2
-      - 电信 北京3
+      - 🇨🇳 电信 北京1
+      - 🇨🇳 电信 北京2
+      - 🇨🇳 电信 北京3
     strategy: consistent-hashing
 
   - name: "🇭🇰 HK"
