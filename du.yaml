@@ -249,7 +249,7 @@ proxy-groups:
       - 🚀 百度直连
       - 🌎 全球节点
 
-  - name: ChatGPT
+  - name: 🔘 ChatGPT
     type: relay
     proxies:
       - 🚀 百度直连
@@ -353,7 +353,7 @@ rules:
   - geosite,category-ads-all,🛑 全球拦截
   # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - DOMAIN-KEYWORD,openai,ChatGPT
+  - DOMAIN-KEYWORD,openai,🔘 ChatGPT
   - GEOSITE,CN,🚀 百度直连
   - GEOIP,CN,🚀 百度直连
   - MATCH,🐟 漏网之鱼
