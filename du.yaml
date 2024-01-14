@@ -112,6 +112,20 @@ CF: &CF
       path: /
       headers: 
         Host: world.kh11a.link
+
+vm: &vm
+    type: vmess
+    uuid: 8d0bf592-7350-4bef-a724-6e9755ed364c
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vmiss1.kh11a.link
+    network: ws
+    ws-opts: 
+      path: /9fd45231225c3/
+      headers:
+        Host: vmiss1.kh11a.link
         
 proxies:
   - name: Baidu auto
@@ -182,6 +196,11 @@ proxies:
     server: 104.16.96.142
     port: 8443
     <<: *CF
+
+  - name: 移动CF
+    server: 104.16.32.36
+    port: 443
+    <<: *vm
     
 proxy-groups:
   - name: 🌎 全球节点
@@ -191,6 +210,7 @@ proxy-groups:
 #      - xiaopro2
     proxies:
       - 🚀 百度直连
+      - 移动CF
       - CF
       - HK
       - TW
