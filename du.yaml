@@ -212,10 +212,10 @@ proxy-groups:
       - 🚀 百度直连
       - 移动CF
       - CF
-      - HK
-      - TW
-      - JP
-      - KR
+      - 🇭🇰 HK
+      - 🇹🇼 TW
+      - 🇯🇵 JP
+      - 🇰🇷 KR
 
   - name: 🚀 百度直连
     type: select
@@ -301,7 +301,7 @@ proxy-groups:
       - 电信 北京3
     strategy: consistent-hashing
 
-  - name: "HK"
+  - name: "🇭🇰 HK"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
@@ -312,7 +312,7 @@ proxy-groups:
       - xiaopro1
       - xiaopro2
 
-  - name: "JP"
+  - name: "🇯🇵 JP"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
@@ -323,7 +323,7 @@ proxy-groups:
       - xiaopro1
       - xiaopro2
 
-  - name: "KR"
+  - name: "🇰🇷 KR"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
@@ -334,7 +334,7 @@ proxy-groups:
       - xiaopro1
       - xiaopro2
 
-  - name: "TW"
+  - name: "🇹🇼 TW"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
