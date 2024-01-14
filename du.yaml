@@ -119,7 +119,7 @@ vm: &vm
     alterId: 0
     cipher: auto
     tls: true
-    skip-cert-verify: true
+    skip-cert-verify: false
     servername: vmiss1.kh11a.link
     network: ws
     ws-opts: 
