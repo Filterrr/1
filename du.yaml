@@ -307,7 +307,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     lazy: true
-    filter: "(?i)港|hk|hongkong|hong kong"
+    filter: "港(?i)|hk|hongkong|hong kong"
     use:
       - xiaopro1
       - xiaopro2
@@ -318,7 +318,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     lazy: true
-    filter: "(?i)日|jp|japanese|japan|tokyo"
+    filter: "日(?i)|jp|japanese|japan|tokyo"
     use:
       - xiaopro1
       - xiaopro2
@@ -329,7 +329,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     lazy: true
-    filter: "(?i)韩|kr|south korea|southkorea|seoul"
+    filter: "韩(?i)|kr|south korea|southkorea|seoul"
     use:
       - xiaopro1
       - xiaopro2
@@ -340,7 +340,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     lazy: true
-    filter: "(?i)台|tw|taiwanese|taiwan|taiwan strait"
+    filter: "台(?i)|tw|taiwanese|taiwan|taiwan strait"
     use:
       - xiaopro1
       - xiaopro2
