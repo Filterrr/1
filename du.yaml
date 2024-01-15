@@ -93,25 +93,6 @@ proxy-providers:
       interval: 7200
       url: http://www.gstatic.com/generate_204
 
-  xiaopro3:
-    type: http
-    url: https://sub.cfno1.eu.org/converter/sub?target=clash&url=https%3A%2F%2Fsub.cfno1.eu.org%2Fsub_jcnf&emoji=true
-    interval: 604800
-    path: ./provider203.yaml
-    health-check:
-      enable: false
-      interval: 7200
-      url: http://www.gstatic.com/generate_204
-
-  xiaopro4:
-    type: http
-    url: https://sub.cfno1.eu.org/converter/sub?target=clash&url=https%3A%2F%2Fsub.cfno1.eu.org%2Fsub_bulianglin&emoji=true
-    interval: 604800
-    path: ./provider204.yaml
-    health-check:
-      enable: false
-      interval: 7200
-      url: http://www.gstatic.com/generate_204
 
 baidu: &baidu
   type: http
@@ -328,8 +309,6 @@ proxy-groups:
     use:
       - xiaopro1
       - xiaopro2
-      - xiaopro3
-      - xiaopro4
 
   - name: "🇯🇵 JP"
     type: url-test
@@ -341,8 +320,6 @@ proxy-groups:
     use:
       - xiaopro1
       - xiaopro2
-      - xiaopro3
-      - xiaopro4
 
   - name: "🇰🇷 KR"
     type: url-test
@@ -354,8 +331,6 @@ proxy-groups:
     use:
       - xiaopro1
       - xiaopro2
-      - xiaopro3
-      - xiaopro4
 
   - name: "🇹🇼 TW"
     type: url-test
@@ -367,8 +342,6 @@ proxy-groups:
     use:
       - xiaopro1
       - xiaopro2
-      - xiaopro3
-      - xiaopro4
       
 rules:
   # UDP 规则 
