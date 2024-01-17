@@ -173,10 +173,9 @@ proxy-groups:
       - 🚀 百度直连
       - 移动CF
       - CF
-      - 🇭🇰 HK
-      - 🇹🇼 TW
-      - 🇯🇵 JP
-      - 🇰🇷 KR
+    use:
+      - xiaopro1
+      - xiaopro2
 
   - name: 🚀 百度直连
     type: select
@@ -253,46 +252,6 @@ proxy-groups:
       - 🇨🇳 电信 北京1
       - 🇨🇳 电信 北京2
       - 🇨🇳 电信 北京3
-
-  - name: "🇭🇰 HK"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    lazy: true
-    filter: "港(?i)|hk|hongkong|hong kong"
-    use:
-      - xiaopro1
-      - xiaopro2
-
-  - name: "🇯🇵 JP"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    lazy: true
-    filter: "日(?i)|jp|japanese|japan|tokyo"
-    use:
-      - xiaopro1
-      - xiaopro2
-
-  - name: "🇰🇷 KR"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    lazy: true
-    filter: "韩(?i)|kr|south korea|southkorea|seoul"
-    use:
-      - xiaopro1
-      - xiaopro2
-
-  - name: "🇹🇼 TW"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    lazy: true
-    filter: "台(?i)|tw|taiwanese|taiwan|taiwan strait"
-    use:
-      - xiaopro1
-      - xiaopro2
       
 rules:
   # UDP 规则 
