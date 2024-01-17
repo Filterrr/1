@@ -93,7 +93,6 @@ proxy-providers:
       interval: 7200
       url: http://www.gstatic.com/generate_204
 
-
 baidu: &baidu
   type: http
   port: 443
@@ -257,53 +256,44 @@ proxy-groups:
   - name: "🇨🇳 联通 广州auto"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
+    interval: 600
     lazy: true
     proxies:
       - 🇨🇳 联通 广州1
       - 🇨🇳 联通 广州2
-    strategy: consistent-hashing
 
   - name: "🇨🇳 联通 河北auto"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
+    interval: 600
     lazy: true
     proxies:
       - 🇨🇳 联通 河北1
       - 🇨🇳 联通 河北2
-    strategy: consistent-hashing
 
   - name: "🇨🇳 电信 南京auto"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
+    interval: 600
     lazy: true
     proxies:
       - 🇨🇳 电信 南京1
       - 🇨🇳 电信 南京2
-    strategy: consistent-hashing
 
   - name: "🇨🇳 电信 北京auto"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
+    interval: 600
     lazy: true
     proxies:
       - 🇨🇳 电信 北京1
       - 🇨🇳 电信 北京2
       - 🇨🇳 电信 北京3
-    strategy: consistent-hashing
 
   - name: "🇭🇰 HK"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
+    interval: 600
     lazy: true
     filter: "港(?i)|hk|hongkong|hong kong"
     use:
@@ -313,8 +303,7 @@ proxy-groups:
   - name: "🇯🇵 JP"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
+    interval: 600
     lazy: true
     filter: "日(?i)|jp|japanese|japan|tokyo"
     use:
@@ -324,8 +313,7 @@ proxy-groups:
   - name: "🇰🇷 KR"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
+    interval: 600
     lazy: true
     filter: "韩(?i)|kr|south korea|southkorea|seoul"
     use:
@@ -335,8 +323,7 @@ proxy-groups:
   - name: "🇹🇼 TW"
     type: url-test
     url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
+    interval: 600
     lazy: true
     filter: "台(?i)|tw|taiwanese|taiwan|taiwan strait"
     use:
@@ -347,7 +334,6 @@ rules:
   # UDP 规则 
   - NETWORK,UDP,🛑 全球拦截
   # 广告过滤
-  #- RULE-SET,reject,🛑 全球拦截
   - geosite,category-ads-all,🛑 全球拦截
   # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
