@@ -61,7 +61,7 @@ baidu: &baidu
   type: http
   port: 443
   headers:
-    Host: 153.3.237.117
+    Host: 153.3.237.117:443
     X-T5-Auth: 946827711
     User-Agent: okhttp/3.11.0 Dalvik/2.1.0 (Linux; Build/RKQ1.200826.002) baiduboxapp/11.0.5.12 (Baidu; P1 11)
 
