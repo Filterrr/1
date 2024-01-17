@@ -156,10 +156,10 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 百度直连
-      - HK
-      - TW
-      - JP
-      - KR
+    use:
+      - xiaopro
+      - xiaopro3
+      - xiaopro4
 
   - name: 🚀 百度直连
     type: select
@@ -202,7 +202,6 @@ proxy-groups:
     proxies:
       - 联通 广州1
       - 联通 广州2
-    strategy: consistent-hashing
 
   - name: "联通 河北auto"
     type: url-test
@@ -213,7 +212,6 @@ proxy-groups:
     proxies:
       - 联通 河北1
       - 联通 河北2
-    strategy: consistent-hashing
 
   - name: "电信 南京auto"
     type: url-test
@@ -224,7 +222,6 @@ proxy-groups:
     proxies:
       - 电信 南京1
       - 电信 南京2
-    strategy: consistent-hashing
 
   - name: "电信 北京auto"
     type: url-test
@@ -236,55 +233,6 @@ proxy-groups:
       - 电信 北京1
       - 电信 北京2
       - 电信 北京3
-    strategy: consistent-hashing
-
-  - name: "HK"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
-    lazy: true
-    filter: "(?i)港|hk|hongkong|hong kong"
-    use:
-      - xiaopro
-      - xiaopro3
-      - xiaopro4
-
-  - name: "JP"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
-    lazy: true
-    filter: "日(?i)|jp|japanese|japan|tokyo"
-    use:
-      - xiaopro
-      - xiaopro3
-      - xiaopro4
-
-  - name: "KR"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
-    lazy: true
-    filter: "韩(?i)|kr|South Korea|SouthKorea|seoul"
-    use:
-      - xiaopro
-      - xiaopro3
-      - xiaopro4
-
-  - name: "TW"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
-    lazy: true
-    filter: "台(?i)|tw|taiwanese|taiwan|taiwan strait"
-    use:
-      - xiaopro
-      - xiaopro3
-      - xiaopro4
 
 rule-providers:
   reject:
