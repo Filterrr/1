@@ -7,27 +7,16 @@
 ###########################################
 
 mixed-port: 7890
-allow-lan: true
-lan-allowed-ips:
-- 0.0.0.0/0
-- ::/0
+allow-lan: false
 mode: rule
 geodata-mode: true
-log-level: debug
+log-level: info
 ipv6: false
 find-process-mode: strict
 global-client-fingerprint: chrome
 geodata-loader: memconservative
 keep-alive-interval: 30
 tcp-concurrent: true
-unified-delay: true
-geo-auto-update: true
-geo-update-interval: 24
-global-ua: clash.meta
-
-profile:
-  store-selected: true
-  store-fake-ip: true
 
 dns:
   enable: true
@@ -41,31 +30,6 @@ dns:
   nameserver:
     - https://223.6.6.6/dns-query
     - https://1.1.1.1/dns-query
-
-sniffer:
-  enable: true
-  force-dns-mapping: true
-  parse-pure-ip: true
-  override-destination: true
-  sniff:
-    QUIC:
-      ports: [ 443 ]
-    TLS:
-      ports: [443, 8443]
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
-  force-domain:
-    - +.v2ex.com
-  skip-domain:
-    - Mijia Cloud
-  sniffing:
-    - tls
-    - http
-  port-whitelist:
-    - "80"
-    - "443"
-    - 8000-9999
 
 geox-url:
   geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
