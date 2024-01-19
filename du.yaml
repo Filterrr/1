@@ -39,7 +39,7 @@ geox-url:
 proxy-providers:
   xiaopro1:
     type: http
-    url: https://sub.cfno1.eu.org/clash?host=vmiss1.kh11a.link&uuid=e48109d9-6613-493d-b807-62cbdb544bdb&path=b8a6cb3e&protocol=vmess
+    url: https://sub.cfno1.eu.org/clash?host=vmiss2.kh11a.link&uuid=e48109d9-6613-493d-b807-62cbdb544bdb&path=b8a6cb3e&protocol=vmess
     interval: 604800
     path: ./provider201.yaml
     health-check:
@@ -49,7 +49,7 @@ proxy-providers:
 
   xiaopro2:
     type: http
-    url: http://sub.xijingping.gay/api/sub?&host=vmiss1.kh11a.link&uuid=e48109d9-6613-493d-b807-62cbdb544bdb&path=b8a6cb3e&type=vmess
+    url: http://sub.xijingping.gay/api/sub?&host=vmiss2.kh11a.link&uuid=e48109d9-6613-493d-b807-62cbdb544bdb&path=b8a6cb3e&type=vmess
     interval: 604800
     path: ./provider202.yaml
     health-check:
