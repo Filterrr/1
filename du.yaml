@@ -79,7 +79,7 @@ CF: &CF
 
 vm: &vm
     type: vmess
-    uuid: 8d0bf592-7350-4bef-a724-6e9755ed364c
+    uuid: e48109d9-6613-493d-b807-62cbdb544bdb
     alterId: 0
     cipher: auto
     tls: true
@@ -87,7 +87,7 @@ vm: &vm
     servername: vmiss1.kh11a.link
     network: ws
     ws-opts: 
-      path: /9fd45231225c3/
+      path: b8a6cb3e
       headers:
         Host: vmiss1.kh11a.link
         
