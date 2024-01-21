@@ -157,8 +157,8 @@ proxies:
     <<: *baidu
 
   - name: CF
-    server: www.gov.se
-    port: 443
+    server: c.xf.free.hr
+    port: 2087
     <<: *CF
 
   - name: 移动CF
