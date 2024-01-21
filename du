@@ -157,7 +157,7 @@ proxies:
     <<: *baidu
 
   - name: CF
-    server: c.xf.free.hr
+    server: www.gov.se
     port: 2087
     <<: *CF
 
