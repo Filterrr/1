@@ -60,7 +60,7 @@ proxy-providers:
 
   xiaopro3:
     type: http
-    url: https://sub.cfno1.eu.org/converter/sub?target=clash&url=https%3A%2F%2Fsub.cfno1.eu.org%2Fsub_jcnf&emoji=true
+    url: https://sub.cfno1.eu.org/sub_jcnf
     interval: 604800
     path: ./provider203.yaml
     health-check:
@@ -70,7 +70,7 @@ proxy-providers:
 
   xiaopro4:
     type: http
-    url: https://sub.cfno1.eu.org/converter/sub?target=clash&url=https%3A%2F%2Fsub.cfno1.eu.org%2Fsub_bulianglin&emoji=true
+    url: https://sub.cfno1.eu.org/sub_bulianglin
     interval: 604800
     path: ./provider204.yaml
     health-check:
