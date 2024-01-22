@@ -77,7 +77,19 @@ proxy-providers:
       enable: false
       interval: 7200
       url: http://www.gstatic.com/generate_204
-        
+
+CF: &CF
+    type: vless
+    uuid: 1ff64191-83b3-410a-86e3-74f721681a80
+    tls: true
+    servername: world.kh11a.link
+    skip-cert-verify: false
+    network: ws
+    ws-opts: 
+      path: /
+      headers: 
+        Host: world.kh11a.link
+
 proxy-groups:
   - name: 🌎 全球节点
     type: select
