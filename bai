@@ -90,11 +90,17 @@ CF: &CF
       headers: 
         Host: world.kh11a.link
 
+  - name: CF
+    server: www.gov.se
+    port: 2087
+    <<: *CF
+
 proxy-groups:
   - name: 🌎 全球节点
     type: select
     proxies:
       - 🚀 百度直连
+
     use:
       - xiaopro
       - xiaopro3
