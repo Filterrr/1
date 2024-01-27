@@ -100,7 +100,7 @@ CF: &CF
 
 vm: &vm
     type: vmess
-    uuid: e48109d9-6613-493d-b807-62cbdb544bdb
+    uuid: 86e0e3a3-5435-4d99-8d5f-54a124d6cb79
     alterId: 0
     cipher: auto
     tls: true
@@ -108,7 +108,7 @@ vm: &vm
     servername: hk888.kh11a.link
     network: ws
     ws-opts: 
-      path: b8a6cb3e
+      path: /b8a6cb3e/
       headers:
         Host: hk888.kh11a.link
         
