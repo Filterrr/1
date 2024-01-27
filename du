@@ -189,8 +189,11 @@ proxy-groups:
       - 移动CF
       - CF
     use:
+      - xiaopro
       - xiaopro1
       - xiaopro2
+      - xiaopro3
+      - xiaopro4
 
   - name: 🚀 百度直连
     type: select
