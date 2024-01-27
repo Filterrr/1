@@ -57,6 +57,27 @@ proxy-providers:
       interval: 7200
       url: http://www.gstatic.com/generate_204
 
+  xiaopro3:
+    type: http
+    url: https://sub.cfno1.eu.org/sub_jcnf
+    interval: 604800
+    path: ./provider203.yaml
+    health-check:
+      enable: false
+      interval: 7200
+      url: http://www.gstatic.com/generate_204
+
+  xiaopro4:
+    type: http
+    url: https://sub.cfno1.eu.org/sub_bulianglin
+    interval: 604800
+    path: ./provider204.yaml
+    health-check:
+      enable: false
+      interval: 7200
+      url: http://www.gstatic.com/generate_204
+
+
 baidu: &baidu
   type: http
   port: 443
