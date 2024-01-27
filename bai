@@ -58,19 +58,10 @@ proxy-providers:
       interval: 7200
       url: http://www.gstatic.com/generate_204
 
-  xiaopro1:
-    type: http
-    url: https://sub.cfno1.eu.org/clash?host=hk888.kh11a.link&uuid=e48109d9-6613-493d-b807-62cbdb544bdb&path=b8a6cb3e&protocol=vmess
-    interval: 604800
-    path: ./provider201.yaml
-    health-check:
-      enable: false
-      interval: 7200
-      url: http://www.gstatic.com/generate_204
 
   xiaopro2:
     type: http
-    url: http://sub.xijingping.gay/api/sub?&host=hk888.kh11a.link&uuid=e48109d9-6613-493d-b807-62cbdb544bdb&path=b8a6cb3e&type=vmess
+    url: http://sub.xijingping.gay/api/sub?&host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=b8a6cb3e&type=vless
     interval: 604800
     path: ./provider202.yaml
     health-check:
