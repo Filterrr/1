@@ -37,6 +37,16 @@ geox-url:
   mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
 
 proxy-providers:
+  xiaopro:
+    type: http
+    url: https://sub.cfno1.eu.org/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&protocol=vless
+    interval: 86400
+    path: ./provider200.yaml
+    health-check:
+      enable: false
+      interval: 7200
+      url: http://www.gstatic.com/generate_204
+
   xiaopro1:
     type: http
     url: https://sub.cfno1.eu.org/clash?host=hk888.kh11a.link&uuid=e48109d9-6613-493d-b807-62cbdb544bdb&path=b8a6cb3e&protocol=vmess
