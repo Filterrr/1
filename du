@@ -180,7 +180,6 @@ proxy-groups:
       - 移动CF
       - CF
     use:
-      - xiaopro
       - xiaopro1
       - xiaopro2
       - xiaopro3
