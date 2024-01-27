@@ -115,7 +115,6 @@ proxy-groups:
       - CF
     use:
       - xiaopro
-      - xiaopro1
       - xiaopro2
       - xiaopro3
       - xiaopro4
