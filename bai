@@ -58,6 +58,26 @@ proxy-providers:
       interval: 7200
       url: http://www.gstatic.com/generate_204
 
+  xiaopro1:
+    type: http
+    url: https://sub.cfno1.eu.org/clash?host=hk888.kh11a.link&uuid=e48109d9-6613-493d-b807-62cbdb544bdb&path=b8a6cb3e&protocol=vmess
+    interval: 604800
+    path: ./provider201.yaml
+    health-check:
+      enable: false
+      interval: 7200
+      url: http://www.gstatic.com/generate_204
+
+  xiaopro2:
+    type: http
+    url: http://sub.xijingping.gay/api/sub?&host=hk888.kh11a.link&uuid=e48109d9-6613-493d-b807-62cbdb544bdb&path=b8a6cb3e&type=vmess
+    interval: 604800
+    path: ./provider202.yaml
+    health-check:
+      enable: false
+      interval: 7200
+      url: http://www.gstatic.com/generate_204
+
   xiaopro3:
     type: http
     url: https://sub.cfno1.eu.org/sub_jcnf
@@ -104,6 +124,8 @@ proxy-groups:
       - CF
     use:
       - xiaopro
+      - xiaopro1
+      - xiaopro2
       - xiaopro3
       - xiaopro4
 
@@ -138,8 +160,6 @@ rule-providers:
 
 
 rules:
-  # UDP 规则 
-  - NETWORK,UDP,🛑 全球拦截
   # 广告过滤
   - RULE-SET,reject,🛑 全球拦截
   # 分流规则
