@@ -60,7 +60,7 @@ proxy-providers:
 
   xiaopro3:
     type: http
-    url: https://sub.cfno1.eu.org/sub_jcnf
+    url: https://sub.xijingping.gay/nthlink
     interval: 604800
     path: ./provider203.yaml
     health-check:
