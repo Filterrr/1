@@ -229,11 +229,20 @@ proxy-groups:
       - 🚀 百度直连
       - 🌎 全球节点
 
-  - name: 🔘 ChatGPT
+  - name: 🔘 AI
     type: relay
     proxies:
       - 🚀 百度直连
       - CF
+
+rule-providers:
+  ai_non_ip:
+    type: http
+    behavior: domain
+    format: text
+    interval: 43200
+    url: https://ruleset.skk.moe/Clash/non_ip/ai.txt
+    path: ./sukkaw_ruleset/ai_non_ip.txt
 
 rules:
   # UDP 规则 
@@ -242,7 +251,7 @@ rules:
   - geosite,category-ads-all,🛑 全球拦截
   # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - DOMAIN-KEYWORD,openai,🔘 ChatGPT
+  - RULE-SET,ai_non_ip,🔘 AI
   - GEOSITE,CN,🚀 百度直连
   - GEOIP,CN,🚀 百度直连
   - MATCH,🐟 漏网之鱼
