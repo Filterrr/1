@@ -61,7 +61,7 @@ proxy-providers:
 
   xiaopro2:
     type: http
-    url: http://sub.xijingping.gay/api/sub?&host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=b8a6cb3e&type=vless
+    url: https://sub.xijingping.gay/api/sub?&host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=b8a6cb3e&type=vless
     interval: 604800
     path: ./provider202.yaml
     health-check:
