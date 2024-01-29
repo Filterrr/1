@@ -60,7 +60,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://sub.cfno1.eu.org/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&protocol=vless
+    url: https://sub.cfno1.eu.org/clash?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&protocol=vless
     interval: 864000
     path: ./provider200.yaml
     health-check:
