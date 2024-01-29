@@ -104,7 +104,7 @@ CF: &CF
 proxies:
   - name: CF
     server: www.gov.se
-    port: 2087
+    port: 443
     <<: *CF
 
 proxy-groups:
