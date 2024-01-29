@@ -48,10 +48,20 @@ geox-url:
   mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
 
 proxy-providers:
-  xiaopro:
+  baidu:
+    type: http
+    url: https://worldcf.kh11a.link/Filterrr/1/main/baidu
+    interval: 6048000
+    path: ./providerbaidu.yaml
+    health-check:
+      enable: false
+      interval: 7200
+      url: http://www.gstatic.com/generate_204
+
+  xiaopro0:
     type: http
     url: https://sub.cfno1.eu.org/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&protocol=vless
-    interval: 86400
+    interval: 864000
     path: ./provider200.yaml
     health-check:
       enable: false
@@ -62,7 +72,7 @@ proxy-providers:
   xiaopro2:
     type: http
     url: https://sub.xijingping.gay/api/sub?&host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=b8a6cb3e&type=vless
-    interval: 604800
+    interval: 6048000
     path: ./provider202.yaml
     health-check:
       enable: false
@@ -72,7 +82,7 @@ proxy-providers:
   xiaopro3:
     type: http
     url: https://sub.cfno1.eu.org/sub_jcnf
-    interval: 604800
+    interval: 6048000
     path: ./provider203.yaml
     health-check:
       enable: false
@@ -82,7 +92,7 @@ proxy-providers:
   xiaopro4:
     type: http
     url: https://sub.cfno1.eu.org/sub_bulianglin
-    interval: 604800
+    interval: 6048000
     path: ./provider204.yaml
     health-check:
       enable: false
@@ -121,6 +131,8 @@ proxy-groups:
 
   - name: 🚀 百度直连
     type: select
+    use:
+      - baidu
     proxies:
       - 🎯 全球直连
       
@@ -139,15 +151,6 @@ proxy-groups:
     proxies:
       - 🚀 百度直连
       - 🌎 全球节点
-
-rule-providers:
-  reject:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
-    interval: 86400
-
 
 rules:
   # 广告过滤
