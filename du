@@ -81,6 +81,16 @@ sniffer:
     - 8000-9999
 
 proxy-providers:
+  baidu:
+    type: http
+    url: https://worldcf.kh11a.link/Filterrr/1/main/baidu
+    interval: 604800
+    path: ./providerbaidu.yaml
+    health-check:
+      enable: false
+      interval: 7200
+      url: http://www.gstatic.com/generate_204
+
   xiaopro1:
     type: http
     url: https://sub.cfno1.eu.org/clash?host=hk888.kh11a.link&uuid=86e0e3a3-5435-4d99-8d5f-54a124d6cb79&path=/b8a6cb3e/&protocol=vmess
@@ -156,55 +166,6 @@ vm: &vm
         Host: hk888.kh11a.link
         
 proxies:
-  - name: 🇨🇳 Baidu auto
-    server: cloudnproxy.baidu.com
-    <<: *baidu
-
-  - name: 🇨🇳 电信 苏州
-    server: 180.97.93.202
-    <<: *baidu
-
-
-  - name: 🇨🇳 电信 北京1
-    server: 220.181.111.189
-    <<: *baidu
-
-  - name: 🇨🇳 电信 北京2
-    server: 220.181.33.174
-    <<: *baidu
-
-  - name: 🇨🇳 电信 北京3
-    server: 220.181.7.1
-    <<: *baidu
-
-  - name: 🇨🇳 电信 南京1
-    server: 180.101.50.249
-    <<: *baidu
-
-  - name: 🇨🇳 电信 南京2
-    server: 180.101.50.208
-    <<: *baidu
-
-  - name: 🇨🇳 联通 河北1
-    server: 110.242.70.68
-    <<: *baidu
-
-  - name: 🇨🇳 联通 河北2
-    server: 110.242.70.69
-    <<: *baidu
-
-  - name: 🇨🇳 联通 南京
-    server: 153.3.237.117
-    <<: *baidu
-
-  - name: 🇨🇳 联通 江苏
-    server: 157.0.148.53
-    <<: *baidu
-
-  - name: 🇨🇳 移动 南京
-    server: 36.155.169.188
-    <<: *baidu
-
   - name: CF
     server: www.gov.se
     port: 2087
@@ -230,15 +191,9 @@ proxy-groups:
 
   - name: 🚀 百度直连
     type: select
+    use:
+      - baidu
     proxies:
-      - 🇨🇳 联通 河北auto
-      - 🇨🇳 联通 江苏
-      - 🇨🇳 联通 南京
-      - 🇨🇳 电信 苏州
-      - 🇨🇳 电信 北京auto
-      - 🇨🇳 电信 南京auto
-      - 🇨🇳 移动 南京
-      - 🇨🇳 Baidu auto
       - 🎯 全球直连
       
   - name: 🎯 全球直连
@@ -263,34 +218,6 @@ proxy-groups:
       - 🚀 百度直连
       - CF
 
-  - name: "🇨🇳 联通 河北auto"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    lazy: true
-    proxies:
-      - 🇨🇳 联通 河北1
-      - 🇨🇳 联通 河北2
-
-  - name: "🇨🇳 电信 南京auto"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    lazy: true
-    proxies:
-      - 🇨🇳 电信 南京1
-      - 🇨🇳 电信 南京2
-
-  - name: "🇨🇳 电信 北京auto"
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 600
-    lazy: true
-    proxies:
-      - 🇨🇳 电信 北京1
-      - 🇨🇳 电信 北京2
-      - 🇨🇳 电信 北京3
-      
 rules:
   # UDP 规则 
   - NETWORK,UDP,🛑 全球拦截
