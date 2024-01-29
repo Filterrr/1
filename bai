@@ -71,7 +71,7 @@ proxy-providers:
 
   xiaopro2:
     type: http
-    url: https://sub.xijingping.gay/api/sub?&host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=b8a6cb3e&type=vless
+    url: https://sub.xf.free.hr/api/sub?&host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=b8a6cb3e&type=vless
     interval: 6048000
     path: ./provider202.yaml
     health-check:
@@ -124,7 +124,7 @@ proxy-groups:
       - 🚀 百度直连
       - CF
     use:
-      - xiaopro
+      - xiaopro0
       - xiaopro2
       - xiaopro3
       - xiaopro4
@@ -154,7 +154,7 @@ proxy-groups:
 
 rules:
   # 广告过滤
-  - RULE-SET,reject,🛑 全球拦截
+  - geosite,category-ads-all,🛑 全球拦截
   # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
   - GEOSITE,CN,🚀 百度直连
