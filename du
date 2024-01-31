@@ -215,7 +215,7 @@ proxy-groups:
     type: relay
     proxies:
       - 🚀 百度直连
-      - CF
+      - 备用节点
 
 rules:
   # UDP 规则 
