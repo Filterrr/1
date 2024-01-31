@@ -6,10 +6,6 @@ dingding: &dingding
     X-T5-Auth: 2045582197
         
 proxies:
-  - name: 🇨🇳 百度域名
-    server: cloudnproxy.baidu.com
-    <<: *dingding
-
   - name: 🇨🇳 电信 苏州
     server: 180.97.93.202
     <<: *dingding
