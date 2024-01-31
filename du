@@ -185,8 +185,8 @@ proxy-groups:
   - name: 🚀 国内节点
     type: select
     proxies:
-      - 🎯 全球直连
       - 🚀 哔哩免流
+      - 🎯 全球直连
 
   - name: ⚠️ UDP规则
     type: select
