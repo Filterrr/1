@@ -6,10 +6,6 @@ bili: &bili
     X-T5-Auth: 1507956775
         
 proxies:
-  - name: 🇨🇳 百度域名
-    server: cloudnproxy.baidu.com
-    <<: *bili
-
   - name: 🇨🇳 电信 苏州
     server: 180.97.93.202
     <<: *bili
