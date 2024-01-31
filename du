@@ -188,16 +188,16 @@ proxy-groups:
       - 🚀 哔哩免流
       - 🎯 全球直连
 
+  - name: 🚀 哔哩免流
+    type: select
+    use:
+      - bili
+
   - name: ⚠️ UDP规则
     type: select
     proxies:
       - 🛑 全球拦截
       - 🎯 全球直连
-
-  - name: 🚀 哔哩免流
-    type: select
-    use:
-      - bili
 
   - name: 🎯 全球直连
     type: select
