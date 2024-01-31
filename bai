@@ -164,7 +164,7 @@ proxy-groups:
   - name: 🌎 全球节点
     type: select
     proxies:
-      - 🚀 国内
+      - 🚀 国内节点
       - ⚠️ UDP规则
       - 备用节点
     use:
@@ -176,8 +176,8 @@ proxy-groups:
   - name: 🚀 国内节点
     type: select
     proxies:
-      - 🚀 百度直连
-      - 🚀 钉钉直连
+      - 🚀 百度免流
+      - 🚀 钉钉免流
       - 🎯 全球直连
 
   - name: ⚠️ UDP规则
@@ -186,12 +186,12 @@ proxy-groups:
       - 🛑 全球拦截
       - 🎯 全球直连
 
-  - name: 🚀 百度直连
+  - name: 🚀 百度免流
     type: select
     use:
       - baidu
 
-  - name: 🚀 钉钉直连
+  - name: 🚀 钉钉免流
     type: select
     use:
       - dingding
@@ -209,7 +209,7 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: relay
     proxies:
-      - 🚀 国内
+      - 🚀 国内节点
       - 🌎 全球节点
 
 rules:
@@ -219,6 +219,6 @@ rules:
   - geosite,category-ads-all,🛑 全球拦截
   # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - GEOSITE,CN,🚀 国内
-  - GEOIP,CN,🚀 国内
+  - GEOSITE,CN,🚀 国内节点
+  - GEOIP,CN,🚀 国内节点
   - MATCH,🐟 漏网之鱼
