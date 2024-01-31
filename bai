@@ -108,7 +108,7 @@ CF: &CF
         Host: world.kh11a.link
 
 proxies:
-  - name: CF
+  - name: 备用节点
     server: www.gov.se
     port: 443
     <<: *CF
@@ -118,7 +118,8 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 百度直连
-      - CF
+      - ⚠️ UDP规则
+      - 备用节点
     use:
       - xiaopro0
       - xiaopro2
