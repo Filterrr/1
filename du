@@ -187,6 +187,12 @@ proxy-groups:
       - baidu
     proxies:
       - 🎯 全球直连
+
+  - name: ⚠️ UDP规则
+    type: select
+    proxies:
+      - 🛑 全球拦截
+      - 🎯 全球直连
       
   - name: 🎯 全球直连
     type: select
@@ -212,7 +218,7 @@ proxy-groups:
 
 rules:
   # UDP 规则 
-  - NETWORK,UDP,🛑 全球拦截
+  - NETWORK,UDP,⚠️ UDP规则
   # 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
   # 分流规则
