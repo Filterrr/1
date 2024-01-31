@@ -172,7 +172,7 @@ proxy-groups:
   - name: 🌎 全球节点
     type: select
     proxies:
-      - 🚀 百度直连
+      - 🚀 国内节点
       - ⚠️ UDP规则
       - 移动备用节点
       - 备用节点
@@ -182,10 +182,10 @@ proxy-groups:
       - xiaopro3
       - xiaopro4
 
-  - name: 🚀 百度直连
+  - name: 🚀 国内节点
     type: select
     use:
-      - bili
+      - 🚀 哔哩免流
     proxies:
       - 🎯 全球直连
 
@@ -194,7 +194,12 @@ proxy-groups:
     proxies:
       - 🛑 全球拦截
       - 🎯 全球直连
-      
+
+  - name: 🚀 哔哩免流
+    type: select
+    use:
+      - bili
+
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -208,13 +213,13 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: relay
     proxies:
-      - 🚀 百度直连
+      - 🚀 国内节点
       - 🌎 全球节点
 
   - name: 🔘 AI
     type: relay
     proxies:
-      - 🚀 百度直连
+      - 🚀 国内节点
       - 备用节点
 
 rules:
@@ -225,6 +230,6 @@ rules:
   # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
   - DOMAIN-KEYWORD,openai,🔘 AI
-  - GEOSITE,CN,🚀 百度直连
-  - GEOIP,CN,🚀 百度直连
+  - GEOSITE,CN,🚀 国内节点
+  - GEOIP,CN,🚀 国内节点
   - MATCH,🐟 漏网之鱼
