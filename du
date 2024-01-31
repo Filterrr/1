@@ -83,9 +83,9 @@ sniffer:
 proxy-providers:
   baidu:
     type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/baidu
+    url: https://worldcf.kh11a.link/Filterrr/1/main/bili
     interval: 6048000
-    path: ./providerbaidu.yaml
+    path: ./providerbili.yaml
     health-check:
       enable: false
       interval: 72000
