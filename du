@@ -173,6 +173,7 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 百度直连
+      - ⚠️ UDP规则
       - 移动CF
       - CF
     use:
