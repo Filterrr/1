@@ -6,7 +6,7 @@ baidu: &baidu
     X-T5-Auth: 1997382601
         
 proxies:
-  - name: 🇨🇳 Baidu auto
+  - name: 🇨🇳 百度域名
     server: cloudnproxy.baidu.com
     <<: *baidu
 
