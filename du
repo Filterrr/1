@@ -81,7 +81,7 @@ sniffer:
     - 8000-9999
 
 proxy-providers:
-  baidu:
+  bili:
     type: http
     url: https://worldcf.kh11a.link/Filterrr/1/main/bili
     interval: 6048000
@@ -185,7 +185,7 @@ proxy-groups:
   - name: 🚀 百度直连
     type: select
     use:
-      - baidu
+      - bili
     proxies:
       - 🎯 全球直连
 
