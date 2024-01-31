@@ -134,10 +134,10 @@ proxy-groups:
 
   - name: ⚠️ UDP规则
     type: select
-    use:
+    proxies:
       - 🛑 全球拦截
       - 🎯 全球直连
-      
+
   - name: 🎯 全球直连
     type: select
     proxies:
