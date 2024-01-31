@@ -180,12 +180,6 @@ proxy-groups:
       - 🚀 钉钉免流
       - 🎯 全球直连
 
-  - name: ⚠️ UDP规则
-    type: select
-    proxies:
-      - 🛑 全球拦截
-      - 🎯 全球直连
-
   - name: 🚀 百度免流
     type: select
     use:
@@ -195,6 +189,12 @@ proxy-groups:
     type: select
     use:
       - dingding
+
+  - name: ⚠️ UDP规则
+    type: select
+    proxies:
+      - 🛑 全球拦截
+      - 🎯 全球直连
 
   - name: 🎯 全球直连
     type: select
