@@ -2,8 +2,8 @@ dingding: &dingding
   type: http
   port: 443
   headers:
-    Host: www.baidu.com:443
-    X-T5-Auth: 1997382601
+    Host: tms.dingtalk.com:80
+    X-T5-Auth: 2045582197
         
 proxies:
   - name: 🇨🇳 百度域名
