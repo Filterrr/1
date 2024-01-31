@@ -2,8 +2,8 @@ bili: &bili
   type: http
   port: 443
   headers:
-    Host: live.bilibili.com:443
-    X-T5-Auth: 1507956775
+    Host: upos-tf-all-js.bilivideo.com
+    X-T5-Auth: 1394692716
         
 proxies:
   - name: 🇨🇳 电信 苏州
