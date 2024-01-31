@@ -91,6 +91,16 @@ proxy-providers:
       interval: 7200
       url: http://www.gstatic.com/generate_204
 
+  dingding:
+    type: http
+    url: https://worldcf.kh11a.link/Filterrr/1/main/dingding
+    interval: 6048000
+    path: ./providerdingding.yaml
+    health-check:
+      enable: false
+      interval: 7200
+      url: http://www.gstatic.com/generate_204
+
   xiaopro0:
     type: http
     url: https://sub.cfno1.eu.org/clash?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&protocol=vless
@@ -154,7 +164,7 @@ proxy-groups:
   - name: 🌎 全球节点
     type: select
     proxies:
-      - 🚀 百度直连
+      - 🚀 国内
       - ⚠️ UDP规则
       - 备用节点
     use:
@@ -163,11 +173,11 @@ proxy-groups:
       - xiaopro3
       - xiaopro4
 
-  - name: 🚀 百度直连
+  - name: 🚀 国内节点
     type: select
-    use:
-      - baidu
     proxies:
+      - 🚀 百度直连
+      - 🚀 钉钉直连
       - 🎯 全球直连
 
   - name: ⚠️ UDP规则
@@ -175,6 +185,16 @@ proxy-groups:
     proxies:
       - 🛑 全球拦截
       - 🎯 全球直连
+
+  - name: 🚀 百度直连
+    type: select
+    use:
+      - baidu
+
+  - name: 🚀 钉钉直连
+    type: select
+    use:
+      - dingding
 
   - name: 🎯 全球直连
     type: select
@@ -189,7 +209,7 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: relay
     proxies:
-      - 🚀 百度直连
+      - 🚀 国内
       - 🌎 全球节点
 
 rules:
@@ -199,6 +219,6 @@ rules:
   - geosite,category-ads-all,🛑 全球拦截
   # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - GEOSITE,CN,🚀 百度直连
-  - GEOIP,CN,🚀 百度直连
+  - GEOSITE,CN,🚀 国内
+  - GEOIP,CN,🚀 国内
   - MATCH,🐟 漏网之鱼
