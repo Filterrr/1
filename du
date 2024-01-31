@@ -158,12 +158,12 @@ vm: &vm
         Host: hk888.kh11a.link
         
 proxies:
-  - name: CF
+  - name: 备用节点
     server: www.gov.se
     port: 2087
     <<: *CF
 
-  - name: 移动CF
+  - name: 移动备用节点
     server: 104.16.32.36
     port: 443
     <<: *vm
@@ -174,8 +174,8 @@ proxy-groups:
     proxies:
       - 🚀 百度直连
       - ⚠️ UDP规则
-      - 移动CF
-      - CF
+      - 移动备用节点
+      - 备用节点
     use:
       - xiaopro1
       - xiaopro2
