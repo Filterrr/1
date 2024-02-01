@@ -2,8 +2,8 @@ dingding: &dingding
   type: http
   port: 443
   headers:
-    Host: tms.dingtalk.com:80
-    X-T5-Auth: 2045582197
+    Host: dtliving-sz.dingtalk.com
+    X-T5-Auth: 1875830060
 
 proxies:
   - name: 🇨🇳 电信 苏州
