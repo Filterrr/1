@@ -42,7 +42,7 @@ geo-update-interval: 24 # 更新间隔，单位：小时
 proxy-providers:
   baidu:
     type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/baidu
+    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
     interval: 6048000
     path: ./providerbaidu.yaml
     health-check:
@@ -52,7 +52,7 @@ proxy-providers:
 
   dingding:
     type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/dingding
+    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/dingding
     interval: 6048000
     path: ./providerdingding.yaml
     health-check:
