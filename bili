@@ -1,11 +1,4 @@
-bili: &bili
-  type: http
-  port: 443
-  headers:
-    Host: upos-tf-all-js.bilivideo.com
-    X-T5-Auth: 1394692716
-        
-proxies:
+ proxies:
   - name: 🇨🇳 电信 苏州
     server: 180.97.93.202
     <<: *bili
@@ -53,3 +46,11 @@ proxies:
   - name: 🇨🇳 移动 广州
     server: 183.240.98.84
     <<: *bili
+
+bili: &bili
+  type: http
+  port: 443
+  headers:
+    Host: upos-tf-all-js.bilivideo.com
+    X-T5-Auth: 1394692716
+       
