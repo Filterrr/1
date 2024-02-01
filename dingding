@@ -1,4 +1,11 @@
- proxies:
+dingding: &dingding
+  type: http
+  port: 443
+  headers:
+    Host: tms.dingtalk.com:80
+    X-T5-Auth: 2045582197
+
+proxies:
   - name: 🇨🇳 电信 苏州
     server: 180.97.93.202
     <<: *dingding
@@ -46,11 +53,3 @@
   - name: 🇨🇳 移动 广州
     server: 183.240.98.84
     <<: *dingding
-
-dingding: &dingding
-  type: http
-  port: 443
-  headers:
-    Host: tms.dingtalk.com:80
-    X-T5-Auth: 2045582197
-       
