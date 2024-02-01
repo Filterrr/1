@@ -2,8 +2,8 @@ dingding: &dingding
   type: http
   port: 443
   headers:
-    Host: dtliving-sz.dingtalk.com
-    X-T5-Auth: 1875830060
+    Host: gw.alicdn.com:443
+    X-T5-Auth: 234276684
 
 proxies:
   - name: 🇨🇳 电信 苏州
