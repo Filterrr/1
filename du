@@ -70,16 +70,6 @@ proxy-providers:
       interval: 72000
       url: http://www.gstatic.com/generate_204
 
-  xiaopro3:
-    type: http
-    url: https://sub.xijingping.gay/nthlink
-    interval: 6048000
-    path: ./provider203.yaml
-    health-check:
-      enable: false
-      interval: 72000
-      url: http://www.gstatic.com/generate_204
-
   xiaopro4:
     type: http
     url: https://sub.cfno1.eu.org/sub_bulianglin
