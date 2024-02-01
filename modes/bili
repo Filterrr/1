@@ -2,7 +2,7 @@ bili: &bili
   type: http
   port: 443
   headers:
-    Host: live.bilibili.com
+    Host: live.bilibili.com:443
     X-T5-Auth: 1507956775
 
 proxies:
