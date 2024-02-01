@@ -1,0 +1,55 @@
+dingding: &dingding
+  type: http
+  port: 443
+  headers:
+    Host: tms.dingtalk.com:80
+    X-T5-Auth: 2045582197
+
+proxies:
+  - name: 🇨🇳 电信 苏州
+    server: 180.97.93.202
+    <<: *dingding
+
+  - name: 🇨🇳 电信 北京1
+    server: 220.181.111.189
+    <<: *dingding
+
+  - name: 🇨🇳 电信 北京2
+    server: 220.181.33.174
+    <<: *dingding
+
+  - name: 🇨🇳 电信 北京3
+    server: 220.181.7.1
+    <<: *dingding
+
+  - name: 🇨🇳 电信 南京1
+    server: 180.101.50.249
+    <<: *dingding
+
+  - name: 🇨🇳 电信 南京2
+    server: 180.101.50.208
+    <<: *dingding
+
+  - name: 🇨🇳 联通 河北1
+    server: 110.242.70.68
+    <<: *dingding
+
+  - name: 🇨🇳 联通 河北2
+    server: 110.242.70.69
+    <<: *dingding
+
+  - name: 🇨🇳 联通 南京
+    server: 153.3.237.117
+    <<: *dingding
+
+  - name: 🇨🇳 联通 江苏
+    server: 157.0.148.53
+    <<: *dingding
+
+  - name: 🇨🇳 移动 南京
+    server: 36.155.169.188
+    <<: *dingding
+
+  - name: 🇨🇳 移动 广州
+    server: 183.240.98.84
+    <<: *dingding
