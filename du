@@ -42,7 +42,7 @@ geo-update-interval: 24 # 更新间隔，单位：小时
 proxy-providers:
   bili:
     type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/bili
+    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/bili
     interval: 6048000
     path: ./providerbili.yaml
     health-check:
