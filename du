@@ -14,27 +14,8 @@ ipv6: false
 geodata-loader: memconservative
 keep-alive-interval: 30
 tcp-concurrent: true
-external-controller: 127.0.0.1:9090
-external-ui: ui
-external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
-
 find-process-mode: strict
 global-client-fingerprint: chrome
-
-profile:
-  store-selected: true
-  store-fake-ip: true
-
-sniffer:
-  enable: true
-  sniff:
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
-    TLS:
-      ports: [443, 8443]
-    QUIC:
-      ports: [443, 8443]
 
 dns:
   enable: true
@@ -47,6 +28,17 @@ dns:
   nameserver:
     - https://223.6.6.6/dns-query
     - https://1.1.1.1/dns-query
+
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
 
 geodata-mode: true
 geox-url:
