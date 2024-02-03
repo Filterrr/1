@@ -176,7 +176,7 @@ rules:
   - geosite,category-ads-all,🛑 全球拦截
   # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - DOMAIN-KEYWORD,ai,🔘 AI
+  - DOMAIN-KEYWORD,openai,🔘 AI
   - GEOSITE,CN,🚀 国内节点
   - GEOIP,CN,🚀 国内节点
   - MATCH,🐟 漏网之鱼
