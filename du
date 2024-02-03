@@ -7,7 +7,7 @@
 ###########################################
 
 mixed-port: 7890
-allow-lan: false
+allow-lan: true
 mode: rule
 geodata-mode: true
 log-level: info
