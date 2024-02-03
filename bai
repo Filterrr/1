@@ -26,7 +26,6 @@ dns:
   fake-ip-range: 28.0.0.1/8
   default-nameserver:
     - https://223.6.6.6/dns-query
-    - https://1.1.1.1/dns-query
   nameserver:
     - https://223.6.6.6/dns-query
     - https://1.1.1.1/dns-query
