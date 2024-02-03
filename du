@@ -18,6 +18,12 @@ geodata-loader: memconservative
 keep-alive-interval: 30
 tcp-concurrent: true
 
+sniffer:
+  enable: false
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+
 dns:
   enable: true
   ipv6: false
