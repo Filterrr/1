@@ -50,6 +50,16 @@ geo-auto-update: true # 是否自动更新 geodata
 geo-update-interval: 24 # 更新间隔，单位：小时
 
 proxy-providers:
+  bili:
+    type: http
+    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/bili
+    interval: 6048000
+    path: ./providerbili.yaml
+    health-check:
+      enable: false
+      interval: 72000
+      url: http://www.gstatic.com/generate_204
+
   baidu:
     type: http
     url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
@@ -158,6 +168,11 @@ proxy-groups:
     type: select
     use:
       - dingding
+
+  - name: 🚀 钉钉免流
+    type: select
+    use:
+      - bili
 
   - name: ⚠️ UDP规则
     type: select
