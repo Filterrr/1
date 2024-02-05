@@ -157,6 +157,7 @@ proxy-groups:
     proxies:
       - 🚀 百度免流
       - 🚀 钉钉免流
+      - 🚀 哔哩免流
       - 🎯 全球直连
 
   - name: 🚀 百度免流
@@ -169,7 +170,7 @@ proxy-groups:
     use:
       - dingding
 
-  - name: 🚀 钉钉免流
+  - name: 🚀 哔哩免流
     type: select
     use:
       - bili
