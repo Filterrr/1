@@ -46,8 +46,8 @@ geox-url:
   geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
   mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
-geo-auto-update: true # 是否自动更新 geodata
-geo-update-interval: 24 # 更新间隔，单位：小时
+geo-auto-update: true
+geo-update-interval: 24
 
 proxy-providers:
   bili:
@@ -198,14 +198,16 @@ proxy-groups:
       - 🌎 全球节点
 
 rules:
-  # UDP 规则 
+# UDP 规则 
   - NETWORK,UDP,⚠️ UDP规则
-  # 广告过滤
+# 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
-  # 蓝奏云规则
+# 蓝奏云规则
   - DST-PORT,446,🐟 漏网之鱼
-  # 分流规则
+# 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
+# 国内外分流规则
   - GEOSITE,CN,🚀 国内节点
   - GEOIP,CN,🚀 国内节点
+# 兜底规则
   - MATCH,🐟 漏网之鱼
