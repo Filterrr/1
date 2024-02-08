@@ -101,25 +101,6 @@ proxy-providers:
       interval: 7200
       url: http://www.gstatic.com/generate_204
 
-  xiaopro3:
-    type: http
-    url: https://sub.cfno1.eu.org/sub_jcnf
-    interval: 6048000
-    path: ./provider203.yaml
-    health-check:
-      enable: false
-      interval: 7200
-      url: http://www.gstatic.com/generate_204
-
-  xiaopro4:
-    type: http
-    url: https://sub.cfno1.eu.org/sub_bulianglin
-    interval: 6048000
-    path: ./provider204.yaml
-    health-check:
-      enable: false
-      interval: 7200
-      url: http://www.gstatic.com/generate_204
 
 CF: &CF
     type: vless
@@ -149,8 +130,6 @@ proxy-groups:
     use:
       - xiaopro0
       - xiaopro2
-      - xiaopro3
-      - xiaopro4
 
   - name: 🚀 国内节点
     type: select
