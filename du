@@ -101,31 +101,12 @@ CF: &CF
       path: /
       headers: 
         Host: world.kh11a.link
-
-vm: &vm
-    type: vmess
-    uuid: 86e0e3a3-5435-4d99-8d5f-54a124d6cb79
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    servername: hk888.kh11a.link
-    network: ws
-    ws-opts: 
-      path: /b8a6cb3e/
-      headers:
-        Host: hk888.kh11a.link
         
 proxies:
   - name: 备用节点
     server: www.gov.se
     port: 2087
     <<: *CF
-
-  - name: 移动备用节点
-    server: 104.16.32.36
-    port: 443
-    <<: *vm
     
 proxy-groups:
   - name: 🌎 全球节点
@@ -133,7 +114,6 @@ proxy-groups:
     proxies:
       - 🚀 国内节点
       - ⚠️ UDP规则
-      - 移动备用节点
       - 备用节点
     use:
       - xiaopro1
