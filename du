@@ -108,7 +108,6 @@ proxy-groups:
     use:
       - xiaopro1
       - xiaopro2
-      - xiaopro4
 
   - name: 🚀 国内节点
     type: select
