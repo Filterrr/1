@@ -180,15 +180,17 @@ proxy-groups:
       - 备用节点
 
 rules:
-  # UDP 规则 
+# UDP 规则 
   - NETWORK,UDP,⚠️ UDP规则
-  # 广告过滤
+# 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
-  # 蓝奏云规则
+# 蓝奏云规则
   - DST-PORT,446,🐟 漏网之鱼
-  # 分流规则
+# 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
   - DOMAIN-KEYWORD,openai,🔘 AI
+# 国内外分流规则
   - GEOSITE,CN,🚀 国内节点
   - GEOIP,CN,🚀 国内节点
+# 兜底规则
   - MATCH,🐟 漏网之鱼
