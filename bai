@@ -8,6 +8,7 @@
 
 mixed-port: 7890
 allow-lan: true
+bind-address: "*"
 mode: rule
 log-level: info
 ipv6: false
