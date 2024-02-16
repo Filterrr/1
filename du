@@ -158,10 +158,10 @@ rules:
   - DST-PORT,446,🐟 漏网之鱼
 # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - DOMAIN-KEYWORD,openai,🔘 AI
   - IN-TYPE,INNER,🔘 AI
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内节点
   - GEOIP,CN,🚀 国内节点
+  - DOMAIN-KEYWORD,ai,🔘 AI
 # 兜底规则
   - MATCH,🐟 漏网之鱼
