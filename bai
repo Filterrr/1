@@ -201,6 +201,7 @@ rules:
   - DST-PORT,446,🐟 漏网之鱼
 # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
+  - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内节点
   - GEOIP,CN,🚀 国内节点
