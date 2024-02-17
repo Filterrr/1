@@ -127,7 +127,6 @@ proxy-groups:
     proxies:
       - 🚀 国内节点
       - ⚠️ UDP规则
-      - 备用节点
     use:
       - xiaopro0
       - xiaopro2
