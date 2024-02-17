@@ -177,6 +177,12 @@ proxy-groups:
       - 🚀 国内节点
       - 🌎 全球节点
 
+  - name: 🔘
+    type: relay
+    proxies:
+      - 🚀 国内节点
+      - 备用节点
+
 rule-providers:
   reject:
     type: http
