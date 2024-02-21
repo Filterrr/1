@@ -65,7 +65,7 @@ proxy-providers:
     type: http
     url: https://sub.cfno1.eu.org/clash?host=hk888.kh11a.link&uuid=86e0e3a3-5435-4d99-8d5f-54a124d6cb79&path=/b8a6cb3e/&protocol=vmess
     interval: 6048000
-    path: ./provider201.yaml
+    path: ./du/provider201.yaml
     health-check:
       enable: false
       interval: 72000
@@ -75,7 +75,7 @@ proxy-providers:
     type: http
     url: https://sub.xijingping.gay/api/sub?&host=hk888.kh11a.link&uuid=86e0e3a3-5435-4d99-8d5f-54a124d6cb79&path=/b8a6cb3e/&type=vmess
     interval: 6048000
-    path: ./provider202.yaml
+    path: ./du/provider202.yaml
     health-check:
       enable: false
       interval: 72000
