@@ -17,6 +17,7 @@ keep-alive-interval: 30
 tcp-concurrent: true
 find-process-mode: strict
 global-client-fingerprint: chrome
+external-controller: 127.0.0.1:9097
 
 dns:
   enable: true
