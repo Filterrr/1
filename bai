@@ -93,17 +93,6 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
 
 
-  xiaopro2:
-    type: http
-    url: https://sub.xf.free.hr/api/sub?&host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=b8a6cb3e&type=vless
-    interval: 6048000
-    path: ./bai/provider202.yaml
-    health-check:
-      enable: false
-      interval: 7200
-      url: http://www.gstatic.com/generate_204
-
-
 CF: &CF
     type: vless
     uuid: 1ff64191-83b3-410a-86e3-74f721681a80
@@ -130,7 +119,6 @@ proxy-groups:
       - ⚠️ UDP规则
     use:
       - xiaopro0
-      - xiaopro2
 
   - name: 🚀 国内节点
     type: select
