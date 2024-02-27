@@ -96,8 +96,8 @@ CF: &CF
         
 proxies:
   - name: 备用节点
-    server: www.gov.se
-    port: 2087
+    server: region1.v2.argotunnel.com
+    port: 2053
     <<: *CF
     
 proxy-groups:
