@@ -2,8 +2,9 @@ dingding: &dingding
   type: http
   port: 443
   headers:
-    Host: gw.alicdn.com:443
-    X-T5-Auth: 234276684
+    Host: "gw.alicdn.com:443"
+    X-T5-Auth: "234276684"
+    Proxy-Connection: "Keep-Alive"
 
 proxies:
   - name: 🇨🇳 电信 苏州
