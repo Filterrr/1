@@ -1,7 +1,7 @@
 baidu: &baidu
   type: http
   port: 443
-  sni: i1.hdslb.com
+  sni: www.baidu.com
   headers:
     Host: "www.baidu.com:443"
     X-T5-Auth: "1997382601"
