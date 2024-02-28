@@ -5,7 +5,6 @@ bili: &bili
   headers:
     Host: "i1.hdslb.com:443"
     X-T5-Auth: "664559762"
-    Proxy-Connection: "Keep-Alive"
 
 proxies:
   - name: 🇨🇳 电信 苏州
