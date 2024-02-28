@@ -1,6 +1,7 @@
 bili: &bili
   type: http
   port: 443
+  sni: i1.hdslb.com
   headers:
     Host: "i1.hdslb.com:443"
     X-T5-Auth: "664559762"
