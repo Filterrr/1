@@ -1,7 +1,7 @@
 dingding: &dingding
   type: http
   port: 443
-  sni: i1.hdslb.com
+  sni: gw.alicdn.com
   headers:
     Host: "gw.alicdn.com:443"
     X-T5-Auth: "234276684"
