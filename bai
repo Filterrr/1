@@ -52,31 +52,11 @@ geo-auto-update: true
 geo-update-interval: 24
 
 proxy-providers:
-  bili:
-    type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/bili
-    interval: 6048000
-    path: ./providerbili.yaml
-    health-check:
-      enable: false
-      interval: 72000
-      url: http://www.gstatic.com/generate_204
-
   baidu:
     type: http
     url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
     interval: 6048000
     path: ./providerbaidu.yaml
-    health-check:
-      enable: false
-      interval: 7200
-      url: http://www.gstatic.com/generate_204
-
-  dingding:
-    type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/dingding
-    interval: 6048000
-    path: ./providerdingding.yaml
     health-check:
       enable: false
       interval: 7200
@@ -124,24 +104,12 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 百度直连
-      - 🚀 钉钉卡免流
-      - 🚀 哔哩卡免流
       - 🎯 全球直连
 
   - name: 🚀 百度直连
     type: select
     use:
       - baidu
-
-  - name: 🚀 钉钉卡免流
-    type: select
-    use:
-      - dingding
-
-  - name: 🚀 哔哩卡免流
-    type: select
-    use:
-      - bili
 
   - name: ⚠️ UDP规则
     type: select
