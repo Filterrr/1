@@ -32,17 +32,6 @@ dns:
     - https://223.6.6.6/dns-query
     - https://1.1.1.1/dns-query
 
-sniffer:
-  enable: true
-  sniff:
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
-    TLS:
-      ports: [443, 8443]
-    QUIC:
-      ports: [443, 8443]
-
 geodata-mode: true
 geox-url:
   geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat"
@@ -136,7 +125,7 @@ proxy-groups:
   - name: 🛑 全球拦截
     type: select
     proxies:
-      - REJECT-DROP
+      - REJECT
 
   - name: 🐟 漏网之鱼
     type: relay
