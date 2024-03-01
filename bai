@@ -50,49 +50,12 @@ proxy-providers:
       interval: 7200
       url: http://www.gstatic.com/generate_204
 
-  xiaopro0:
-    type: http
-    url: https://sub.cfno1.eu.org/clash?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&format=base64&protocol=vless
-    interval: 864000
-    path: ./bai/provider200.yaml
-    health-check:
-      enable: false
-      interval: 7200
-      url: http://www.gstatic.com/generate_204
-
-
-CF: &CF
-    type: vless
-    uuid: 1ff64191-83b3-410a-86e3-74f721681a80
-    tls: true
-    servername: world.kh11a.link
-    skip-cert-verify: false
-    network: ws
-    ws-opts: 
-      path: /
-      headers: 
-        Host: world.kh11a.link
-
-proxies:
-  - name: 备用节点
-    server: www.gov.se
-    port: 443
-    <<: *CF
-
 proxy-groups:
-  - name: 🌎 全球节点
-    type: select
-    proxies:
-      - 🚀 国内节点
-      - ⚠️ UDP规则
-    use:
-      - xiaopro0
-
   - name: 🚀 国内节点
     type: select
     proxies:
       - 🚀 百度直连
-      - 🎯 全球直连
+      - ⚠️ UDP规则
 
   - name: 🚀 百度直连
     type: select
@@ -115,18 +78,6 @@ proxy-groups:
     proxies:
       - REJECT
 
-  - name: 🐟 漏网之鱼
-    type: relay
-    proxies:
-      - 🚀 国内节点
-      - 🌎 全球节点
-
-  - name: 🔘
-    type: relay
-    proxies:
-      - 🚀 国内节点
-      - 备用节点
-
 rule-providers:
   reject:
     type: http
@@ -141,13 +92,5 @@ rules:
 # 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
   - RULE-SET,reject,🛑 全球拦截
-# 蓝奏云规则
-  - DST-PORT,446,🐟 漏网之鱼
-# 分流规则
-  - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - IN-TYPE,INNER,🔘
-# 国内外分流规则
-  - GEOSITE,CN,🚀 国内节点
-  - GEOIP,CN,🚀 国内节点
 # 兜底规则
-  - MATCH,🐟 漏网之鱼
+  - MATCH,🚀 国内节点
