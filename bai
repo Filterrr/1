@@ -55,42 +55,33 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 百度直连
-      - ⚠️ UDP规则
+      - ⚠️ UDP 方式
 
   - name: 🚀 百度直连
     type: select
     use:
       - baidu
 
-  - name: ⚠️ UDP规则
+  - name: ⚠️ UDP 方式
     type: select
     proxies:
-      - 🛑 全球拦截
-      - 🎯 全球直连
+      - 🛑 拦截
+      - 🎯 放行
 
-  - name: 🎯 全球直连
+  - name: 🎯 放行
     type: select
     proxies:
       - DIRECT
 
-  - name: 🛑 全球拦截
+  - name: 🛑 拦截
     type: select
     proxies:
       - REJECT
 
-rule-providers:
-  reject:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
-    interval: 864000
-
 rules:
 # UDP 规则 
-  - NETWORK,UDP,⚠️ UDP规则
+  - NETWORK,UDP,⚠️ UDP 方式
 # 广告过滤
-  - geosite,category-ads-all,🛑 全球拦截
-  - RULE-SET,reject,🛑 全球拦截
+  - geosite,category-ads-all,🛑 拦截
 # 兜底规则
   - MATCH,🚀 国内节点
