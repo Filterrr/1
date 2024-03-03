@@ -97,7 +97,8 @@ proxies:
     server: www.gov.se
     port: 2053
     <<: *CF
-    
+  - {name: 备用节点2, type: vmess, server: www.gov.se, port: 8443, uuid: 86e0e3a3-5435-4d99-8d5f-54a124d6cb79, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: '/b8a6cb3e/', headers: {Host: hk888.kh11a.link}}}
+
 proxy-groups:
   - name: 🌎 全球节点
     type: select
@@ -124,6 +125,7 @@ proxy-groups:
     type: select
     proxies:
       - 备用节点
+      - 备用节点2
     use:
       - xiaopro0
 
