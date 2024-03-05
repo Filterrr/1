@@ -107,7 +107,7 @@ proxy-groups:
       - ⚠️ UDP规则
       - 🌥️ 备用节点
     use:
-      - xiaopro1
+    #  - xiaopro1
       - xiaopro2
 
   - name: 🚀 国内节点
