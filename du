@@ -157,12 +157,6 @@ proxy-groups:
       - 🚀 国内节点
       - 🌥️ 备用节点
 
-  - name: 🔘 AI
-    type: relay
-    proxies:
-      - 🚀 国内节点
-      - 备用节点
-
 rules:
 # UDP 规则 
   - NETWORK,UDP,⚠️ UDP规则
@@ -172,7 +166,7 @@ rules:
   - DST-PORT,446,🐟 漏网之鱼
 # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - DOMAIN-KEYWORD,openai,🔘 AI
+  - DOMAIN-KEYWORD,openai,🔘
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内节点
