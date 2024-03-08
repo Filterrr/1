@@ -151,11 +151,17 @@ proxy-groups:
       - 🚀 国内节点
       - 🌎 全球节点
 
-  - name: 🔘 AI
+  - name: 🔘
     type: relay
     proxies:
       - 🚀 国内节点
       - 🌥️ 备用节点
+
+  - name: 🔘 AI
+    type: relay
+    proxies:
+      - 🚀 国内节点
+      - 备用节点
 
 rules:
 # UDP 规则 
@@ -167,7 +173,7 @@ rules:
 # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
   - DOMAIN-KEYWORD,openai,🔘 AI
-  - IN-TYPE,INNER,🔘 AI
+  - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内节点
   - GEOIP,CN,🚀 国内节点,no-resolve
