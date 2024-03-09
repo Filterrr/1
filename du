@@ -103,14 +103,14 @@ proxy-groups:
   - name: 🌎 全球节点
     type: select
     proxies:
-      - 🚀 国内节点
+      - 🚀 国内->百度节点
       - ⚠️ UDP规则
       - 🌥️ 备用节点
     use:
     #  - xiaopro1
       - xiaopro2
 
-  - name: 🚀 国内节点
+  - name: 🚀 国内->百度节点
     type: select
     proxies:
       - 🎯 全球直连
@@ -144,13 +144,13 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: relay
     proxies:
-      - 🚀 国内节点
+      - 🚀 国内->百度节点
       - 🌎 全球节点
 
   - name: 🔘
     type: relay
     proxies:
-      - 🚀 国内节点
+      - 🚀 国内->百度节点
       - 🌥️ 备用节点
 
 rules:
@@ -165,7 +165,7 @@ rules:
   - DOMAIN-KEYWORD,openai,🔘
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
-  - GEOSITE,CN,🚀 国内节点
-  - GEOIP,CN,🚀 国内节点,no-resolve
+  - GEOSITE,CN,🚀 国内->百度节点
+  - GEOIP,CN,🚀 国内->百度节点,no-resolve
 # 兜底规则
   - MATCH,🐟 漏网之鱼
