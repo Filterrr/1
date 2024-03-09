@@ -113,13 +113,8 @@ proxy-groups:
   - name: 🚀 国内节点
     type: select
     proxies:
-      - 🚀 哔哩卡免流
-      - 🎯 全球直连
-
-  - name: 🚀 哔哩卡免流
-    type: select
-    use:
       - bili
+      - 🎯 全球直连
 
   - name: 🌥️ 备用节点
     type: select
