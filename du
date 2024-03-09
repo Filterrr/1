@@ -113,8 +113,9 @@ proxy-groups:
   - name: 🚀 国内节点
     type: select
     proxies:
-      - bili
       - 🎯 全球直连
+    use:
+      - bili
 
   - name: 🌥️ 备用节点
     type: select
