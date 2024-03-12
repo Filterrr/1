@@ -166,6 +166,6 @@ rules:
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内->百度节点
-  - GEOIP,CN,🚀 国内->百度节点,no-resolve
+  - GEOIP,CN,🚀 国内->百度节点
 # 兜底规则
   - MATCH,🐟 漏网之鱼
