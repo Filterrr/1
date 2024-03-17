@@ -23,6 +23,6 @@ proxies:
     <<: *bili
 
   - name: 🇨🇳 Baidu Auto
-    server: 36.155.169.188
+    server: cloudnproxy.n.shifen.com
     <<: *bili
        
