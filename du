@@ -10,7 +10,7 @@ mixed-port: 7890
 allow-lan: true
 bind-address: "*"
 mode: rule
-log-level: info
+log-level: debug
 ipv6: false
 geodata-loader: memconservative
 keep-alive-interval: 30
