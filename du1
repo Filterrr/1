@@ -154,7 +154,7 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
+    path: ./ruleset/cn.yaml
     interval: 86400
       
 rules:
@@ -169,7 +169,7 @@ rules:
   - DOMAIN-KEYWORD,openai,🔘
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
-    
+  - RULE-SET,private,🚀 国内->百度节点
   - GEOSITE,CN,🚀 国内->百度节点
   - GEOIP,CN,🚀 国内->百度节点
 # 兜底规则
