@@ -153,8 +153,8 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/cn.yaml
+    url: "https://raw.githubusercontent.com/Filterrr/1/main/modes/cn-asn"
+    path: ./ruleset/cn-asn.yaml
     interval: 86400
       
 rules:
@@ -169,7 +169,7 @@ rules:
   - DOMAIN-KEYWORD,openai,🔘
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
-  - RULE-SET,private,🚀 国内->百度节点
+  - RULE-SET,cn-asn,🚀 国内->百度节点
   - GEOSITE,CN,🚀 国内->百度节点
   - GEOIP,CN,🚀 国内->百度节点
 # 兜底规则
