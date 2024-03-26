@@ -58,7 +58,7 @@ proxy-providers:
 
   xiaopro1:
     type: http
-    url: https://sub.cfno1.eu.org/clash?host=hk888.kh11a.link&uuid=86e0e3a3-5435-4d99-8d5f-54a124d6cb79&path=/b8a6cb3e/&protocol=vmess
+    url: https://sub.cfno1.eu.org/clash?host=xjaid.affa21.free.hr&uuid=86e0e3a3-5435-4d99-8d5f-54a124d6cb79&path=/b8a6cb3e/&protocol=vmess
     interval: 6048000
     path: ./du/provider201.yaml
     health-check:
@@ -68,7 +68,7 @@ proxy-providers:
 
 #  xiaopro2:
 #    type: http
-#    url: https://sub.xf.free.hr/api/sub?&host=hk888.kh11a.link&uuid=86e0e3a3-5435-4d99-8d5f-54a124d6cb79&path=/b8a6cb3e/&type=vmess
+#    url: https://sub.xf.free.hr/api/sub?&host=xjaid.affa21.free.hr&uuid=86e0e3a3-5435-4d99-8d5f-54a124d6cb79&path=/b8a6cb3e/&type=vmess
 #    interval: 6048000
 #    path: ./du/provider202.yaml
 #    health-check:
@@ -93,7 +93,7 @@ proxies:
     server: ip.sb
     port: 2053
     <<: *CF
-  - {name: 备用节点2, type: vmess, server: ip.sb, port: 8443, uuid: 86e0e3a3-5435-4d99-8d5f-54a124d6cb79, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: '/b8a6cb3e/', headers: {Host: hk888.kh11a.link}}}
+  - {name: 备用节点2, type: vmess, server: ip.sb, port: 8443, uuid: 86e0e3a3-5435-4d99-8d5f-54a124d6cb79, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: '/b8a6cb3e/', headers: {Host: xjaid.affa21.free.hr}}}
 
 proxy-groups:
   - name: 🌎 全球节点
