@@ -131,6 +131,8 @@ proxy-groups:
 rules:
 # UDP 规则 
   - NETWORK,UDP,⚠️ UDP规则
+# 将请求劫持到内部dns模块处理
+  - DST-PORT,53,dns-out
 # 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
 # 蓝奏云规则
