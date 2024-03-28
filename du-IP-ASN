@@ -69,9 +69,14 @@ CF: &CF
         Host: world.kh11a.link
         
 proxies:
-  - name: 备用节点
+  - name: 备用节点1
     server: ip.sb
-    port: 2053
+    port: 8443
+    <<: *CF
+
+  - name: 备用节点2
+    server: www.visa.com.hk
+    port: 2096
     <<: *CF
 
   - name: "dns-out"
@@ -97,7 +102,8 @@ proxy-groups:
   - name: 🌥️ 备用节点
     type: select
     proxies:
-      - 备用节点
+      - 备用节点1
+      - 备用节点2
 
   - name: ⚠️ UDP规则
     type: select
