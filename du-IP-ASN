@@ -48,9 +48,9 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    #url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&format=base64&type=vless
-    #url: https://sub.cfno1.eu.org/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&format=base64&type=vless
-    url: https://sub.cfno1.eu.org/clash?host=vm155.212124.xyz&uuid=cecdf79f-9374-4416-b343-78855e66ee8b&path=/1da8817a742b43/&type=vmess
+    #url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&format=base64&&protocol=vless
+    #url: https://sub.cfno1.eu.org/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&format=base64&protocol=vless
+    url: https://sub.cfno1.eu.org/clash?host=vm155.212124.xyz&uuid=cecdf79f-9374-4416-b343-78855e66ee8b&path=/1da8817a742b43/&protocol=vmess
     interval: 6048000
     path: ./du/provider200.yaml
     health-check:
