@@ -50,7 +50,7 @@ proxy-providers:
     type: http
     #url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&format=base64&type=vless
     #url: https://sub.cfno1.eu.org/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&format=base64&protocol=vless
-    url: https://sub.cfno1.eu.org/clash?host=signals-minus-peoples-providing.trycloudflare.com&uuid=379666ff-87b4-4e69-b6a2-d3f41a108300&path=379666ff&protocol=vmess
+    url: https://sub.cfno1.eu.org/clash?host=vm156.212124.xyz&uuid=98a23903-61f4-4b9b-af3b-55ec47863474&path=/af2e0af4ace3d/&protocol=vmess
     interval: 6048000
     path: ./du/provider200.yaml
     health-check:
