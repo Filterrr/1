@@ -48,7 +48,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://sub.cfno1.eu.org/sub?host=neon-opening-martin-dosage.trycloudflare.com&uuid=ead65a89-f2f0-47c0-92ee-5a75dd6095c3&path=/ead65a89&format=base64&protocol=vmess
+    url: https://sub.cfno1.eu.org/clash?host=neon-opening-martin-dosage.trycloudflare.com&uuid=ead65a89-f2f0-47c0-92ee-5a75dd6095c3&path=/ead65a89&format=base64&protocol=vmess
     interval: 6048000
     path: ./du/provider200.yaml
     health-check:
