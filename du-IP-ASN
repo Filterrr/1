@@ -20,7 +20,7 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
   default-nameserver:
-    - 223.5.5.5
+    - 114.114.114.114
   nameserver:
     - 114.114.114.114
     - 223.5.5.5
