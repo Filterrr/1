@@ -143,8 +143,6 @@ proxy-groups:
 rules:
 # UDP 规则 
   - NETWORK,UDP,⚠️ UDP规则
-# DNS劫持
-  - DST-PORT,53,🦈 DNS劫持
 # 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
 # 蓝奏云规则
@@ -156,5 +154,7 @@ rules:
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内->百度节点
   - GEOIP,CN,🚀 国内->百度节点
+# DNS劫持
+  - AND,((NETWORK,udp),(DST-PORT,53)),🦈 DNS劫持
 # 兜底规则
   - MATCH,🐟 漏网之鱼
