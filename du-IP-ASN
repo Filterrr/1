@@ -49,7 +49,7 @@ proxy-providers:
     type: http
     #url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&format=base64&type=vless
     #url: https://sub.cfno1.eu.org/clash?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&protocol=vless
-    url: https://sub.cfno1.eu.org/clash?host=canm.212124.xyz&uuid=9a6583a5-6c8d-49cb-ba7a-234792cc7fb8&path=/a3f3381e/&protocol=vmess
+    url: https://sub.cfno1.eu.org/clash?host=canm.212124.xyz&uuid=7948ea21-411a-4118-aa02-1cfcd32266dd&path=/7948ea21&protocol=vmess
     interval: 6048000
     path: ./du/provider200.yaml
     health-check:
