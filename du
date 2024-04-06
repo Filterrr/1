@@ -47,7 +47,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://sub.cfno1.eu.org/clash?host=canm.212124.xyz&uuid=7948ea21-411a-4118-aa02-1cfcd32266dd&path=/7948ea21&protocol=vmess
+    url: https://sub.xf.free.hr/api/sub?host=canm.212124.xyz&uuid=7948ea21-411a-4118-aa02-1cfcd32266dd&path=/7948ea21&format=base64&type=vmess
     interval: 6048000
     path: ./du/provider200.yaml
     health-check:
