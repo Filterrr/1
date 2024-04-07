@@ -47,7 +47,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=canm.212124.xyz&uuid=5cae0e55-f2ff-47d1-bac5-21b3691d29fb&path=/5cae0e55&format=base64&type=vmess
+    url: https://sub.xf.free.hr/api/sub?host=canm.212124.xyz&uuid=58079f03-c75a-4794-aed4-c573bbeffec4&path=/58079f03&format=base64&type=vmess
     interval: 6048000
     path: ./du/provider200.yaml
     health-check:
