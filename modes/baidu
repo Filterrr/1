@@ -2,8 +2,8 @@ baidu: &baidu
   type: http
   port: 443
   headers:
-    Host: "www.baidu.com:443"
-    X-T5-Auth: "1997382601"
+    Host: www.baidu.com
+    X-T5-Auth: 1997382601
 
 proxies:
   - name: 🇨🇳 电信 苏州
