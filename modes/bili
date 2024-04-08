@@ -2,8 +2,8 @@ bili: &bili
   type: http
   port: 443
   headers:
-    Host: "i1.hdslb.com"
-    X-T5-Auth: "664559762"
+    Host: i1.hdslb.com
+    X-T5-Auth: 664559762
 
 proxies:
   - name: 🇨🇳 联通 河北1
