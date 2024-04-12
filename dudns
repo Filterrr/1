@@ -56,6 +56,7 @@ proxy-providers:
       enable: true
       interval: 720
       url: http://www.gstatic.com/generate_204
+      lazy: true
 
 CF: &CF
     type: vless
@@ -101,10 +102,13 @@ proxy-groups:
       - bili
 
   - name: 🌥️ 备用节点
-    type: select
+    type: url-test
     proxies:
       - 备用节点1
       - 备用节点2
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 720
+    lazy: true
 
   - name: ⚠️ UDP规则
     type: select
