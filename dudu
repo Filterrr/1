@@ -87,9 +87,13 @@ proxy-groups:
 
 
   - name: 🌥️ 备用节点
-    type: select
+    type: url-test
     proxies:
-      - 备用节点
+      - 备用节点1
+      - 备用节点2
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 720
+    lazy: true
 
   - name: ⚠️ UDP规则
     type: select
