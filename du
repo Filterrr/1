@@ -59,6 +59,19 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       lazy: true
 
+  xiaopro1:
+    type: http
+    #url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&format=base64&type=vless
+    #url: https://sub.cfno1.eu.org/clash?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&protocol=vless
+    url: https://sub.cfno1.eu.org/clash?host=canm.212124.xyz&uuid=58079f03-c75a-4794-aed4-c573bbeffec4&path=/58079f03&protocol=vmess
+    interval: 6048000
+    path: ./du/provider201.yaml
+    health-check:
+      enable: true
+      interval: 720
+      url: http://www.gstatic.com/generate_204
+      lazy: true
+
 CF: &CF
     type: vless
     uuid: 1ff64191-83b3-410a-86e3-74f721681a80
@@ -91,6 +104,7 @@ proxy-groups:
       - 🌥️ 备用节点
     use:
       - xiaopro0
+      - xiaopro1
 
   - name: 🚀 国内->百度节点
     type: select
