@@ -3,7 +3,7 @@ allow-lan: true
 bind-address: "*"
 mode: rule
 log-level: debug
-ipv6: false
+ipv6: true
 geodata-loader: memconservative
 keep-alive-interval: 30
 tcp-concurrent: true
@@ -74,17 +74,9 @@ proxy-groups:
   - name: 🌎 全球节点
     type: select
     proxies:
-      - 🚀 国内->百度节点
-      - ⚠️ UDP规则
       - 🌥️ 备用节点
     use:
       - xiaopro0
-
-  - name: 🚀 国内->百度节点
-    type: select
-    proxies:
-      - 🎯 全球直连
-
 
   - name: 🌥️ 备用节点
     type: url-test
@@ -95,11 +87,6 @@ proxy-groups:
     interval: 720
     lazy: true
 
-  - name: ⚠️ UDP规则
-    type: select
-    proxies:
-      - 🛑 全球拦截
-      - 🎯 全球直连
 
   - name: 🎯 全球直连
     type: select
@@ -114,18 +101,16 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: relay
     proxies:
-      - 🚀 国内->百度节点
+      - 🎯 全球直连
       - 🌎 全球节点
 
   - name: 🔘
     type: relay
     proxies:
-      - 🚀 国内->百度节点
+      - 🎯 全球直连
       - 🌥️ 备用节点
 
 rules:
-# UDP 规则 
-  - NETWORK,UDP,⚠️ UDP规则
 # 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
 # 蓝奏云规则
@@ -135,7 +120,7 @@ rules:
   - DOMAIN-KEYWORD,openai,🔘
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
-  - GEOSITE,CN,🚀 国内->百度节点
-  - GEOIP,CN,🚀 国内->百度节点
+  - GEOSITE,CN,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
 # 兜底规则
   - MATCH,🐟 漏网之鱼
