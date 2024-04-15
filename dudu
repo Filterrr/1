@@ -55,7 +55,7 @@ CF: &CF
     skip-cert-verify: false
     network: ws
     ws-opts: 
-      path: /
+      path: /xkaopf15da
       headers: 
         Host: world.kh11a.link
         
