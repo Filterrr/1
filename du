@@ -60,7 +60,7 @@ proxy-providers:
 
   xiaopro1:
     type: http
-    url: https://sub.cfno1.eu.org/clash?host=jata.212124.xyz&uuid=41d8d8eb-f78d-49f3-ae4c-2a10a2eaf319&path=41d8d8eb&protocol=vmess
+    url: https://cfno1.pages.dev/clash?host=jata.212124.xyz&uuid=41d8d8eb-f78d-49f3-ae4c-2a10a2eaf319&path=41d8d8eb&protocol=vmess
     interval: 6048000
     path: ./du/provider201.yaml
     health-check:
