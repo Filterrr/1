@@ -92,9 +92,6 @@ proxies:
     port: 2096
     <<: *CF
 
-  - name: "dns-out"
-    type: dns
-
 proxy-groups:
   - name: 🌎 全球节点
     type: select
@@ -127,11 +124,6 @@ proxy-groups:
     proxies:
       - 🛑 全球拦截
       - 🎯 全球直连
-
-  - name: 🦈 DNS劫持
-    type: select
-    proxies:
-      - dns-out
 
   - name: 🎯 全球直连
     type: select
@@ -171,7 +163,5 @@ rules:
   - GEOIP,CN,🚀 国内->百度节点
 # 局域网
   - IP-CIDR,192.168.0.0/16,🎯 全球直连
-# DNS劫持
-  - AND,((NETWORK,udp),(DST-PORT,53)),🦈 DNS劫持
 # 兜底规则
   - MATCH,🐟 漏网之鱼
