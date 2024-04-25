@@ -114,12 +114,8 @@ proxy-groups:
     proxies:
       - REJECT
 rules:
-# UDP 规则 
-  - NETWORK,UDP,🌎 全球节点
 # 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
-# 蓝奏云规则
-  - DST-PORT,446,🎯 全球直连
 # 分流规则
   - DOMAIN-KEYWORD,google,🌎 全球节点
   - DOMAIN-KEYWORD,openai,🌥️ 备用节点
@@ -127,7 +123,5 @@ rules:
 # 国内外分流规则
   - GEOSITE,CN,🎯 全球直连
   - GEOIP,CN,🎯 全球直连
-# 局域网
-  - IP-CIDR,192.168.0.0/16,🎯 全球直连
 # 兜底规则
   - MATCH,🌎 全球节点
