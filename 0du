@@ -114,6 +114,8 @@ proxy-groups:
     proxies:
       - REJECT
 rules:
+# UDP 规则 
+  - NETWORK,UDP,🌎 全球节点
 # 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
 # 蓝奏云规则
