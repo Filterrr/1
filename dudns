@@ -60,7 +60,6 @@ proxy-providers:
       enable: true
       interval: 720
       url: http://www.gstatic.com/generate_204
-      lazy: true
 
   xiaopro1:
     type: http
@@ -71,7 +70,6 @@ proxy-providers:
       enable: true
       interval: 720
       url: http://www.gstatic.com/generate_204
-      lazy: true
 
 CF: &CF
     type: vless
@@ -165,7 +163,5 @@ rules:
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内->百度节点
   - GEOIP,CN,🚀 国内->百度节点
-# 局域网
-  - IP-CIDR,192.168.0.0/16,🎯 全球直连
 # 兜底规则
   - MATCH,🐟 漏网之鱼
