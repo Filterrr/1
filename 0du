@@ -154,6 +154,5 @@ rules:
   - GEOIP,CN,🎯 全球直连
 # DNS 劫持
   - AND,((NETWORK,udp),(DST-PORT,53)),dns-out
-  - AND,((NETWORK,tcp),(DST-PORT,53)),dns-out
 # 兜底规则
   - MATCH,🌎 全球节点
