@@ -1,0 +1,192 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: "*"
+mode: rule
+log-level: debug
+ipv6: false
+geodata-loader: memconservative
+keep-alive-interval: 30
+tcp-concurrent: true
+find-process-mode: strict
+global-client-fingerprint: chrome
+external-controller: 127.0.0.1:9090
+unified-delay: true
+global-ua: clash.meta
+
+profile: # 存储 select 选择记录
+  store-selected: false
+  # 持久化 fake-ip
+  store-fake-ip: true
+
+# 嗅探域名 可选配置
+sniffer:
+  enable: true
+  sniff: # TLS 默认如果不配置 ports 默认嗅探 443
+    TLS:
+      ports: [443, 8443]
+    HTTP: # 需要嗅探的端口, 默认嗅探 80
+      ports: [80, 8080-8880]
+      override-destination: true # 可覆盖 sniffer.override-destination
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.1/8
+  default-nameserver:
+    - https://223.5.5.5/dns-query
+  nameserver:
+    - https://223.5.5.5/dns-query
+    - https://1.0.0.1/dns-query
+  nameserver-policy:
+    "geosite:cn,private":
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
+
+geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 8
+geox-url:
+  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+
+proxy-providers:
+  bili:
+    type: http
+    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/bili
+    interval: 6048000
+    path: ./providerbili.yaml
+    health-check:
+      enable: true
+      interval: 720
+      url: http://www.gstatic.com/generate_204
+
+  xiaopro0:
+    type: http
+    url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
+    path: ./du/provider200.yaml
+    interval: 6048000
+    header:
+      User-Agent:
+      - "Clash/v1.18.0"
+      - "mihomo/1.18.3"
+      Authorization:
+      - 'token 1231231'
+    health-check:
+      enable: true
+      interval: 720
+      url: http://www.gstatic.com/generate_204
+
+  xiaopro1:
+    type: http
+    url: https://cfno1.pages.dev/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
+    path: ./du/provider201.yaml
+    interval: 6048000
+    header:
+      User-Agent:
+      - "Clash/v1.18.0"
+      - "mihomo/1.18.3"
+      Authorization:
+      - 'token 1231231'
+    health-check:
+      enable: true
+      interval: 720
+      url: http://www.gstatic.com/generate_204
+
+CF: &CF
+    type: vless
+    uuid: 1ff64191-83b3-410a-86e3-74f721681a80
+    tls: true
+    servername: world.kh11a.link
+    skip-cert-verify: false
+    network: ws
+    ws-opts: 
+      path: /xkaopf15da
+      headers: 
+        Host: world.kh11a.link
+        
+proxies:
+  - name: 备用节点1
+    server: ip.sb
+    port: 8443
+    <<: *CF
+
+  - name: 备用节点2
+    server: www.visa.com.hk
+    port: 2096
+    <<: *CF
+
+proxy-groups:
+  - name: 🌎 全球节点
+    type: select
+    proxies:
+      - 🚀 国内->百度节点
+      - ⚠️ UDP规则
+      - 🌥️ 备用节点
+    use:
+      - xiaopro0
+      - xiaopro1
+
+  - name: 🚀 国内->百度节点
+    type: select
+    proxies:
+      - 🎯 全球直连
+    use:
+      - bili
+
+  - name: 🌥️ 备用节点
+    type: url-test
+    proxies:
+      - 备用节点1
+      - 备用节点2
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 720
+    lazy: true
+
+  - name: ⚠️ UDP规则
+    type: select
+    proxies:
+      - 🛑 全球拦截
+      - 🎯 全球直连
+
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+
+  - name: 🐟 漏网之鱼
+    type: relay
+    proxies:
+      - 🚀 国内->百度节点
+      - 🌎 全球节点
+
+  - name: 🔘
+    type: relay
+    proxies:
+      - 🚀 国内->百度节点
+      - 🌥️ 备用节点
+
+rules:
+# UDP 规则 
+  - NETWORK,UDP,⚠️ UDP规则
+# 广告过滤
+  - geosite,category-ads-all,🛑 全球拦截
+# 蓝奏云规则
+  - DST-PORT,446,🐟 漏网之鱼
+# 分流规则
+  - DOMAIN-KEYWORD,google,🐟 漏网之鱼
+  - DOMAIN-KEYWORD,openai,🔘
+  - IN-TYPE,INNER,🔘
+# 国内外分流规则
+  - GEOSITE,CN,🚀 国内->百度节点
+  - GEOIP,CN,🚀 国内->百度节点
+# 兜底规则
+  - MATCH,🐟 漏网之鱼
