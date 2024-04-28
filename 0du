@@ -111,6 +111,9 @@ proxies:
     port: 2096
     <<: *CF
 
+- name: dns-out
+  type: dns
+
 proxy-groups:
   - name: 🌎 全球节点
     type: select
@@ -149,5 +152,7 @@ rules:
 # 国内外分流规则
   - GEOSITE,CN,🎯 全球直连
   - GEOIP,CN,🎯 全球直连
+# DNS 劫持
+  - AND,((NETWORK,udp),(DST-PORT,53)),dns-out
 # 兜底规则
   - MATCH,🌎 全球节点
