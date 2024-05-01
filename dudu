@@ -151,6 +151,7 @@ proxy-groups:
     proxies:
       - 🛑 全球拦截
       - 🎯 全球直连
+      - 🌎 全球节点
 
   - name: 🎯 全球直连
     type: select
