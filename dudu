@@ -3,7 +3,7 @@ allow-lan: true
 bind-address: "*"
 mode: rule
 log-level: debug
-ipv6: true
+ipv6: false
 geodata-loader: memconservative
 keep-alive-interval: 30
 tcp-concurrent: true
@@ -13,6 +13,21 @@ external-controller: 127.0.0.1:9090
 unified-delay: true
 global-ua: clash.meta
 
+profile: # 存储 select 选择记录
+  store-selected: false
+  # 持久化 fake-ip
+  store-fake-ip: true
+
+# 嗅探域名 可选配置
+sniffer:
+  enable: true
+  sniff: # TLS 默认如果不配置 ports 默认嗅探 443
+    TLS:
+      ports: [443, 8443]
+    HTTP: # 需要嗅探的端口, 默认嗅探 80
+      ports: [80, 8080-8880]
+      override-destination: true # 可覆盖 sniffer.override-destination
+
 dns:
   enable: true
   ipv6: false
@@ -20,11 +35,14 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
   default-nameserver:
-    - 223.5.5.5
+    - https://223.5.5.5/dns-query
   nameserver:
     - https://223.5.5.5/dns-query
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - https://1.0.0.1/dns-query
+  nameserver-policy:
+    "geosite:cn,private":
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
 
 geodata-mode: true
 geo-auto-update: true
@@ -36,12 +54,43 @@ geox-url:
   asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
 
 proxy-providers:
+  bili:
+    type: http
+    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/bili
+    interval: 6048000
+    path: ./providerbili.yaml
+    health-check:
+      enable: true
+      interval: 720
+      url: http://www.gstatic.com/generate_204
+
   xiaopro0:
     type: http
-    #url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/?ed=2048&format=base64&type=vless
-    url: https://cfno1.pages.dev/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&protocol=vless
-    interval: 6048000
+    url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
     path: ./du/provider200.yaml
+    interval: 6048000
+    header:
+      User-Agent:
+      - "Clash/v1.18.0"
+      - "mihomo/1.18.3"
+      Authorization:
+      - 'token 1231231'
+    health-check:
+      enable: true
+      interval: 720
+      url: http://www.gstatic.com/generate_204
+
+  xiaopro1:
+    type: http
+    url: https://cfno1.pages.dev/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
+    path: ./du/provider201.yaml
+    interval: 6048000
+    header:
+      User-Agent:
+      - "Clash/v1.18.0"
+      - "mihomo/1.18.3"
+      Authorization:
+      - 'token 1231231'
     health-check:
       enable: true
       interval: 720
@@ -69,14 +118,24 @@ proxies:
     server: www.visa.com.hk
     port: 2096
     <<: *CF
-  
+
 proxy-groups:
   - name: 🌎 全球节点
     type: select
     proxies:
+      - 🚀 国内->百度节点
+      - ⚠️ UDP规则
       - 🌥️ 备用节点
     use:
       - xiaopro0
+      - xiaopro1
+
+  - name: 🚀 国内->百度节点
+    type: select
+    proxies:
+      - 🎯 全球直连
+    use:
+      - bili
 
   - name: 🌥️ 备用节点
     type: url-test
@@ -87,6 +146,11 @@ proxy-groups:
     interval: 720
     lazy: true
 
+  - name: ⚠️ UDP规则
+    type: select
+    proxies:
+      - 🛑 全球拦截
+      - 🎯 全球直连
 
   - name: 🎯 全球直连
     type: select
@@ -101,16 +165,18 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: relay
     proxies:
-      - 🎯 全球直连
+      - 🚀 国内->百度节点
       - 🌎 全球节点
 
   - name: 🔘
     type: relay
     proxies:
-      - 🎯 全球直连
+      - 🚀 国内->百度节点
       - 🌥️ 备用节点
 
 rules:
+# UDP 规则 
+  - NETWORK,UDP,⚠️ UDP规则
 # 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
 # 蓝奏云规则
@@ -120,11 +186,7 @@ rules:
   - DOMAIN-KEYWORD,openai,🔘
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
-  - GEOSITE,CN,🎯 全球直连
-  - GEOIP,CN,🎯 全球直连
-# 局域网
-  - IP-CIDR,10.0.0.0/8,🎯 全球直连
-  - IP-CIDR,172.16.0.0/12,🎯 全球直连
-  - IP-CIDR,192.168.0.0/16,🎯 全球直连
+  - GEOSITE,CN,🚀 国内->百度节点
+  - GEOIP,CN,🚀 国内->百度节点
 # 兜底规则
   - MATCH,🐟 漏网之鱼
