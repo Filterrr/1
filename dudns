@@ -68,7 +68,7 @@ proxy-providers:
     type: http
     #url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
     #url: https://sub.cfno1.eu.org/clash?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&protocol=vless
-    url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=https%3A%2F%2Fsub.xf.free.hr%2Fapi%2Fsub%3Fhost%3Djata.212124.xyz%26uuid%3D41d8d8eb-f78d-49f3-ae4c-2a10a2eaf319%26path%3D%2F41d8d8eb%26type%3Dvmess&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false
+    url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=https%3A%2F%2Fsub.xf.free.hr%2Fapi%2Fsub%3Fhost%3Djata.212124.xyz%26uuid%3D41d8d8eb-f78d-49f3-ae4c-2a10a2eaf319%26path%3D%2F41d8d8eb%26type%3Dvmess&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=false&list=true&tfo=false&scv=false&fdn=false&sort=false
     path: ./du/provider200.yaml
     interval: 6048000
     header:
