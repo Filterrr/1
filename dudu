@@ -54,9 +54,9 @@ geox-url:
   asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
 
 proxy-providers:
-  bili:
+  baidu:
     type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/bili
+    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
     interval: 6048000
     path: ./providerbili.yaml
     health-check:
@@ -135,7 +135,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
     use:
-      - bili
+      - baidu
 
   - name: 🌥️ 备用节点
     type: url-test
