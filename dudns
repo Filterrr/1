@@ -109,8 +109,19 @@ CF: &CF
       path: /xkaopf15da
       headers: 
         Host: world.kh11a.link
+
+baidu: &baidu
+    type: http
+    port: 443
+    headers:
+      Host: www.baidu.com
+      X-T5-Auth: 1997382601
         
 proxies:
+  - name: Baidu Auto
+    server: 14.215.182.75
+    <<: *baidu
+
   - name: 备用节点1
     server: ip.sb
     port: 8443
@@ -168,12 +179,14 @@ proxy-groups:
     type: relay
     proxies:
       - 🚀 国内->百度节点
+      - Baidu Auto
       - 🌎 全球节点
 
   - name: 🔘
     type: relay
     proxies:
       - 🚀 国内->百度节点
+      - Baidu Auto
       - 🌥️ 备用节点
 
 rules:
