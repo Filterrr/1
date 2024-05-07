@@ -1,9 +1,12 @@
 bili: &bili
     type: http
     port: 443
+    skip-cert-verify: true
     headers:
       Host: i1.hdslb.com
       X-T5-Auth: 664559762
+      Proxy-Connection: "Keep-Alive"
+
 proxies:
   - name: 🇨🇳 联通 河北1
     server: 110.242.70.68
