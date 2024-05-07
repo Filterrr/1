@@ -1,9 +1,11 @@
 baidu: &baidu
     type: http
     port: 443
+    skip-cert-verify: true
     headers:
       Host: www.baidu.com
       X-T5-Auth: 1997382601
+      Proxy-Connection: "Keep-Alive"
 
 proxies:
   - name: 🇨🇳 电信 苏州
