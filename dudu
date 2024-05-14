@@ -183,7 +183,8 @@ rules:
   - DST-PORT,446,🐟 漏网之鱼
 # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - DOMAIN-KEYWORD,openai,🔘
+  - DOMAIN-KEYWORD,ai,🔘
+  - DOMAIN-KEYWORD,chatgpt,🔘
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内->百度节点
