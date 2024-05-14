@@ -142,7 +142,7 @@ proxy-groups:
     proxies:
       - 备用节点1
       - 备用节点2
-    url: 'https://cp.cloudflare.com'
+    url: https://cp.cloudflare.com
     interval: 720
     lazy: true
 
