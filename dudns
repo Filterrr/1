@@ -52,9 +52,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    #url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
-    #url: https://cfno1.pages.dev/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&protocol=vless
-    url: https://cfno1.pages.dev/sub?host=csafevm.212124.xyz&uuid=c602dce2-d03d-459e-97b8-02fb314cf8a8&path=/c602dce2
+    url: https://cfno1.pages.dev/sub?host=csafevm.212124.xyz&uuid=c602dce2-d03d-459e-97b8-02fb314cf8a8&path=/c602dce2&format=base64&type=vless
     path: ./du/provider200.yaml
     interval: 6048000
     header:
