@@ -48,7 +48,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 720
-      url: https://cp.cloudflare.com
+      url: https://www.gstatic.com/generate_204
 
   xiaopro0:
     type: http
@@ -64,7 +64,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 720
-      url: https://cp.cloudflare.com
+      url: https://www.gstatic.com/generate_204
 
   xiaopro1:
     type: http
@@ -80,7 +80,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 720
-      url: https://cp.cloudflare.com
+      url: https://www.gstatic.com/generate_204
 
 CF: &CF
     type: vless
@@ -128,7 +128,7 @@ proxy-groups:
     proxies:
       - 备用节点1
       - 备用节点2
-    url: https://cp.cloudflare.com
+    url: https://www.gstatic.com/generate_204
     interval: 720
     lazy: true
 
