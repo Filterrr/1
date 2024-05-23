@@ -24,14 +24,6 @@ proxies:
     server: 157.0.148.53
     <<: *bili
 
-  - name: 🇨🇳 联通 广州
-    server: 163.177.17.6
-    <<: *bili
-
-  - name: 🇨🇳 联通 广州2
-    server: 163.177.17.189
-    <<: *bili
-
   - name: 🇨🇳 Baidu Auto
     server: cloudnproxy.n.shifen.com
     <<: *bili
