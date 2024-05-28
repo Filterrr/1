@@ -9,11 +9,6 @@ keep-alive-interval: 30
 global-client-fingerprint: firefox
 global-ua: clash.meta
 
-profile: # 存储 select 选择记录
-  store-selected: true
-  # 持久化 fake-ip
-  store-fake-ip: true
-
 dns:
   enable: true
   ipv6: false
@@ -165,8 +160,7 @@ rules:
   - DST-PORT,446,🐟 漏网之鱼
 # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - DOMAIN-KEYWORD,ai,🔘
-  - DOMAIN-KEYWORD,chatgpt,🔘
+  - DOMAIN-KEYWORD,chat,🔘
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内->百度节点
