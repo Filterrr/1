@@ -121,7 +121,6 @@ proxy-groups:
       - 备用节点2
     url: https://www.gstatic.com/generate_204
     interval: 720
-    lazy: true
 
   - name: ⚠️ UDP规则
     type: select
