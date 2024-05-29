@@ -5,7 +5,6 @@ baidu: &baidu
     headers:
       Host: www.baidu.com
       X-T5-Auth: 1997382601
-      Proxy-Connection: "Keep-Alive"
 
 proxies:
   - name: 🇨🇳 电信 苏州
