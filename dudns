@@ -36,12 +36,6 @@ proxy-providers:
     url: https://worldcf.kh11a.link/Filterrr/1/main/modes/bili
     interval: 6048000
     path: ./providerbili.yaml
-    header:
-      User-Agent:
-        - "Clash/v1.18.0"
-        - "mihomo/1.18.3"
-      Authorization:
-        - 'token 1231231'
     health-check:
       enable: true
       interval: 720
@@ -52,12 +46,6 @@ proxy-providers:
     url: https://cfno1.pages.dev/clash?host=csafevm.212124.xyz&uuid=c602dce2-d03d-459e-97b8-02fb314cf8a8&path=/c602dce2&format=base64&type=vless
     path: ./du/provider200.yaml
     interval: 6048000
-    header:
-      User-Agent:
-        - "Clash/v1.18.0"
-        - "mihomo/1.18.3"
-      Authorization:
-        - 'token 1231231'
     health-check:
       enable: true
       interval: 720
@@ -68,12 +56,6 @@ proxy-providers:
     url: https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fsub.xf.free.hr%2Fapi%2Fsub%3Fhost%3Dcsafevm.212124.xyz%26uuid%3Dc602dce2-d03d-459e-97b8-02fb314cf8a8%26path%3D%2Fc602dce2%26format%3Dbase64%26type%3Dvless&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=true&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
     path: ./du/provider201.yaml
     interval: 6048000
-    header:
-      User-Agent:
-        - "Clash/v1.18.0"
-        - "mihomo/1.18.3"
-      Authorization:
-        - 'token 1231231'
     health-check:
       enable: true
       interval: 720
