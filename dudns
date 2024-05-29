@@ -36,6 +36,12 @@ proxy-providers:
     url: https://worldcf.kh11a.link/Filterrr/1/main/modes/bili
     interval: 6048000
     path: ./providerbili.yaml
+    header:
+      User-Agent:
+        - "Clash/v1.18.0"
+        - "mihomo/1.18.3"
+      Authorization:
+        - 'token 1231231'
     health-check:
       enable: true
       interval: 720
@@ -48,10 +54,10 @@ proxy-providers:
     interval: 6048000
     header:
       User-Agent:
-      - "Clash/v1.18.0"
-      - "mihomo/1.18.3"
+        - "Clash/v1.18.0"
+        - "mihomo/1.18.3"
       Authorization:
-      - 'token 1231231'
+        - 'token 1231231'
     health-check:
       enable: true
       interval: 720
@@ -64,10 +70,10 @@ proxy-providers:
     interval: 6048000
     header:
       User-Agent:
-      - "Clash/v1.18.0"
-      - "mihomo/1.18.3"
+        - "Clash/v1.18.0"
+        - "mihomo/1.18.3"
       Authorization:
-      - 'token 1231231'
+        - 'token 1231231'
     health-check:
       enable: true
       interval: 720
