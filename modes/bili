@@ -3,8 +3,8 @@ bili: &bili
     port: 443
     skip-cert-verify: true
     headers:
-      Host: i1.hdslb.com
-      X-T5-Auth: 664559762
+      Host: cn-fjqz-cmcc-v-02.bilivideo.com
+      X-T5-Auth: 1440006092
       Proxy-Connection: "Keep-Alive"
       User-Agent: okhttp/3.11.0 Dalvik/2.1.0 (Linux; Build/RKQ1.200826.002) baiduboxapp/11.0.5.12 (Baidu; P1 11)
 
