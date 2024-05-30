@@ -33,9 +33,9 @@ geox-url:
 proxy-providers:
   bili:
     type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/bili
+    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
     interval: 6048000
-    path: ./providerbili.yaml
+    path: ./providerbaidu.yaml
     health-check:
       enable: true
       interval: 720
