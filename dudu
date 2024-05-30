@@ -9,11 +9,6 @@ keep-alive-interval: 30
 global-client-fingerprint: firefox
 global-ua: clash.meta
 
-profile: # 存储 select 选择记录
-  store-selected: true
-  # 持久化 fake-ip
-  store-fake-ip: true
-
 dns:
   enable: true
   ipv6: false
