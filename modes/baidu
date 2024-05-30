@@ -58,3 +58,7 @@ proxies:
   - name: 🇨🇳 移动 广东
     server: 183.240.98.84
     <<: *baidu
+
+  - name: 🇨🇳 Baidu Auto
+    server: cloudnproxy.n.shifen.com
+    <<: *baidu
