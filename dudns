@@ -53,7 +53,7 @@ proxy-providers:
 
   xiaopro1:
     type: http
-    url: https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fsub.xf.free.hr%2Fapi%2Fsub%3Fhost%3Dcsafevm.212124.xyz%26uuid%3Dc602dce2-d03d-459e-97b8-02fb314cf8a8%26path%3D%2Fc602dce2%26format%3Dbase64%26type%3Dvless&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=true&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+    url: https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fsub.xf.free.hr%2Fapi%2Fsub%3Fhost%3Dvmypq.212124.xyz%26uuid%3Dee9a3cfa-f9ad-46ef-94b1-ad3b28bde778%26path%3D%2Fee9a3cfa%26format%3Dbase64%26type%3Dvless&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=true&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
     path: ./du/provider201.yaml
     interval: 6048000
     health-check:
