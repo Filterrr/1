@@ -31,6 +31,16 @@ geox-url:
   asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
 
 proxy-providers:
+  fx:
+    type: http
+    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/fx
+    interval: 6048000
+    path: ./providerfx.yaml
+    health-check:
+      enable: true
+      interval: 720
+      url: https://www.gstatic.com/generate_204
+
   baidu:
     type: http
     url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
@@ -101,6 +111,7 @@ proxy-groups:
       - 🎯 全球直连
     use:
       - baidu
+      - fx
 
   - name: 🌥️ 备用节点
     type: url-test
