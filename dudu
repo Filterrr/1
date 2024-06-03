@@ -87,7 +87,7 @@ CF: &CF
         
 proxies:
   - name: 备用节点1
-    server: ip.sb
+    server: speed.cloudflare.com
     port: 8443
     <<: *CF
 
