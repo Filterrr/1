@@ -53,7 +53,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://cfno1.pages.dev/clash?host=vmypq.212124.xyz&uuid=ee9a3cfa-f9ad-46ef-94b1-ad3b28bde778&path=/ee9a3cfa&format=base64&type=vless
+    url: https://cfno1.pages.dev/clash?host=vmypq.212124.xyz&uuid=ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae&path=/ddcde2a6&format=base64&type=vless
     path: ./du/provider200.yaml
     interval: 6048000
     health-check:
@@ -63,7 +63,7 @@ proxy-providers:
 
   xiaopro1:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=vmypq.212124.xyz&uuid=ee9a3cfa-f9ad-46ef-94b1-ad3b28bde778&path=/ee9a3cfa&format=base64&type=vless
+    url: https://sub.xf.free.hr/api/sub?host=vmypq.212124.xyz&uuid=ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae&path=/ddcde2a6&format=base64&type=vless
     path: ./du/provider201.yaml
     interval: 6048000
     health-check:
