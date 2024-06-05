@@ -35,7 +35,6 @@ proxy-providers:
     type: http
     url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
     interval: 6048000
-    path: ./providerbili.yaml
     health-check:
       enable: true
       interval: 720
@@ -44,7 +43,6 @@ proxy-providers:
   xiaopro0:
     type: http
     url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
-    path: ./du/provider200.yaml
     interval: 6048000
     health-check:
       enable: true
@@ -54,7 +52,6 @@ proxy-providers:
   xiaopro1:
     type: http
     url: https://cfno1.pages.dev/clash?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
-    path: ./du/provider201.yaml
     interval: 6048000
     health-check:
       enable: true
@@ -64,7 +61,6 @@ proxy-providers:
   xiaopro2:
     type: http
     url: https://mc.jiedianxielou.workers.dev
-    path: ./du/provider202.yaml
     interval: 6048000
     health-check:
       enable: true
