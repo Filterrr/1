@@ -53,7 +53,7 @@ proxy-providers:
 
   xiaopro1:
     type: http
-    url: https://cfno1.pages.dev/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
+    url: https://cfno1.pages.dev/clash?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
     path: ./du/provider201.yaml
     interval: 6048000
     health-check:
