@@ -3,8 +3,8 @@ baidu: &baidu
     port: 443
     skip-cert-verify: true
     headers:
-      Host: www.baidu.com
-      X-T5-Auth: 1997382601
+      Host: cloudnproxy.baidu.com
+      X-T5-Auth: 1050504963
 
 proxies:
   - name: 🇨🇳 电信 苏州
