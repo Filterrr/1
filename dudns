@@ -81,6 +81,9 @@ CF: &CF
         Host: world.kh11a.link
         
 proxies:
+  - name: dns-out
+    type: dns
+
   - name: 备用节点1
     server: speed.cloudflare.com
     port: 8443
@@ -160,5 +163,6 @@ rules:
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内->百度节点
   - GEOIP,CN,🚀 国内->百度节点
+  - AND,((NETWORK,udp),(DST-PORT,53)),dns-out
 # 兜底规则
   - MATCH,🐟 漏网之鱼
