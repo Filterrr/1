@@ -154,6 +154,8 @@ rules:
   - NETWORK,UDP,⚠️ UDP规则
 # 广告过滤
   - geosite,category-ads-all,🛑 全球拦截
+# dns 劫持
+  - AND,((NETWORK,udp),(DST-PORT,53)),dns-out
 # 蓝奏云规则
   - DST-PORT,446,🐟 漏网之鱼
 # 分流规则
@@ -163,6 +165,5 @@ rules:
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内->百度节点
   - GEOIP,CN,🚀 国内->百度节点
-  - AND,((NETWORK,udp),(DST-PORT,53)),dns-out
 # 兜底规则
   - MATCH,🐟 漏网之鱼
