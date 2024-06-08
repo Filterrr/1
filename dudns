@@ -10,6 +10,18 @@ global-client-fingerprint: firefox
 global-ua: clash.meta
 find-process-mode: strict
 
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  auto-route: true
+  auto-detect-interface: true
+  # 黑名单(填UID)
+  exclude-uid:
+   # - 10114
+
 dns:
   enable: true
   ipv6: false
