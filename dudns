@@ -5,10 +5,11 @@ mode: rule
 log-level: debug
 ipv6: false
 geodata-loader: memconservative
-keep-alive-interval: 30
+keep-alive-interval: 15
 global-client-fingerprint: firefox
 global-ua: clash.meta
 find-process-mode: strict
+unified-delay: true
 
 tun:
   enable: true
@@ -51,7 +52,7 @@ dns:
 
 geodata-mode: true
 geo-auto-update: true
-geo-update-interval: 8
+geo-update-interval: 24
 geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
