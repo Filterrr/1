@@ -61,7 +61,7 @@ proxy-providers:
 
   xiaopro2:
     type: http
-    url: https://mc.jiedianxielou.workers.dev
+    url: https://c.jiedianxielou.workers.dev/api/v1/client/subscribe?token=114513
     interval: 6048000
     health-check:
       enable: true
