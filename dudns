@@ -169,7 +169,7 @@ rules:
   - DST-PORT,446,🐟 漏网之鱼
 # AI 规则
 # ChatGPT
-  - AND,((DOMAIN-KEYWORD,chatgpt-async-webps-prod-eastus-),(DOMAIN-SUFFIX,webpubsub.azure.com))
+  - DOMAIN-KEYWORD,chat,🔘
   - DOMAIN,chat.openai.com.cdn.cloudflare.net,🔘
   - DOMAIN,o33249.ingest.sentry.io,🔘
   - DOMAIN,openaiapi-site.azureedge.net,🔘
@@ -199,8 +199,8 @@ rules:
 # Claude
   - DOMAIN-SUFFIX,anthropic.com,🔘
   - DOMAIN-SUFFIX,claude.ai,🔘
-  - IP-CIDR,160.79.104.0/23,no-resolve,🔘
-  - IP-CIDR6,2607:6bc0::/48,no-resolve,🔘
+  - IP-CIDR,160.79.104.0/23,🔘,no-resolve
+  - IP-CIDR6,2607:6bc0::/48,🔘,no-resolve
 # JetBrains AI
   - DOMAIN-SUFFIX,grazie.ai,🔘
   - DOMAIN-SUFFIX,grazie.aws.intellij.net,🔘
