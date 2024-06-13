@@ -52,7 +52,6 @@ proxy-providers:
     type: http
     url: https://worldcf.kh11a.link/Filterrr/1/main/modes/fx
     interval: 6048000
-    proxy: 🔘
     health-check:
       enable: true
       interval: 720
@@ -62,7 +61,6 @@ proxy-providers:
     type: http
     url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
     interval: 6048000
-    proxy: 🔘
     health-check:
       enable: true
       interval: 720
@@ -72,7 +70,6 @@ proxy-providers:
     type: http
     url: https://cfno1.pages.dev/clash?host=vmypq.212124.xyz&uuid=ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae&path=/ddcde2a6&format=base64&type=vless
     interval: 6048000
-    proxy: 🔘
     health-check:
       enable: true
       interval: 720
@@ -82,7 +79,6 @@ proxy-providers:
     type: http
     url: https://sub.xf.free.hr/api/sub?host=vmypq.212124.xyz&uuid=ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae&path=/ddcde2a6&format=base64&type=vless
     interval: 6048000
-    proxy: 🔘
     health-check:
       enable: true
       interval: 720
@@ -213,7 +209,7 @@ rules:
   - DOMAIN-SUFFIX,meta.ai,🔘
 # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-#  - IN-TYPE,INNER,🔘
+  - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内->百度节点
   - GEOIP,CN,🚀 国内->百度节点
