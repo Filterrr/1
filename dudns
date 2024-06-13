@@ -158,6 +158,14 @@ proxy-groups:
       - 🚀 国内->百度节点
       - 🌥️ 备用节点
 
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AI.yaml"
+    path: ./ruleset/AI.yaml
+    interval: 86400
+
 rules:
 # dns 劫持
   - AND,((NETWORK,udp),(DST-PORT,53)),dns-out
@@ -167,9 +175,10 @@ rules:
   - geosite,category-ads-all,🛑 全球拦截
 # 蓝奏云规则
   - DST-PORT,446,🐟 漏网之鱼
+# AI 规则
+  - RULE-SET,AI,🔘
 # 分流规则
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - DOMAIN-KEYWORD,chat,🔘
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内->百度节点
