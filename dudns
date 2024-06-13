@@ -10,6 +10,7 @@ global-client-fingerprint: firefox
 global-ua: clash.meta
 find-process-mode: strict
 unified-delay: true
+tcp-concurrent: true
 
 sniffer:
   enable: true
