@@ -96,6 +96,8 @@ proxy-groups:
 
   - name: 🚀 国内
     type: select
+    proxies:
+      - 🌎 全球节点
     use:
       - xiaopro11
     filter: "国内"
