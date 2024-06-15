@@ -1,0 +1,218 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: "*"
+mode: rule
+log-level: debug
+ipv6: false
+geodata-loader: memconservative
+keep-alive-interval: 15
+global-client-fingerprint: firefox
+global-ua: clash.meta
+find-process-mode: strict
+unified-delay: true
+tcp-concurrent: true
+
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  force-domain:
+    - +.v2ex.com
+  skip-domain:
+    - Mijia Cloud
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.1/8
+  default-nameserver:
+    - 223.5.5.5
+  nameserver:
+    - 223.5.5.5
+    - 1.0.0.1
+
+geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+
+proxy-providers:
+  fx:
+    type: http
+    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/fx
+    interval: 6048000
+    health-check:
+      enable: true
+      interval: 720
+      url: https://www.gstatic.com/generate_204
+
+  baidu:
+    type: http
+    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
+    interval: 6048000
+    health-check:
+      enable: true
+      interval: 720
+      url: https://www.gstatic.com/generate_204
+
+  xiaopro0:
+    type: http
+    url: https://cfno1.pages.dev/clash?host=vmypq.212124.xyz&uuid=ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae&path=/ddcde2a6&format=base64&type=vless
+    interval: 6048000
+    health-check:
+      enable: true
+      interval: 720
+      url: https://www.gstatic.com/generate_204
+
+  xiaopro1:
+    type: http
+    url: https://sub.xf.free.hr/api/sub?host=vmypq.212124.xyz&uuid=ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae&path=/ddcde2a6&format=base64&type=vless
+    interval: 6048000
+    health-check:
+      enable: true
+      interval: 720
+      url: https://www.gstatic.com/generate_204
+
+CF: &CF
+    type: vless
+    uuid: 1ff64191-83b3-410a-86e3-74f721681a80
+    tls: true
+    servername: world.kh11a.link
+    skip-cert-verify: false
+    network: ws
+    ws-opts: 
+      path: /xkaopf15da
+      headers: 
+        Host: world.kh11a.link
+        
+proxies:
+  - name: dns-out
+    type: dns
+
+  - name: 备用节点1
+    server: speed.cloudflare.com
+    port: 8443
+    <<: *CF
+
+  - name: 备用节点2
+    server: www.visa.com.hk
+    port: 2096
+    <<: *CF
+
+proxy-groups:
+  - name: 🌎 全球节点
+    type: select
+    proxies:
+      - 🚀 国内->百度节点
+      - 🌥️ 备用节点
+    use:
+      - xiaopro0
+      - xiaopro1
+
+  - name: 🚀 国内->百度节点
+    type: select
+    proxies:
+      - 🎯 全球直连
+    use:
+      - baidu
+      - fx
+
+  - name: 🌥️ 备用节点
+    type: url-test
+    proxies:
+      - 备用节点1
+      - 备用节点2
+    url: https://www.gstatic.com/generate_204
+    interval: 720
+
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+
+  - name: 🐟 漏网之鱼
+    type: relay
+    proxies:
+      - 🚀 国内->百度节点
+      - 🌎 全球节点
+
+  - name: 🔘
+    type: relay
+    proxies:
+      - 🚀 国内->百度节点
+      - 🌥️ 备用节点
+
+rules:
+# dns 劫持
+  - AND,((NETWORK,udp),(DST-PORT,53)),dns-out
+# UDP 规则 
+  - NETWORK,UDP,🛑 全球拦截
+# 广告过滤
+  - geosite,category-ads-all,🛑 全球拦截
+# 蓝奏云规则
+  - DST-PORT,446,🐟 漏网之鱼
+# AI 规则
+# ChatGPT
+  - DOMAIN-KEYWORD,chat,🔘
+  - DOMAIN,chat.openai.com.cdn.cloudflare.net,🔘
+  - DOMAIN,o33249.ingest.sentry.io,🔘
+  - DOMAIN,openaiapi-site.azureedge.net,🔘
+  - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,🔘
+  - DOMAIN,openaicom.imgix.net,🔘
+  - DOMAIN,openaicomproductionae4b.blob.core.windows.net,🔘
+  - DOMAIN,production-openaicom-storage.azureedge.net,🔘
+  - DOMAIN-SUFFIX,chatgpt.com,🔘
+  - DOMAIN-SUFFIX,oaistatic.com,🔘
+  - DOMAIN-SUFFIX,oaiusercontent.com,🔘
+  - DOMAIN-SUFFIX,openai.com,🔘
+# Copilot
+  - DOMAIN,api.githubcopilot.com,🔘
+  - DOMAIN,copilot-proxy.githubusercontent.com,🔘
+  - DOMAIN,copilot.microsoft.com,🔘
+  - DOMAIN,sydney.bing.com,🔘
+  - DOMAIN,www.bing.com,🔘
+# Gemini
+  - DOMAIN,bard.google.com,🔘
+  - DOMAIN,gemini.google.com,🔘
+  - DOMAIN,generativelanguage.googleapis.com,🔘
+  - DOMAIN,ai.google.dev,🔘
+  - DOMAIN,aida.googleapis.com,🔘
+  - DOMAIN,aistudio.google.com,🔘
+  - DOMAIN,alkalimakersuite-pa.clients6.google.com,🔘
+  - DOMAIN,makersuite.google.com,🔘
+# Claude
+  - DOMAIN-SUFFIX,anthropic.com,🔘
+  - DOMAIN-SUFFIX,claude.ai,🔘
+  - IP-CIDR,160.79.104.0/23,🔘,no-resolve
+  - IP-CIDR6,2607:6bc0::/48,🔘,no-resolve
+# JetBrains AI
+  - DOMAIN-SUFFIX,grazie.ai,🔘
+  - DOMAIN-SUFFIX,grazie.aws.intellij.net,🔘
+# Meta
+  - DOMAIN,imagine.meta.com,🔘
+  - DOMAIN-SUFFIX,meta.ai,🔘
+# 分流规则
+  - DOMAIN-KEYWORD,google,🐟 漏网之鱼
+  - IN-TYPE,INNER,🔘
+# 国内外分流规则
+  - GEOSITE,CN,🚀 国内->百度节点
+  - GEOIP,CN,🚀 国内->百度节点
+# 兜底规则
+  - MATCH,🐟 漏网之鱼
