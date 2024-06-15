@@ -49,36 +49,9 @@ geox-url:
   asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
 
 proxy-providers:
-  fx:
+  xiaopro11:
     type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/fx
-    interval: 6048000
-    health-check:
-      enable: true
-      interval: 720
-      url: https://www.gstatic.com/generate_204
-
-  baidu:
-    type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
-    interval: 6048000
-    health-check:
-      enable: true
-      interval: 720
-      url: https://www.gstatic.com/generate_204
-
-  xiaopro0:
-    type: http
-    url: https://cfno1.pages.dev/clash?host=vmypq.212124.xyz&uuid=ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae&path=/ddcde2a6&format=base64&type=vless
-    interval: 6048000
-    health-check:
-      enable: true
-      interval: 720
-      url: https://www.gstatic.com/generate_204
-
-  xiaopro1:
-    type: http
-    url: https://sub.xf.free.hr/api/sub?host=vmypq.212124.xyz&uuid=ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae&path=/ddcde2a6&format=base64&type=vless
+    url: https://suballapi.somersaultcloud.xyz/&&https://yzc.ruyawwj.com/api/v1/client/subscribe?token=4e314c87c34f2c3f03c6ef62a0f8cb48&&cn-fjqz-cmcc-v-02.bilivideo.com&&&&&&&&
     interval: 6048000
     health-check:
       enable: true
@@ -115,19 +88,17 @@ proxy-groups:
   - name: 🌎 全球节点
     type: select
     proxies:
-      - 🚀 国内->百度节点
+      - 🚀 国内
       - 🌥️ 备用节点
     use:
-      - xiaopro0
-      - xiaopro1
+      - xiaopro11
+    filter: "国外"
 
-  - name: 🚀 国内->百度节点
+  - name: 🚀 国内
     type: select
-    proxies:
-      - 🎯 全球直连
     use:
-      - baidu
-      - fx
+      - xiaopro11
+    filter: "国内"
 
   - name: 🌥️ 备用节点
     type: url-test
@@ -137,26 +108,20 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 720
 
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-
   - name: 🛑 全球拦截
     type: select
     proxies:
       - REJECT
 
   - name: 🐟 漏网之鱼
-    type: relay
+    type: select
     proxies:
-      - 🚀 国内->百度节点
       - 🌎 全球节点
 
   - name: 🔘
     type: relay
     proxies:
-      - 🚀 国内->百度节点
+      - 🚀 国内
       - 🌥️ 备用节点
 
 rules:
@@ -212,7 +177,7 @@ rules:
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
-  - GEOSITE,CN,🚀 国内->百度节点
-  - GEOIP,CN,🚀 国内->百度节点
+  - GEOSITE,CN,🚀 国内
+  - GEOIP,CN,🚀 国内
 # 兜底规则
   - MATCH,🐟 漏网之鱼
