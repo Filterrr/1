@@ -92,7 +92,7 @@ proxy-groups:
       - 🌥️ 备用节点
     use:
       - xiaopro11
-    filter: "国外"
+    filter: "国外|剩余"
 
   - name: 🚀 国内
     type: select
