@@ -45,6 +45,8 @@ proxy-providers:
     type: http
     url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
     interval: 6048000
+    override:
+      additional-prefix: "【1】"
     health-check:
       enable: true
       interval: 720
@@ -54,15 +56,8 @@ proxy-providers:
     type: http
     url: https://cfno1.pages.dev/clash?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
     interval: 6048000
-    health-check:
-      enable: true
-      interval: 720
-      url: https://cp.cloudflare.com
-
-  xiaopro2:
-    type: http
-    url: https://c.jiedianxielou.workers.dev/api/v1/client/subscribe?token=114513
-    interval: 6048000
+    override:
+      additional-prefix: "【2】"
     health-check:
       enable: true
       interval: 720
@@ -101,7 +96,6 @@ proxy-groups:
     use:
       - xiaopro0
       - xiaopro1
-      - xiaopro2
 
   - name: 🚀 国内->百度节点
     type: select
