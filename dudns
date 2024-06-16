@@ -98,9 +98,6 @@ CF: &CF
         Host: world.kh11a.link
         
 proxies:
-  - name: dns-out
-    type: dns
-
   - name: 备用节点1
     server: speed.cloudflare.com
     port: 8443
@@ -160,7 +157,6 @@ proxy-groups:
       - 🌥️ 备用节点
 
 rules:
-  - AND,((DST-PORT,53),(NETWORK,UDP)),dns-out
   - AND,((DST-PORT,443),(NETWORK,UDP)),🛑 全球拦截
 # UDP 规则 
   - NETWORK,UDP,🛑 全球拦截
