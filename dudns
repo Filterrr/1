@@ -161,7 +161,8 @@ proxy-groups:
 
 rules:
 # dns 劫持
-  - AND,((NETWORK,udp),(DST-PORT,53)),dns-out
+  - AND,((DST-PORT,53),(NETWORK,udp)),dns-out
+  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT
 # UDP 规则 
   - NETWORK,UDP,🛑 全球拦截
 # 广告过滤
