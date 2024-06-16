@@ -126,6 +126,7 @@ proxy-groups:
 
 rules:
 # dns 劫持
+  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT
   - AND,((NETWORK,udp),(DST-PORT,53)),dns-out
 # UDP 规则 
   - NETWORK,UDP,🛑 全球拦截
