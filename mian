@@ -60,15 +60,15 @@ proxy-providers:
 
 CF: &CF
     type: vless
-    uuid: 1ff64191-83b3-410a-86e3-74f721681a80
+    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
     tls: true
-    servername: world.kh11a.link
+    servername: world21.kh11a.link
     skip-cert-verify: false
     network: ws
     ws-opts: 
       path: /xkaopf15da
       headers: 
-        Host: world.kh11a.link
+        Host: world21.kh11a.link
         
 proxies:
   - name: 备用节点1
