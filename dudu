@@ -43,7 +43,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
+    url: https://sub.xf.free.hr/api/sub?host=world21.kh11a.link&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da&format=base64&type=vless
     interval: 6048000
     override:
       additional-prefix: "【1】"
@@ -54,7 +54,7 @@ proxy-providers:
 
   xiaopro1:
     type: http
-    url: https://cfno1.pages.dev/clash?host=world.kh11a.link&uuid=1ff64191-83b3-410a-86e3-74f721681a80&path=/xkaopf15da&format=base64&type=vless
+    url: https://cfno1.pages.dev/clash?host=world21.kh11a.link&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da&format=base64&type=vless
     interval: 6048000
     override:
       additional-prefix: "【2】"
@@ -67,13 +67,13 @@ CF: &CF
     type: vless
     uuid: 1ff64191-83b3-410a-86e3-74f721681a80
     tls: true
-    servername: world.kh11a.link
+    servername: world21.kh11a.link
     skip-cert-verify: false
     network: ws
     ws-opts: 
       path: /xkaopf15da
       headers: 
-        Host: world.kh11a.link
+        Host: world21.kh11a.link
         
 proxies:
   - name: 备用节点1
