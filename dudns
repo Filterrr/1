@@ -3,7 +3,7 @@ allow-lan: true
 bind-address: "*"
 mode: rule
 log-level: debug
-ipv6: false
+ipv6: true
 geodata-loader: memconservative
 keep-alive-interval: 15
 global-client-fingerprint: firefox
