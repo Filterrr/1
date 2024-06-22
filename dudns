@@ -145,20 +145,11 @@ proxy-groups:
       - 🚀 国内->百度节点
       - 🌥️ 备用节点
 
-rule-providers:
-  reject:
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
-    path: ./ruleset/reject.yaml
-    interval: 86400
-
 rules:
   - AND,((DST-PORT,443),(NETWORK,UDP)),🛑 全球拦截
 # UDP 规则 
   - NETWORK,UDP,🛑 全球拦截
 # 广告过滤
-  - RULE-SET,reject,🛑 全球拦截
   - geosite,category-ads-all,🛑 全球拦截
 # 蓝奏云规则
   - DST-PORT,446,🐟 漏网之鱼
