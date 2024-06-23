@@ -4,7 +4,7 @@ bind-address: "*"
 mode: rule
 log-level: debug
 ipv6: true
-geodata-loader: memconservative
+geodata-loader: standard
 keep-alive-interval: 30
 global-client-fingerprint: firefox
 global-ua: clash.meta
