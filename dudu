@@ -146,8 +146,6 @@ rules:
   - AND,((DST-PORT,443),(NETWORK,UDP)),🛑 全球拦截
 # UDP 规则 
   - NETWORK,UDP,⚠️ UDP规则
-# 广告过滤
-  - geosite,category-ads-all,🛑 全球拦截
 # 蓝奏云规则
   - DST-PORT,446,🐟 漏网之鱼
 # 分流规则
