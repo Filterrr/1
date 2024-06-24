@@ -156,10 +156,10 @@ rules:
   - DOMAIN,imagine.meta.com,🔘
   - DOMAIN-SUFFIX,meta.ai,🔘
 # 分流规则
-  - DOMAIN-KEYWORD,google,🐟 漏网之鱼
+  - DOMAIN-KEYWORD,google,🐟 漏网之鱼,no-resolve
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内
-  - GEOIP,CN,🚀 国内
+  - GEOIP,CN,🚀 国内,no-resolve
 # 兜底规则
   - MATCH,🐟 漏网之鱼
