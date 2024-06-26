@@ -23,6 +23,14 @@ proxies:
     server: 157.0.148.53
     <<: *baidu
 
+  - name: 🇨🇳 移动 南京
+    server: 36.155.169.188
+    <<: *baidu
+
+  - name: 🇨🇳 移动 广东
+    server: 183.240.98.84
+    <<: *baidu
+
   - name: 🇨🇳 Baidu Auto
     server: cloudnproxy.baidu.com
     <<: *baidu
