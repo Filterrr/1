@@ -184,8 +184,8 @@ rules:
 # Claude
   - DOMAIN-SUFFIX,anthropic.com,🔘
   - DOMAIN-SUFFIX,claude.ai,🔘
-  - IP-CIDR,160.79.104.0/23,🔘,no-resolve
-  - IP-CIDR6,2607:6bc0::/48,🔘,no-resolve
+  - IP-CIDR,160.79.104.0/23,🔘
+  - IP-CIDR6,2607:6bc0::/48,🔘
 # JetBrains AI
   - DOMAIN-SUFFIX,grazie.ai,🔘
   - DOMAIN-SUFFIX,grazie.aws.intellij.net,🔘
@@ -193,10 +193,10 @@ rules:
   - DOMAIN,imagine.meta.com,🔘
   - DOMAIN-SUFFIX,meta.ai,🔘
 # 分流规则
-  - DOMAIN-KEYWORD,google,🐟 漏网之鱼,no-resolve
+  - DOMAIN-KEYWORD,google,🐟 漏网之鱼
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内->百度节点
-  - GEOIP,CN,🚀 国内->百度节点,no-resolve
+  - GEOIP,CN,🚀 国内->百度节点
 # 兜底规则
   - MATCH,🐟 漏网之鱼
