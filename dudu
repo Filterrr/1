@@ -44,7 +44,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=world21.kh11a.link&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da&format=base64&type=vless
+    url: https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fsub.xf.free.hr%2Fapi%2Fsub%3Fhost%3Dworld21.kh11a.link%26uuid%3Dd342d11e-d424-4583-b36e-524ab1f0afa4%26path%3D%2Fxkaopf15da%26format%3Dbase64%26type%3Dvless&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=true&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
     interval: 6048000
     override:
       additional-prefix: "【1】"
@@ -55,7 +55,7 @@ proxy-providers:
 
   xiaopro1:
     type: http
-    url: https://cfno1.pages.dev/clash?host=world21.kh11a.link&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da&format=base64&type=vless
+    url: https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fcfno1.pages.dev%2Fclash%3Fhost%3Dworld21.kh11a.link%26uuid%3Dd342d11e-d424-4583-b36e-524ab1f0afa4%26path%3D%2Fxkaopf15da%26format%3Dbase64%26type%3Dvless&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=true&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
     interval: 6048000
     override:
       additional-prefix: "【2】"
