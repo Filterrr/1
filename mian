@@ -37,7 +37,7 @@ geox-url:
 proxy-providers:
   xiaopro11:
     type: http
-    url: https://suballapi.somersaultcloud.xyz/&&https://yzc.ruyawwj.com/api/v1/client/subscribe?token=4e314c87c34f2c3f03c6ef62a0f8cb48&&cn-fjqz-cmcc-v-02.bilivideo.com&&&&&&&&
+    url: https://suballapi.somersaultcloud.xyz/&&https://sss.ruyawwj.com/api/v1/client/subscribe?token=4e314c87c34f2c3f03c6ef62a0f8cb48&&cn-fjqz-cmcc-v-02.bilivideo.com&&&&&&&&
     interval: 6048000
     health-check:
       enable: true
