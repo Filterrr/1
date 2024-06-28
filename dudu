@@ -54,7 +54,7 @@ proxy-providers:
 
   xiaopro1:
     type: http
-    url: https://cfno1.pages.dev/sub?host=world21.kh11a.link&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da
+    url: https://cfno1.pages.dev/clash?host=world21.kh11a.link&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da
     interval: 6048000
     override:
       additional-prefix: "【2】"
