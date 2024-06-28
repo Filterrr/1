@@ -157,22 +157,10 @@ proxy-groups:
       - 🚀 国内->百度节点
       - 🌥️ 备用节点
 
-rule-providers:
-  秋风广告规则:
-    type: http
-    behavior: domain
-    format: yaml
-    path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
-    #此处“/rule_providers”自行参考
-    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Clash.yaml"
-    interval: 60480
-
 rules:
   - AND,((DST-PORT,443),(NETWORK,UDP)),🛑 全球拦截
 # UDP 规则 
   - NETWORK,UDP,🛑 全球拦截
-# 广告过滤
-  - RULE-SET, 秋风广告规则,🛑 全球拦截
 # 蓝奏云规则
   - DST-PORT,446,🐟 漏网之鱼
 # AI 规则
