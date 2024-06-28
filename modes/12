@@ -1,3 +1,29 @@
-vless://ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae@47.76.227.128:2086?encryption=none&security=none&type=ws&host=vmypq.212124.xyz&path=%2Fddcde2a6#HK-VMISS-NO_tls1
-vless://ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae@47.238.40.58:2052?encryption=none&security=none&type=ws&host=vmypq.212124.xyz&path=%2Fddcde2a6#HK-VMISS-NO_tls2
-vless://ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae@47.238.0.114:2095?encryption=none&security=none&type=ws&host=vmypq.212124.xyz&path=%2Fddcde2a6#HK-VMISS-NO_tls3
+HK12: &HK12
+    type: vmess
+    uuid: 7fc4fd78-e4de-4b62-9679-b34b938bba12
+    alterId: 0
+    cipher: auto
+#    tls: true
+    servername: vmypq.212124.xyz
+    skip-cert-verify: false
+    network: ws
+    client-fingerprint: chrome
+    ws-opts: 
+      path: /7fc4fd78
+      headers: 
+        Host: vmypq.212124.xyz
+
+- name: HK-VMISS-NO_tls1
+  server: 47.76.227.128
+  port: 2086
+  <<: *HK12
+
+- name: HK-VMISS-NO_tls2
+  server: 47.238.40.58
+  port: 2052
+  <<: *HK12
+
+- name: HK-VMISS-NO_tls3
+  server: 47.238.0.114
+  port: 2095
+  <<: *HK12
