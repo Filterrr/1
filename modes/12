@@ -13,17 +13,18 @@ HK12: &HK12
       headers: 
         Host: vmypq.212124.xyz
 
-- name: HK-VMISS-NO_tls1
-  server: 47.76.227.128
-  port: 2086
-  <<: *HK12
+proxies:
+  - name: HK-VMISS-NO_tls1
+    server: 47.76.227.128
+    port: 2086
+    <<: *HK12
 
-- name: HK-VMISS-NO_tls2
-  server: 47.238.40.58
-  port: 2052
-  <<: *HK12
+  - name: HK-VMISS-NO_tls2
+    server: 47.238.40.58
+    port: 2052
+    <<: *HK12
 
-- name: HK-VMISS-NO_tls3
-  server: 47.238.0.114
-  port: 2095
-  <<: *HK12
+  - name: HK-VMISS-NO_tls3
+    server: 47.238.0.114
+    port: 2095
+    <<: *HK12
