@@ -64,7 +64,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://cfno1.pages.dev/clash?host=vmypq.212124.xyz&uuid=ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae&path=/ddcde2a6&format=base64&type=vless
+    url: https://cfno1.pages.dev/clash?host=vmypq.212124.xyz&uuid=7fc4fd78-e4de-4b62-9679-b34b938bba12&path=/7fc4fd78&format=base64&protocol=vmess
     interval: 6048000
     override:
       additional-prefix: "【1】"
@@ -75,7 +75,7 @@ proxy-providers:
 
   xiaopro1:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=vmypq.212124.xyz&uuid=ddcde2a6-8c0f-4e70-a8ce-72a8942b2fae&path=/ddcde2a6&format=base64&type=vless
+    url: https://sub.xf.free.hr/api/sub?host=vmypq.212124.xyz&uuid=7fc4fd78-e4de-4b62-9679-b34b938bba12&path=/7fc4fd78&format=base64&type=vmess
     interval: 6048000
     override:
       additional-prefix: "【2】"
