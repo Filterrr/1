@@ -157,6 +157,15 @@ proxy-groups:
       - 🚀 国内->百度节点
       - 🌥️ 备用节点
 
+rule-providers:
+  ASNChina:
+    type: http
+    path: ./ruleset/ASNChina.yaml
+    url: "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.yaml"
+    interval: 864000
+    behavior: classical
+    format: yaml
+
 rules:
   - AND,((DST-PORT,443),(NETWORK,UDP)),🛑 全球拦截
 # UDP 规则 
@@ -209,6 +218,7 @@ rules:
   - DOMAIN-KEYWORD,google,🐟 漏网之鱼
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
+  - RULE-SET,ASNChina,🚀 国内->百度节点
   - GEOSITE,CN,🚀 国内->百度节点
   - GEOIP,CN,🚀 国内->百度节点
 # 兜底规则
