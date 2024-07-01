@@ -104,6 +104,12 @@ proxy-groups:
     use:
       - baidu
 
+  - name: ⚠️ UDP规则
+    type: select
+    proxies:
+      - 🛑 全球拦截
+      - 🎯 全球直连
+
   - name: 🌥️ 备用节点
     type: url-test
     proxies:
@@ -112,12 +118,6 @@ proxy-groups:
     url: https://cp.cloudflare.com
     interval: 720
     lazy: true
-
-  - name: ⚠️ UDP规则
-    type: select
-    proxies:
-      - 🛑 全球拦截
-      - 🎯 全球直连
 
   - name: 🎯 全球直连
     type: select
