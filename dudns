@@ -118,6 +118,7 @@ proxy-groups:
       - 12
       - xiaopro0
       - xiaopro1
+    exclude-filter: "(?i)tg|channel|undefined"
 
   - name: 🚀 国内->百度节点
     type: select
