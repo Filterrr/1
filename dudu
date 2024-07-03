@@ -211,8 +211,6 @@ rules:
 # 蓝奏云规则
   - DST-PORT,446,🐟 漏网之鱼
 # 分流规则
-  - DOMAIN-KEYWORD,google,🐟 漏网之鱼
-  - DOMAIN-KEYWORD,chat,🔘
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - GEOSITE,CN,🚀 国内->百度节点
