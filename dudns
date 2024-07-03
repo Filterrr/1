@@ -278,7 +278,6 @@ rules:
   - DOMAIN,imagine.meta.com,🔘
   - DOMAIN-SUFFIX,meta.ai,🔘
 # 分流规则
-  - DOMAIN-KEYWORD,google,🐟 漏网之鱼
   - IN-TYPE,INNER,🔘
 # 国内外分流规则
   - RULE-SET,ASNChina,🚀 国内->百度节点
