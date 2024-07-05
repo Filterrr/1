@@ -1,10 +1,11 @@
 baidu: &baidu
-    type: http
-    port: 443
-    skip-cert-verify: true
-    headers:
-      Host: cloudnproxy.baidu.com
-      X-T5-Auth: 1050504963
+  type: http
+  port: 443
+  udp: false
+  skip-cert-verify: true
+  headers:
+    Host: cloudnproxy.baidu.com
+    X-T5-Auth: 1050504963
 
 proxies:
   - name: 🇨🇳 联通 河北1
