@@ -1,6 +1,6 @@
 HK12: &HK12
     type: vmess
-    uuid: 7fc4fd78-e4de-4b62-9679-b34b938bba12
+    uuid: b6b61733-b8d6-4c57-850e-f568b7a0f16b
     alterId: 0
     cipher: auto
 #    tls: true
@@ -9,7 +9,7 @@ HK12: &HK12
     network: ws
     client-fingerprint: chrome
     ws-opts: 
-      path: /7fc4fd78
+      path: /a1b1bdcf83d5ac6/
       headers: 
         Host: vmypq.212124.xyz
 
