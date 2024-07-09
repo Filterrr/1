@@ -53,15 +53,6 @@ proxy-providers:
       interval: 720
       url: https://www.gstatic.com/generate_204
 
-  12:
-    type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/12
-    interval: 6048000
-    health-check:
-      enable: true
-      interval: 720
-      url: https://www.gstatic.com/generate_204
-
   xiaopro0:
     type: http
     url: https://cfno1.pages.dev/clash?host=vmypq.212124.xyz&uuid=a5b46721-0b87-4345-ba57-61336e1af567&path=a5b46721&protocol=vmess
@@ -115,7 +106,6 @@ proxy-groups:
       - 🚀 国内->百度节点
       - 🌥️ 备用节点
     use:
-      - 12
       - xiaopro0
       - xiaopro1
     exclude-filter: "(?i)tg|channel|undefined|t.me"
