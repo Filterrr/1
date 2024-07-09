@@ -64,7 +64,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://cfno1.pages.dev/clash?host=vmypq.212124.xyz&uuid=4e648044-30b2-4d5c-b5b5-826aaf47573b&path=4e648044&protocol=vmess
+    url: https://cfno1.pages.dev/clash?host=vmypq.212124.xyz&uuid=a5b46721-0b87-4345-ba57-61336e1af567&path=a5b46721&protocol=vmess
     interval: 6048000
     override:
       additional-prefix: "【1】"
@@ -75,8 +75,8 @@ proxy-providers:
 
   xiaopro1:
     type: http
-#    url: https://sub.xf.free.hr/api/sub?host=vmypq.212124.xyz&uuid=4e648044-30b2-4d5c-b5b5-826aaf47573b&path=4e648044&type=vmess
-    url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=https%3A%2F%2Fsub.xf.free.hr%2Fapi%2Fsub%3Fhost%3Dvmypq.212124.xyz%26uuid%3D4e648044-30b2-4d5c-b5b5-826aaf47573b%26path%3D%2F4e648044%26format%3Dbase64%26type%3Dvmess&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false
+#    url: https://sub.xf.free.hr/api/sub?host=vmypq.212124.xyz&uuid=a5b46721-0b87-4345-ba57-61336e1af567&path=a5b46721&type=vmess
+    url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=https%3A%2F%2Fsub.xf.free.hr%2Fapi%2Fsub%3Fhost%3Dvmypq.212124.xyz%26uuid%3Da5b46721-0b87-4345-ba57-61336e1af567%26path%3D%2Fa5b46721%26format%3Dbase64%26type%3Dvmess&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false
     interval: 6048000
     override:
       additional-prefix: "【2】"
