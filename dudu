@@ -86,9 +86,6 @@ proxies:
     port: 2096
     <<: *CF
 
-  - {name: 80, server: 36.140.92.98, port: 10207, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: false, tfo: false, skip-cert-verify: false, servername: world.212124.xyz, network: ws, ws-opts: {path: /xkaopf15da, headers: {Host: world.212124.xyz}}}
-  - {name: 443, server: 36.140.92.98, port: 10208, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: true, tfo: false, skip-cert-verify: false, servername: world.212124.xyz, network: ws, ws-opts: {path: /xkaopf15da, headers: {Host: world.212124.xyz}}}
-
 proxy-groups:
   - name: 🌎 全球节点
     type: select
