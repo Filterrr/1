@@ -86,6 +86,9 @@ proxies:
     port: 2096
     <<: *CF
 
+  - {name: 80, server: 36.140.92.98, port: 10207, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: false, tfo: false, skip-cert-verify: false, servername: world21.kh11a.link, network: ws, ws-opts: {path: /xkaopf15da, headers: {Host: world21.kh11a.link}}}
+  - {name: 443, server: 36.140.92.98, port: 10208, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: true, tfo: false, skip-cert-verify: false, servername: world21.kh11a.link, network: ws, ws-opts: {path: /xkaopf15da, headers: {Host: world21.kh11a.link}}}
+
 proxy-groups:
   - name: 🌎 全球节点
     type: select
@@ -93,6 +96,8 @@ proxy-groups:
       - 🚀 国内->百度节点
       - ⚠️ UDP规则
       - 🌥️ 备用节点
+      - 80
+      - 443
     use:
       - xiaopro0
       - xiaopro1
