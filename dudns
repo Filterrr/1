@@ -37,7 +37,7 @@ geox-url:
 proxy-providers:
   fx:
     type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/fx
+    url: https://worldcf.affa21.free.hr/Filterrr/1/main/modes/fx
     interval: 6048000
     health-check:
       enable: true
@@ -46,7 +46,7 @@ proxy-providers:
 
   baidu:
     type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
+    url: https://worldcf.affa21.free.hr/Filterrr/1/main/modes/baidu
     interval: 6048000
     health-check:
       enable: true
@@ -80,13 +80,13 @@ CF: &CF
     type: vless
     uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
     tls: true
-    servername: world21.kh11a.link
+    servername: world.affa21.free.hr
     skip-cert-verify: false
     network: ws
     ws-opts: 
       path: /xkaopf15da
       headers: 
-        Host: world21.kh11a.link
+        Host: world.affa21.free.hr
         
 proxies:
   - name: 备用节点1
