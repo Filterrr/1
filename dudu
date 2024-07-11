@@ -35,7 +35,7 @@ geox-url:
 proxy-providers:
   baidu:
     type: http
-    url: https://worldcf.kh11a.link/Filterrr/1/main/modes/baidu
+    url: https://wocf.212124.xyz/Filterrr/1/main/modes/baidu
     interval: 6048000
     health-check:
       enable: true
@@ -44,7 +44,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=world21.kh11a.link&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da&type=vless
+    url: https://sub.xf.free.hr/api/sub?host=world.212124.xyz&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da&type=vless
     override:
       additional-prefix: "【1】"
     health-check:
@@ -54,7 +54,7 @@ proxy-providers:
 
   xiaopro1:
     type: http
-    url: https://cfno1.pages.dev/clash?host=world21.kh11a.link&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da
+    url: https://cfno1.pages.dev/clash?host=world.212124.xyz&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da
     interval: 6048000
     override:
       additional-prefix: "【2】"
@@ -67,13 +67,13 @@ CF: &CF
     type: vless
     uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
     tls: true
-    servername: world21.kh11a.link
+    servername: world.212124.xyz
     skip-cert-verify: false
     network: ws
     ws-opts: 
       path: /xkaopf15da
       headers: 
-        Host: world21.kh11a.link
+        Host: world.212124.xyz
         
 proxies:
   - name: 备用节点1
@@ -86,8 +86,8 @@ proxies:
     port: 2096
     <<: *CF
 
-  - {name: 80, server: 36.140.92.98, port: 10207, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: false, tfo: false, skip-cert-verify: false, servername: world21.kh11a.link, network: ws, ws-opts: {path: /xkaopf15da, headers: {Host: world21.kh11a.link}}}
-  - {name: 443, server: 36.140.92.98, port: 10208, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: true, tfo: false, skip-cert-verify: false, servername: world21.kh11a.link, network: ws, ws-opts: {path: /xkaopf15da, headers: {Host: world21.kh11a.link}}}
+  - {name: 80, server: 36.140.92.98, port: 10207, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: false, tfo: false, skip-cert-verify: false, servername: world.212124.xyz, network: ws, ws-opts: {path: /xkaopf15da, headers: {Host: world.212124.xyz}}}
+  - {name: 443, server: 36.140.92.98, port: 10208, client-fingerprint: random, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: true, tfo: false, skip-cert-verify: false, servername: world.212124.xyz, network: ws, ws-opts: {path: /xkaopf15da, headers: {Host: world.212124.xyz}}}
 
 proxy-groups:
   - name: 🌎 全球节点
