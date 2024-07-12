@@ -99,17 +99,12 @@ proxies:
     port: 2096
     <<: *CF
 
-  - {name: 🇭🇰 HK-VMISS-443, server: 36.140.92.98, port: 10208, type: vmess, uuid: 1705452e-5113-4633-a973-18ea15a1a5f0, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: 1705452e, headers: {Host: vmypq.212124.xyz}}}
-  - {name: 🇭🇰 HK-VMISS-80, server: 36.140.92.98, port: 10207, type: vmess, uuid: 1705452e-5113-4633-a973-18ea15a1a5f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: 1705452e, headers: {Host: vmypq.212124.xyz}}}
-
 proxy-groups:
   - name: 🌎 全球节点
     type: select
     proxies:
       - 🚀 国内->百度节点
       - 🌥️ 备用节点
-      - 🇭🇰 HK-VMISS-443
-      - 🇭🇰 HK-VMISS-80
     use:
       - xiaopro0
       - xiaopro1
