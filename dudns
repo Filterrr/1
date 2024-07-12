@@ -78,25 +78,25 @@ proxy-providers:
 
 CF: &CF
     type: vless
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-    tls: true
-    servername: world.212124.xyz
+    uuid: 97e9e73d-2a29-4a1e-b451-093d81c51f7b
+    tls: false
+    servername: word.212124.xyz
     skip-cert-verify: false
     network: ws
     ws-opts: 
       path: /xkaopf15da
       headers: 
-        Host: world.212124.xyz
+        Host: word.212124.xyz
         
 proxies:
   - name: 备用节点1
     server: speed.cloudflare.com
-    port: 8443
+    port: 8880
     <<: *CF
 
   - name: 备用节点2
     server: www.visa.com.hk
-    port: 2096
+    port: 2095
     <<: *CF
 
 proxy-groups:
