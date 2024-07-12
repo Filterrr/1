@@ -44,7 +44,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://sub.xf.free.hr/api/sub?host=world.212124.xyz&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da&type=vless
+    url: https://sub.xf.free.hr/api/sub?host=word.212124.xyz&uuid=97e9e73d-2a29-4a1e-b451-093d81c51f7b&path=/xkaopf15da&type=vless
     override:
       additional-prefix: "【1】"
     health-check:
@@ -54,7 +54,7 @@ proxy-providers:
 
   xiaopro1:
     type: http
-    url: https://cfno1.pages.dev/clash?host=world.212124.xyz&uuid=d342d11e-d424-4583-b36e-524ab1f0afa4&path=/xkaopf15da
+    url: https://cfno1.pages.dev/clash?host=word.212124.xyz&uuid=97e9e73d-2a29-4a1e-b451-093d81c51f7b&path=/xkaopf15da
     interval: 6048000
     override:
       additional-prefix: "【2】"
@@ -65,15 +65,15 @@ proxy-providers:
 
 CF: &CF
     type: vless
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+    uuid: 97e9e73d-2a29-4a1e-b451-093d81c51f7b
     tls: true
-    servername: world.212124.xyz
+    servername: word.212124.xyz
     skip-cert-verify: false
     network: ws
     ws-opts: 
       path: /xkaopf15da
       headers: 
-        Host: world.212124.xyz
+        Host: word.212124.xyz
         
 proxies:
   - name: 备用节点1
