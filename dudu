@@ -101,15 +101,15 @@ proxy-groups:
   - name: 🚀 国内->百度节点
     type: select
     proxies:
-      - 🎯 全球直连
+      - DIRECT
     use:
       - baidu
 
   - name: ⚠️ UDP规则
     type: select
     proxies:
-      - 🛑 全球拦截
-      - 🎯 全球直连
+      - REJECT
+      - DIRECT
 
   - name: 🌥️ 备用节点
     type: url-test
@@ -119,16 +119,6 @@ proxy-groups:
     url: https://cp.cloudflare.com
     interval: 720
     lazy: true
-
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-
-  - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
 
   - name: 🐟 漏网之鱼
     type: relay
@@ -143,7 +133,6 @@ proxy-groups:
       - 🌥️ 备用节点
 
 rules:
-  - AND,((DST-PORT,443),(NETWORK,UDP)),🛑 全球拦截
 # UDP 规则 
   - NETWORK,UDP,⚠️ UDP规则
 # 蓝奏云规则
