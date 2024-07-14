@@ -113,7 +113,7 @@ proxy-groups:
   - name: 🚀 国内->百度节点
     type: select
     proxies:
-      - 🎯 全球直连
+      - DIRECT
     use:
       - baidu
       - fx
@@ -125,11 +125,6 @@ proxy-groups:
       - 备用节点2
     url: https://www.gstatic.com/generate_204
     interval: 720
-
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
 
   - name: 🛑 全球拦截
     type: select
