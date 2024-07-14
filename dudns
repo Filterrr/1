@@ -126,11 +126,6 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 720
 
-  - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
-
   - name: 🐟 漏网之鱼
     type: relay
     proxies:
@@ -153,11 +148,10 @@ rule-providers:
     format: yaml
 
 rules:
-  - AND,((DST-PORT,443),(NETWORK,UDP)),🛑 全球拦截
 # UDP 规则 
-  - NETWORK,UDP,🛑 全球拦截
+  - NETWORK,UDP,REJECT
 # 广告过滤
-  - geosite,category-ads-all,🛑 全球拦截
+  - geosite,category-ads-all,REJECT
 # 蓝奏云规则
   - DST-PORT,446,🐟 漏网之鱼
 # AI 规则
