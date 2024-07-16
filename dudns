@@ -118,6 +118,12 @@ proxy-groups:
       - baidu
       - fx
 
+  - name: ⚠️ UDP规则
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
   - name: 🌥️ 备用节点
     type: url-test
     proxies:
@@ -149,7 +155,7 @@ rule-providers:
 
 rules:
 # UDP 规则 
-  - NETWORK,UDP,REJECT
+  - NETWORK,UDP,⚠️ UDP规则
 # 广告过滤
   - geosite,category-ads-all,REJECT
 # 蓝奏云规则
