@@ -105,6 +105,7 @@ proxy-groups:
     proxies:
       - 🚀 国内->百度节点
       - 🌥️ 备用节点
+      - ⚠️ UDP规则
     use:
       - xiaopro0
       - xiaopro1
