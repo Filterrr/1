@@ -136,7 +136,7 @@ rules:
 # UDP 规则 
   - NETWORK,UDP,⚠️ UDP策略
 # 广告过滤
-  - geosite,category-ads-all,REJECT
+  - geosite,category-ads-all,REJECT-DROP
 # 蓝奏云规则
   - DST-PORT,446,🐟 漏网之鱼
 # 分流规则
