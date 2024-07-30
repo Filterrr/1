@@ -46,7 +46,7 @@ proxy-providers:
     type: http
     url: https://sub.xf.free.hr/api/sub?host=word.212124.xyz&uuid=97e9e73d-2a29-4a1e-b451-093d81c51f7b&path=/xkaopf15da&type=vless
     override:
-      additional-prefix: "【1】"
+      additional-prefix: "【妖火哈基米】"
     health-check:
       enable: true
       interval: 720
@@ -57,7 +57,7 @@ proxy-providers:
     url: https://cfno1.pages.dev/clash?host=word.212124.xyz&uuid=97e9e73d-2a29-4a1e-b451-093d81c51f7b&path=/xkaopf15da
     interval: 6048000
     override:
-      additional-prefix: "【2】"
+      additional-prefix: "【妖火哈基米】"
     health-check:
       enable: true
       interval: 720
