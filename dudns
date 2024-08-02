@@ -79,7 +79,7 @@ proxy-providers:
 CF: &CF
     type: vless
     uuid: 97e9e73d-2a29-4a1e-b451-093d81c51f7b
-    tls: false
+    tls: true
     servername: word.212124.xyz
     skip-cert-verify: false
     network: ws
@@ -91,12 +91,12 @@ CF: &CF
 proxies:
   - name: 备用节点1
     server: 115155.xyz
-    port: 8880
+    port: 443
     <<: *CF
 
   - name: 备用节点2
     server: www.visa.com.hk
-    port: 2095
+    port: 8443
     <<: *CF
 
 proxy-groups:
