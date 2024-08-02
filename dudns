@@ -53,7 +53,6 @@ ipv6: true
 geodata-loader: standard
 keep-alive-interval: 15
 global-client-fingerprint: firefox
-global-ua: clash.meta
 find-process-mode: strict
 unified-delay: true
 tcp-concurrent: true
