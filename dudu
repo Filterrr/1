@@ -110,6 +110,7 @@ proxy-groups:
     use:
       - xiaopro0
       - xiaopro1
+      - xiaopro2
     exclude-filter: "(?i)tg|channel|undefined|t.me"
 
   - name: 🚀 国内->百度节点
