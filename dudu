@@ -3,6 +3,8 @@ proxy-providers:
     type: http
     url: https://wocf.212124.xyz/Filterrr/1/main/modes/baidu
     interval: 6048000
+    override:
+      additional-prefix: "【百度直连】"
     health-check:
       enable: true
       interval: 720
