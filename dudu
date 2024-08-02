@@ -1,3 +1,46 @@
+proxy-providers:
+  baidu:
+    type: http
+    url: https://wocf.212124.xyz/Filterrr/1/main/modes/baidu
+    interval: 6048000
+    health-check:
+      enable: true
+      interval: 720
+      url: https://cp.cloudflare.com
+
+  xiaopro0:
+    type: http
+    url: https://sub.xf.free.hr/api/sub?host=word.212124.xyz&uuid=97e9e73d-2a29-4a1e-b451-093d81c51f7b&path=/xkaopf15da&type=vless
+    override:
+      additional-prefix: "【妖火哈基米分享】"
+    health-check:
+      enable: true
+      interval: 720
+      url: https://cp.cloudflare.com
+
+  xiaopro1:
+    type: http
+    url: https://cfno1.pages.dev/clash?host=word.212124.xyz&uuid=97e9e73d-2a29-4a1e-b451-093d81c51f7b&path=/xkaopf15da
+    interval: 6048000
+    override:
+      additional-prefix: "【妖火哈基米分享】"
+    health-check:
+      enable: true
+      interval: 720
+      url: https://cp.cloudflare.com
+
+  xiaopro2:
+    type: http
+    url: https://sub.d1.mk/sub?target=clash&url=https%3A%2F%2Fsub.kaiche.tk%2F%3Ftoken%3Dauto&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=true&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+    interval: 6048000
+    override:
+      additional-prefix: "【妖火哈基米分享】"
+    health-check:
+      enable: true
+      interval: 720
+      url: https://cp.cloudflare.com
+##====================================================================================================================================================================================================
+
 mixed-port: 7890
 allow-lan: true
 bind-address: "*"
@@ -31,37 +74,6 @@ geox-url:
   geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
   mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
   asn: "https://mirror.ghproxy.com/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
-
-proxy-providers:
-  baidu:
-    type: http
-    url: https://wocf.212124.xyz/Filterrr/1/main/modes/baidu
-    interval: 6048000
-    health-check:
-      enable: true
-      interval: 720
-      url: https://cp.cloudflare.com
-
-  xiaopro0:
-    type: http
-    url: https://sub.xf.free.hr/api/sub?host=word.212124.xyz&uuid=97e9e73d-2a29-4a1e-b451-093d81c51f7b&path=/xkaopf15da&type=vless
-    override:
-      additional-prefix: "【妖火哈基米】"
-    health-check:
-      enable: true
-      interval: 720
-      url: https://cp.cloudflare.com
-
-  xiaopro1:
-    type: http
-    url: https://cfno1.pages.dev/clash?host=word.212124.xyz&uuid=97e9e73d-2a29-4a1e-b451-093d81c51f7b&path=/xkaopf15da
-    interval: 6048000
-    override:
-      additional-prefix: "【妖火哈基米】"
-    health-check:
-      enable: true
-      interval: 720
-      url: https://cp.cloudflare.com
 
 CF: &CF
     type: vless
