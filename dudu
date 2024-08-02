@@ -144,6 +144,15 @@ proxy-groups:
       - 🚀 国内->百度节点
       - 🌥️ 备用节点
 
+rule-providers:
+  ASNChina:
+    type: http
+    path: ./ruleset/ASNChina.yaml
+    url: "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.yaml"
+    interval: 864000
+    behavior: classical
+    format: yaml
+
 rules:
 # UDP 规则 
   - NETWORK,UDP,⚠️ UDP策略
