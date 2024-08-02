@@ -94,7 +94,7 @@ CF: &CF
         
 proxies:
   - name: 备用节点1
-    server: 115155.xyz
+    server: www.gov.se
     port: 443
     <<: *CF
 
