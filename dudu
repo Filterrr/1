@@ -14,7 +14,7 @@ proxy-providers:
     type: http
     url: https://sub.xf.free.hr/api/sub?host=word.212124.xyz&uuid=97e9e73d-2a29-4a1e-b451-093d81c51f7b&path=/xkaopf15da&type=vless
     override:
-      additional-prefix: "【妖火哈基米分享】"
+      additional-prefix: "【哈基米分享】"
     health-check:
       enable: true
       interval: 720
@@ -25,7 +25,7 @@ proxy-providers:
     url: https://cfno1.pages.dev/clash?host=word.212124.xyz&uuid=97e9e73d-2a29-4a1e-b451-093d81c51f7b&path=/xkaopf15da
     interval: 6048000
     override:
-      additional-prefix: "【妖火哈基米分享】"
+      additional-prefix: "【哈基米分享】"
     health-check:
       enable: true
       interval: 720
@@ -36,7 +36,7 @@ proxy-providers:
     url: https://sub.d1.mk/sub?target=clash&url=https%3A%2F%2Fsub.kaiche.tk%2F%3Ftoken%3Dauto&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=true&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
     interval: 6048000
     override:
-      additional-prefix: "【妖火哈基米分享】"
+      additional-prefix: "【哈基米分享】"
     health-check:
       enable: true
       interval: 720
