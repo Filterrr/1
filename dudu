@@ -52,7 +52,6 @@ ipv6: true
 geodata-loader: standard
 keep-alive-interval: 30
 global-client-fingerprint: firefox
-global-ua: clash.meta
 find-process-mode: strict
 
 dns:
