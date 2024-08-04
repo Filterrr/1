@@ -21,7 +21,7 @@ proxy-providers:
 
   xiaopro0:
     type: http
-    url: https://cfno1.pages.dev/clash?host=vmypq.212124.xyz&uuid=1705452e-5113-4633-a973-18ea15a1a5f0&path=1705452e&protocol=vmess
+    url: https://cfno1.212124.xyz/clash?host=vmypq.212124.xyz&uuid=1705452e-5113-4633-a973-18ea15a1a5f0&path=1705452e&protocol=vmess
     interval: 6048000
     override:
       additional-prefix: "【1】"
@@ -32,8 +32,8 @@ proxy-providers:
 
   xiaopro1:
     type: http
-#    url: https://sub.xf.free.hr/api/sub?host=vmypq.212124.xyz&uuid=1705452e-5113-4633-a973-18ea15a1a5f0&path=1705452e&type=vmess
-    url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=https%3A%2F%2Fsub.xf.free.hr%2Fapi%2Fsub%3Fhost%3Dvmypq.212124.xyz%26uuid%3D1705452e-5113-4633-a973-18ea15a1a5f0%26path%3D%2F1705452e%26format%3Dbase64%26type%3Dvmess&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false
+#    url: https://ed.212124.xyz/api/sub?host=vmypq.212124.xyz&uuid=1705452e-5113-4633-a973-18ea15a1a5f0&path=1705452e&type=vmess
+    url: https://sub.d1.mk/sub?target=clash&url=https%3A%2F%2Fed.212124.xyz%2Fapi%2Fsub%3Fhost%3Dvmypq.212124.xyz%26uuid%3D1705452e-5113-4633-a973-18ea15a1a5f0%26path%3D1705452e%26type%3Dvmess&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=true&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
     interval: 6048000
     override:
       additional-prefix: "【2】"
