@@ -33,10 +33,16 @@ proxy-providers:
 
   xiaopro2:
     type: http
-    url: https://sub.d1.mk/sub?target=clash&url=https%3A%2F%2Fsub.kaiche.tk%2F%3Ftoken%3Dauto&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=true&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+    url: https://sub.kaiche.tk/?token=auto
     interval: 6048000
     override:
       additional-prefix: "【哈基米分享】"
+    header:
+      User-Agent:
+      - "Clash/v1.18.0"
+      - "mihomo/1.18.3"
+      Authorization:
+      - 'token 1231231'
     health-check:
       enable: true
       interval: 720
