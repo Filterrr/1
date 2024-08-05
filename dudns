@@ -49,7 +49,7 @@ allow-lan: true
 bind-address: "*"
 mode: rule
 log-level: debug
-ipv6: true
+ipv6: false
 geodata-loader: standard
 keep-alive-interval: 15
 global-client-fingerprint: firefox
