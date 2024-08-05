@@ -25,8 +25,6 @@ proxy-providers:
     interval: 6048000
     override:
       additional-prefix: "【1】"
-      skip-cert-verify: true
-      udp: true
       dialer-proxy: 🚀 国内->百度节点
     health-check:
       enable: true
@@ -40,8 +38,6 @@ proxy-providers:
     interval: 6048000
     override:
       additional-prefix: "【2】"
-      skip-cert-verify: true
-      udp: true
       dialer-proxy: 🚀 国内->百度节点
     health-check:
       enable: true
@@ -90,7 +86,6 @@ CF: &CF
     uuid: 97e9e73d-2a29-4a1e-b451-093d81c51f7b
     tls: true
     servername: word.212124.xyz
-    skip-cert-verify: false
     network: ws
     ws-opts: 
       path: /xkaopf15da
