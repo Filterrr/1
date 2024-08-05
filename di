@@ -122,6 +122,7 @@ proxy-groups:
     use:
       - baidu
       - fx
+    lazy: true
 
   - name: ⚠️ UDP策略
     type: select
@@ -136,6 +137,7 @@ proxy-groups:
       - 备用节点2
     url: https://www.gstatic.com/generate_204
     interval: 720
+    lazy: true
     dialer-proxy: 🚀 国内->百度节点
 
 rule-providers:
