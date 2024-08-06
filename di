@@ -79,7 +79,7 @@ geox-url:
   geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
   mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
-  asn: "https://gi.212124.xyz/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+  asn: "https://github.abskoop.workers.dev/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
 
 CF: &CF
     type: vless
