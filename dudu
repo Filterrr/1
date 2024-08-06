@@ -119,7 +119,7 @@ proxy-groups:
       - xiaopro0
       - xiaopro1
       - xiaopro2
-    exclude-filter: "(?i)tg|channel|undefined|t.me"
+    exclude-filter: "(?i)channel|undefined"
 
   - name: 🚀 国内->百度节点
     type: select
