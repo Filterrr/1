@@ -160,6 +160,7 @@ rule-providers:
 rules:
 # UDP 规则 
   - NETWORK,UDP,⚠️ UDP策略
+  - DST-PORT,53,⚫️ DNS劫持
 # 广告过滤
   - geosite,category-ads-all,REJECT
 # 蓝奏云规则
