@@ -93,7 +93,9 @@ CF: &CF
         Host: word.212124.xyz
         
 proxies:
-  - {name: "⚫️ DNS劫持", type: dns, udp: true}
+  - name: "⚫️ DNS劫持"
+    type: dns
+    udp: true
 
   - name: 备用节点1
     server: www.gov.se
