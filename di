@@ -93,6 +93,8 @@ CF: &CF
         Host: word.212124.xyz
         
 proxies:
+  - {name: "⚫️ DNS劫持", type: dns, udp: true}
+
   - name: 备用节点1
     server: www.gov.se
     port: 443
@@ -152,6 +154,7 @@ rule-providers:
 rules:
 # UDP 规则 
   - NETWORK,UDP,⚠️ UDP策略
+  - DST-PORT,53,⚫️ DNS劫持
 # 广告过滤
   - geosite,category-ads-all,REJECT
 # 蓝奏云规则
