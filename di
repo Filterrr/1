@@ -66,11 +66,10 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
   default-nameserver:
-    - https://223.5.5.5/dns-query
-    - https://8.8.8.8/dns-query
+    - 180.76.76.76
   nameserver:
-    - https://223.5.5.5/dns-query
-    - https://1.0.0.1/dns-query
+    - 119.29.29.29
+    - 1.1.1.1
 
 geodata-mode: true
 geo-auto-update: true
